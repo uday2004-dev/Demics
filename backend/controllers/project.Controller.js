@@ -50,7 +50,7 @@ export const createProject = async (req, res) => {
     }
 
     const result = await uploadOnCloudinary(
-      req.file.buffer
+      req.file.buffer,"projects"
     );
     console.log(result)
     const newProject = await Project.create({
