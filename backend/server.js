@@ -7,6 +7,7 @@ import { createProject } from "./controllers/project.Controller.js";
 import projectRoutes from "./routes/projectRoute.js"
 import serviceRoute from "./routes/serviceRoute.js";
 import blogRoute from "./routes/blogRoute.js"
+import cors from "cors";
 
 dotenv.config();
 
@@ -19,6 +20,15 @@ const PORT = process.env.PORT;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173", // local frontend
+      "https://your-frontend-domain.vercel.app", // production frontend
+    ],
+    credentials: true,
+  })
+);
 
 app.use("/api/admin", adminLogin);
 app.use("/api/projects", projectRoutes);
