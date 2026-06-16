@@ -169,3 +169,75 @@ export const deleteBlogs = async (req, res) => {
     });
   }
 };
+
+
+
+// export const editBlogs = async (req, res) => {
+//   try {
+//     console.log("ID:", req.params.id);
+//     console.log("BODY:", req.body);
+//     const { id } = req.params;
+//     const updateData = req.body;
+
+//     const updatedBlogs = await Blogs.findByIdAndUpdate(
+//       id,
+//       updateData,
+//       { new: true, runValidators: true }
+//       ,
+   
+
+//     );
+
+//     if (!updatedBlogs) {
+//       return res.status(404).json({
+//         success: false,
+//         message: "Service not found",
+//       });
+//     }
+
+//     return res.status(200).json({
+//       success: true,
+//       message: "Service updated successfully",
+//       data: updatedBlogs,
+//     });
+
+//   } catch (error) {
+//     console.log(error);
+
+//     return res.status(500).json({
+//       success: false,
+//       message: "Failed to update service",
+//     });
+//   }
+// };
+
+
+export const editBlogs = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    console.log("ID:", id);
+    console.log("BODY:", req.body);
+
+    const updatedBlogs = await Blogs.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        returnDocument: "after",
+        runValidators: true,
+      }
+    );
+
+    console.log("UPDATED:", updatedBlogs);
+
+    const check = await Blogs.findById(id);
+    console.log("AFTER UPDATE:", check);
+
+    return res.status(200).json({
+      success: true,
+      data: updatedBlogs,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};

@@ -31,3 +31,24 @@ export const adminLogin = async (req, res) => {
     message: "Admin login successful"
   });
 };
+
+
+export const logoutAdmin=async (req,res) => {
+    try {
+        return res
+            .status(200)
+            .cookie("token", "", {
+                maxAge: 0,
+                httpOnly: true,
+                sameSite: "strict"
+            })
+            .json({
+                success: true,
+                message: "Logged out successfully"
+            })
+
+    } catch (error) {
+        console.log(error)
+    }
+  
+}
