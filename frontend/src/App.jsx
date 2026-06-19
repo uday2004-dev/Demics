@@ -1,8 +1,72 @@
 import React from 'react'
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Home from '../components/Home'
+import Login from '../components/Login'
+import SideBar from '../components/SideBar'
+import ProtectedRoute from '../components/ProtectedRoute'
+import Dashboard from '../components/Dashboard'
+import Projects from '../components/Projects'
+import ProjectAdd from '../components/ProjectAdd'
+import OurServices from '../components/OurServices'
+import Services from '../components/Services'
+import Blogs from '../components/Blogs'
+import CreateBlogs from '../components/CreateBlogs'
+
+
+
+
 
 const App = () => {
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Login />,
+    },
+    {
+      path: "/sideBar",
+      element: (
+        <ProtectedRoute>
+          <SideBar />
+        </ProtectedRoute>
+      ),
+      children: [
+        {
+          path: "dashboard",
+          element: <Dashboard />
+        },
+        {
+          path: "project",
+          element: <Projects />,
+        }, {
+          path: "project/projectAdd",
+          element: <ProjectAdd />
+        }, {
+          path: "services",
+          element: <OurServices />
+        },
+        {
+          path: "services/create",
+          element: <Services />
+        },
+        {
+          path: "blogs",
+          element: <Blogs />
+        }
+        ,
+        {
+          path: "blogs/createBlogs",
+          element: <CreateBlogs />
+        }
+      ]
+    }
+
+  ])
   return (
-    <div>App</div>
+    <>
+
+      <RouterProvider router={router} />
+    </>
   )
 }
 

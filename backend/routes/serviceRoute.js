@@ -1,10 +1,11 @@
 import express from "express";
+import { upload } from "../middleware/multer.js";
 import { createService, deleteService, getServiceById, getServices,editServices } from "../controllers/servicesController.js";
 import adminAuthMiddleware from "../middleware/adminAuthMiddleware.js";
 
 const router = express.Router();
 
-router.post("/create-service", adminAuthMiddleware, createService);
+router.post("/create-service", adminAuthMiddleware, upload.single("photo"),createService);
 router.get("/getAllServices",adminAuthMiddleware,getServices)
 router.get("/:id",adminAuthMiddleware,getServiceById)
 router.delete("/:id",adminAuthMiddleware,deleteService)

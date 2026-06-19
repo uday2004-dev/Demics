@@ -1,5 +1,6 @@
 import api from "./axios";
 
+
 export const getBlogs = () => {
   return api.get("/blog/getAllBlogs");
 };

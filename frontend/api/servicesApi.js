@@ -1,15 +1,15 @@
 import api from "./axios";
 
 export const getServices = () => {
-  return api.get("/services");
+  return api.get("/services/getAllServices");
 };
 
 export const createService = (data) => {
-  return api.post("/services/create", data);
+  return api.post("/services/create-service", data);
 };
 
 export const updateService = (id, data) => {
-  return api.put(`/services/${id}`, data);
+  return api.patch(`/services/${id}`, data);
 };
 
 export const deleteService = (id) => {

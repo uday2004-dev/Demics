@@ -1,18 +1,21 @@
 
 
 import { Service } from "../models/servicesSchema.js";
+import { uploadOnCloudinary } from "../utils/cloudinaryUpload.js";
 
 // Create Service
 export const createService = async (req, res) => {
   try {
-    const { name, photo } = req.body;
+    const { name } = req.body;
 
-    if (!name || !photo) {
+    if (!name || !req.file) {
       return res.status(400).json({
         success: false,
         message: "Please fill all fields",
       });
     }
+    console.log(req.body);
+    console.log(req.file);
 
     const existingService = await Service.findOne({ name });
 
@@ -23,24 +26,31 @@ export const createService = async (req, res) => {
       });
     }
 
+    const result = await uploadOnCloudinary(
+      req.file.buffer,
+      "services"
+    );
+
     const newService = await Service.create({
       name,
-      photo,
+      photo: result.secure_url,
     });
 
-    return res.status(201).json({
-      success: true,
-      message: "Service created successfully",
-      service: newService,
-    });
-  } catch (error) {
-    console.log(error);
+   
 
-    return res.status(500).json({
-      success: false,
-      message: "Service creation failed",
-    });
-  }
+  return res.status(201).json({
+    success: true,
+    message: "Service created successfully",
+    service: newService,
+  });
+} catch (error) {
+  console.log(error);
+
+  return res.status(500).json({
+    success: false,
+    message: "Service creation failed",
+  });
+}
 };
 
 // Get All Services
