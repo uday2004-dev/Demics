@@ -3,6 +3,7 @@ import {
   createProject,
   getProjects,
   getProjectById,
+  deleteProject,
 } from "../controllers/project.Controller.js";
 
 import { upload } from "../middleware/multer.js"
@@ -18,5 +19,6 @@ router.post(
 );
 router.get("/", getProjects);
 router.get("/:id", getProjectById);
+router.delete("/:id",deleteProject)
 
 export default router;

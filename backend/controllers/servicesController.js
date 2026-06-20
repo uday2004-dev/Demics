@@ -2,6 +2,7 @@
 
 import { Service } from "../models/servicesSchema.js";
 import { uploadOnCloudinary } from "../utils/cloudinaryUpload.js";
+import { Project } from "../models/projectSchema.js";
 
 // Create Service
 export const createService = async (req, res) => {
@@ -102,7 +103,6 @@ export const getServiceById = async (req, res) => {
 };
 
 
-
 export const deleteService = async (req, res) => {
   try {
     const { id } = req.params;
@@ -116,11 +116,17 @@ export const deleteService = async (req, res) => {
       });
     }
 
+    // Pehle related projects delete karo
+    await Project.deleteMany({
+      service: id,
+    });
+
+    // Fir service delete karo
     await Service.findByIdAndDelete(id);
 
     return res.status(200).json({
       success: true,
-      message: "Service deleted successfully",
+      message: "Service and related projects deleted successfully",
     });
   } catch (error) {
     console.log(error);
@@ -131,7 +137,6 @@ export const deleteService = async (req, res) => {
     });
   }
 };
-
 
 
 export const editServices = async (req, res) => {

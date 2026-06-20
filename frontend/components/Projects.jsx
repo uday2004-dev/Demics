@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import { MdOutlineAddCircle } from "react-icons/md";
-import { getProjects } from "../api/projectApi";
+import { deleteProject, getProjects } from "../api/projectApi";
 import { getServices } from "../api/servicesApi";
 
 const Projects = () => {
@@ -33,6 +33,17 @@ const Projects = () => {
       setLoading(false);
     }
   };
+  const dltProject = async (id) => {
+    try {
+      await deleteProject(id);
+
+      setProjects((prev) =>
+        prev.filter((project) => project._id !== id)
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const fetchServices = async () => {
     try {
@@ -48,10 +59,10 @@ const Projects = () => {
 
   const filteredProjects = selectedService
     ? projects.filter(
-        (project) =>
-          project.service?._id ===
-          selectedService
-      )
+      (project) =>
+        project.service?._id ===
+        selectedService
+    )
     : projects;
 
   return (
@@ -64,11 +75,10 @@ const Projects = () => {
             onClick={() =>
               setSelectedService(service._id)
             }
-            className={`px-5 py-2 rounded-full text-sm transition cursor-pointer ${
-              selectedService === service._id
+            className={`px-5 py-2 rounded-full text-sm transition cursor-pointer ${selectedService === service._id
                 ? "bg-purple-600 text-white"
                 : "bg-[#1e1e1e] text-gray-300"
-            }`}
+              }`}
           >
             {service.name}
           </button>
@@ -79,11 +89,10 @@ const Projects = () => {
           onClick={() =>
             setSelectedService("")
           }
-          className={`px-5 py-2 rounded-full text-sm transition cursor-pointer ${
-            selectedService === ""
+          className={`px-5 py-2 rounded-full text-sm transition cursor-pointer ${selectedService === ""
               ? "bg-purple-600 text-white"
               : "bg-[#1e1e1e] text-gray-300"
-          }`}
+            }`}
         >
           All
         </button>
@@ -120,10 +129,17 @@ const Projects = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-
-              <h3 className="text-white mt-3 text-sm uppercase">
-                {project.title}
-              </h3>
+              <div className="flex items-center justify-between mt-3">
+                <h3 className="text-white mt-3 text-sm uppercase">
+                  {project.title}
+                </h3>
+                <button
+                  onClick={() => dltProject(project._id)}
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full cursor-pointer"
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           ))}
         </div>
@@ -137,7 +153,7 @@ export default Projects;
 
 
 
-  
+
 
 // import React from 'react'
 // import { Outlet, useNavigate } from 'react-router-dom'

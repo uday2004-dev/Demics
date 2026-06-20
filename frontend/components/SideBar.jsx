@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
+import logo from "../src/assets/logo.png"
 import {
   FaThLarge,
   FaFolder,
@@ -60,7 +61,8 @@ const SideBar = () => {
         
         {/* Logo */}
         <div className="px-12 pt-12 pb-8">
-          <h1 className="text-6xl font-bold">Demics</h1>
+          {/* <h1 className="text-6xl font-bold">Demics</h1> */}
+          <img src={logo} alt="" />
         </div>
 
         {/* Menu */}

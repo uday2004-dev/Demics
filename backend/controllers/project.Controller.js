@@ -50,7 +50,7 @@ export const createProject = async (req, res) => {
     }
 
     const result = await uploadOnCloudinary(
-      req.file.buffer,"projects"
+      req.file.buffer, "projects"
     );
     console.log(result)
     const newProject = await Project.create({
@@ -138,5 +138,63 @@ export const getProjectById = async (req, res) => {
   }
 };
 
+
+export const deleteProject = async (req, res) => {
+  try {
+    const { id } = req.params
+
+
+    const project = await Project.findById(id)
+    if (!project) {
+      return res.status(404).json({
+        success: false,
+        message: "Is is not found"
+      })
+    }
+
+    await Project.findByIdAndDelete(id)
+    return res.status(200).json({
+      success: true,
+      mmessage: "Project deleted success fully"
+    })
+  } catch (error) {
+    console.log(error)
+    return res.status(400).json({
+      success: false,
+      message: "Id is not matching"
+    })
+  }
+
+}
+
+
+// export const deleteService = async (req, res) => {
+//   try {
+//     const { id } = req.params;
+
+//     const service = await Service.findById(id);
+
+//     if (!service) {
+//       return res.status(404).json({
+//         success: false,
+//         message: "Service not found",
+//       });
+//     }
+
+//     await Service.findByIdAndDelete(id);
+
+//     return res.status(200).json({
+//       success: true,
+//       message: "Service deleted successfully",
+//     });
+//   } catch (error) {
+//     console.log(error);
+
+//     return res.status(500).json({
+//       success: false,
+//       message: "Failed to delete service",
+//     });
+//   }
+// };
 
 
