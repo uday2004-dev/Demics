@@ -112,29 +112,3 @@ const SideBar = () => {
 
 export default SideBar;
 
-
-
-// import React from 'react'
-// import { Outlet, useNavigate } from 'react-router-dom'
-
-// const SideBar = () => {
-//     const navigate=useNavigate()
-//   return (
-//    <div className="flex min-h-screen">
-//   <div className='flex flex-col items-start'>
-//     <button onClick={()=>navigate("/sideBar/dashboard")}>Dashboard</button>
-//     <button onClick={()=>navigate("/sideBar/project")}>Projects</button>
-//     <button onClick={()=>{navigate("/sideBar/services")}}>Our Services</button>
-//     <button onClick={()=>{navigate("/sideBar/blogs")}}>Blogs</button>
-//     <button onClick={()=>{navigate("/sideBar/testimonial")}}>Testimonial</button>
-//     <button onClick={()=>{navigate("/sideBar/inquaries")}}>Inquiries</button>
-//     <button onClick={()=>{navigate("/sideBar/team")}}>Team</button>
-//   </div>
-//   <div className='flex-1'>
-//     <Outlet/>
-//   </div>
-// </div>
-//   )
-// }
-
-// export default SideBar

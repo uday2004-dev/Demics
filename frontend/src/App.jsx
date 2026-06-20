@@ -10,7 +10,9 @@ import ProjectAdd from '../components/ProjectAdd'
 import OurServices from '../components/OurServices'
 import Services from '../components/Services'
 import Blogs from '../components/Blogs'
+import Testimonial from '../components/Testimonial'
 import CreateBlogs from '../components/CreateBlogs'
+import CreateTesti from '../components/createTesti'
 
 
 
@@ -57,6 +59,12 @@ const App = () => {
         {
           path: "blogs/createBlogs",
           element: <CreateBlogs />
+        },{
+          path:"testimonial",
+          element:<Testimonial/>
+        },{
+          path:"testimonial/createTestimonial",
+          element:<CreateTesti/>
         }
       ]
     }
