@@ -14,6 +14,9 @@ import Testimonial from '../components/Testimonial'
 import CreateBlogs from '../components/CreateBlogs'
 import CreateTesti from '../components/createTesti'
 
+import TeamCreate from '../components/TeamCreate'
+import Team from '../components/Team'
+
 
 
 
@@ -59,12 +62,20 @@ const App = () => {
         {
           path: "blogs/createBlogs",
           element: <CreateBlogs />
-        },{
-          path:"testimonial",
-          element:<Testimonial/>
-        },{
-          path:"testimonial/createTestimonial",
-          element:<CreateTesti/>
+        }, {
+          path: "testimonial",
+          element: <Testimonial />
+        }, {
+          path: "testimonial/createTestimonial",
+          element: <CreateTesti />
+        },
+        {
+          path: "team",
+          element: <Team/>
+        },
+        {
+          path:"team/teamCreate",
+          element:<TeamCreate/>
         }
       ]
     }
