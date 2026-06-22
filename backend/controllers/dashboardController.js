@@ -3,15 +3,15 @@ import { Inquiry } from "../models/dashboard.js";
 // Create Inquiry
 export const createInquiry = async (req, res) => {
   try {
-    const { name, email, phone, message } = req.body;
+    const { name, email, message } = req.body;
 
     // Required fields
     if (
       // !formType?.trim() ||
       !name?.trim() ||
       !email?.trim() ||
-      !message?.trim()||
-      !phone?.trim()
+      !message?.trim()
+      // !phone?.trim()
     ) {
       return res.status(400).json({
         success: false,
@@ -52,7 +52,7 @@ export const createInquiry = async (req, res) => {
       // formType,
       name: name.trim(),
       email: email.trim(),
-      phone: phone?.trim() || "",
+      // phone: phone?.trim() || "",
       message: message.trim(),
     });
 

@@ -20,7 +20,7 @@ const inquirySchema = new mongoose.Schema(
 
     phone: {
       type: String,
-      required: true,
+      // required: true,
     },
 
     message: {
