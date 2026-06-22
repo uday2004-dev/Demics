@@ -16,6 +16,7 @@ import CreateTesti from '../components/createTesti'
 
 import TeamCreate from '../components/TeamCreate'
 import Team from '../components/Team'
+import Inquery from '../components/Inquery'
 
 
 
@@ -71,12 +72,16 @@ const App = () => {
         },
         {
           path: "team",
-          element: <Team/>
+          element: <Team />
         },
         {
-          path:"team/teamCreate",
-          element:<TeamCreate/>
+          path: "team/teamCreate",
+          element: <TeamCreate />
+        }, {
+          path: "inquaries",
+          element: <Inquery />
         }
+
       ]
     }
 

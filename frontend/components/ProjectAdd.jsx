@@ -6,7 +6,7 @@ import { GrGallery } from "react-icons/gr";
 
 const ProjectAdd = () => {
   const [services, setServices] = useState([]);
-  const navigate=useNavigate()
+  const navigate = useNavigate()
 
   const [formData, setFormData] = useState({
     title: "",
@@ -28,8 +28,8 @@ const ProjectAdd = () => {
 
       setServices(
         res.data.services ||
-          res.data.data ||
-          []
+        res.data.data ||
+        []
       );
     } catch (error) {
       console.log(error);
@@ -87,7 +87,7 @@ const ProjectAdd = () => {
 
       alert(
         error.response?.data?.message ||
-          "Something went wrong"
+        "Something went wrong"
       );
     }
   };
@@ -197,22 +197,22 @@ const ProjectAdd = () => {
 
         {/* Upload Section */}
         <div className="mt-8">
-            <label
-                htmlFor="photo"
-                className="w-full h-[320px] rounded-2xl bg-purple-500 flex items-center justify-center cursor-pointer overflow-hidden"
-            >
-                {photo ? (
-                <img
-                    src={URL.createObjectURL(photo)}
-                    alt="preview"
-                    className="w-full h-full object-cover"
-                />
-                ) : (
-                <div className="text-6xl">
-                    <GrGallery />
-                </div>
-                )}
-            </label>
+          <label
+            htmlFor="photo"
+            className="w-full h-[320px] rounded-2xl bg-purple-500 flex items-center justify-center cursor-pointer overflow-hidden"
+          >
+            {photo ? (
+              <img
+                src={URL.createObjectURL(photo)}
+                alt="preview"
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="text-6xl">
+                <GrGallery />
+              </div>
+            )}
+          </label>
 
           <input
             id="photo"
@@ -224,92 +224,11 @@ const ProjectAdd = () => {
             }
           />
 
-
-                
-                
-        </div>
-                     <div>
-                <label className="block mb-2">
-                    Description
-                </label>
-
-                <textarea
-                    name="description"
-                    value={formData.description}
-                    onChange={handleChange}
-                    placeholder="Enter here"
-                    className="w-150 h-36 bg-transparent border border-gray-600 rounded-lg px-4 py-3 outline-none resize-none"
-                />
-                </div>
-         
-
-          <div className="mt-8">
-            <label
-                htmlFor="photo"
-                className="w-full h-[320px] rounded-2xl bg-purple-500 flex items-center justify-center cursor-pointer overflow-hidden"
-            >
-                {photo ? (
-                <img
-                    src={URL.createObjectURL(photo)}
-                    alt="preview"
-                    className="w-full h-full object-cover"
-                />
-                ) : (
-                <div className="text-6xl">
-                    <GrGallery />
-                </div>
-                )}
-            </label>
-
-            <div>
-
-             <div className="mt-8">
-            <label
-                htmlFor="photo"
-                className="w-full h-[320px] rounded-2xl bg-purple-500 flex items-center justify-center cursor-pointer overflow-hidden"
-            >
-                {photo ? (
-                <img
-                    src={URL.createObjectURL(photo)}
-                    alt="preview"
-                    className="w-full h-full object-cover"
-                />
-                ) : (
-                <div className="text-6xl">
-                    <GrGallery />
-                </div>
-                )}
-            </label>
-
-          <input
-            id="photo"
-            type="file"
-            accept="image/*"
-            className="hidden"
-            onChange={(e) =>
-              setPhoto(e.target.files[0])
-            }
-          />
-
-
-                
-                
-        </div>
-                   
 </div>
-          <input
-            id="photo"
-            type="file"
-            accept="image/*"
-            className="hidden"
-            onChange={(e) =>
-              setPhoto(e.target.files[0])
-            }
-          />  
-        </div>
-                   
+
+
       
-        
+
 
         <button
           type="submit"

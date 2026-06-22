@@ -9,6 +9,7 @@ import serviceRoute from "./routes/serviceRoute.js";
 import testimonialRoute from "./routes/testimonialRoute.js"
 import blogRoute from "./routes/blogRoute.js"
 import teamRoute from "./routes/teamRoute.js"
+import inqueryRoute from "./routes/inqueryRoute.js"
 
 import cors from "cors";
 
@@ -39,6 +40,7 @@ app.use("/api/services",serviceRoute)
 app.use("/api/blog",blogRoute)
 app.use("/api/testimonial",testimonialRoute)
 app.use("/api/team",teamRoute)
+app.use("/api/inquery",inqueryRoute)
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
