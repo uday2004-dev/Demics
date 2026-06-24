@@ -40,3 +40,5 @@ const inquirySchema = new mongoose.Schema(
 );
 
 export const Inquiry = mongoose.model("Inquiry", inquirySchema);
+
+

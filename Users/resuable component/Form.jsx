@@ -109,7 +109,7 @@ const Form = () => {
               disabled={loading}
               className="px-8 py-3 rounded-full bg-purple-600 hover:bg-purple-700 transition"
             >
-              {loading ? "Submitting..." : "SEE MORE"}
+              {loading ? "Submitting..." : "Submit"}
             </button>
           </div>
         </form>

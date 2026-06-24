@@ -1,101 +1,113 @@
 
-
-
 import React, { useState } from "react";
-import { createService, deleteService } from "../api/servicesApi";
+import { createService } from "../api/servicesApi";
 import { useNavigate } from "react-router-dom";
 
 const Services = () => {
-    const [service, setService] = useState({
-        name: "",
+  const navigate = useNavigate();
+
+  const [service, setService] = useState({
+    name: "",
+    description: "",
+  });
+
+  const [servicePic, setServicePic] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setService({
+      ...service,
+      [e.target.name]: e.target.value,
     });
+  };
 
-    const [servicePic, setServicePic] = useState(null);
-    const [loading, setLoading] = useState(false);
+  const createServices = async (e) => {
+    e.preventDefault();
 
-    const handleChange = (e) => {
-        setService({
-            ...service,
-            [e.target.name]: e.target.value,
-        });
-    };
-    const navigate=useNavigate()
+    try {
+      setLoading(true);
 
+      const data = new FormData();
 
-    const createServices = async (e) => {
-        e.preventDefault();
+      data.append("name", service.name);
+      data.append("description", service.description);
 
-        try {
-            setLoading(true);
+      if (servicePic) {
+        data.append("photo", servicePic);
+      }
 
-            const data = new FormData();
+      const res = await createService(data);
 
-            data.append("name", service.name);
+      alert(res.data.message);
 
-            if (servicePic) {
-                data.append("photo", servicePic);
-            }
+      setService({
+        name: "",
+        description: "",
+      });
 
-            const res = await createService(data);
+      setServicePic(null);
 
-            alert(res.data.message);
+      navigate("/sideBar/services");
+    } catch (error) {
+      console.log(error);
 
-            setService({
-                name: "",
-            });
+      alert(
+        error.response?.data?.message ||
+          "Something went wrong"
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
 
-            setServicePic(null);
-            navigate("/sideBar/services")
-        } catch (error) {
-            console.log(error);
+  return (
+    <div className="min-h-screen flex justify-center items-center bg-black">
+      <form
+        onSubmit={createServices}
+        className="flex flex-col gap-4 p-6 bg-[#1E1E1E] rounded-lg w-[500px]"
+      >
+        <h2 className="text-white text-2xl font-semibold">
+          Create Service
+        </h2>
 
-            alert(
-                error.response?.data?.message ||
-                "Something went wrong"
-            );
-        } finally {
-            setLoading(false);
-        }
-    };
+        <input
+          type="text"
+          name="name"
+          value={service.name}
+          onChange={handleChange}
+          placeholder="Service Name"
+          className="border border-gray-600 bg-transparent text-white p-3 rounded outline-none"
+          required
+        />
 
-    return (
-        <div className="min-h-screen flex justify-center items-center bg-black">
-            <form
-                onSubmit={createServices}
-                className="flex flex-col gap-4 p-6 bg-[#1E1E1E] rounded-lg w-[400px]"
-            >
-                <h2 className="text-white text-2xl font-semibold">
-                    Create Service
-                </h2>
+        <textarea
+          name="description"
+          value={service.description}
+          onChange={handleChange}
+          placeholder="Service Description"
+          rows="5"
+          className="border border-gray-600 bg-transparent text-white p-3 rounded outline-none resize-none"
+          required
+        />
 
-                <input
-                    type="text"
-                    name="name"
-                    value={service.name}
-                    onChange={handleChange}
-                    placeholder="Service Name"
-                    className="border border-gray-600 bg-transparent text-white p-3 rounded"
-                />
+        <input
+          type="file"
+          accept="image/*"
+          onChange={(e) => setServicePic(e.target.files[0])}
+          className="text-white"
+          required
+        />
 
-                <input
-                    type="file"
-                    accept="image/*"
-                    onChange={(e) =>
-                        setServicePic(e.target.files[0])
-                    }
-                    className="text-white"
-                />
-
-                <button
-                    type="submit"
-                    disabled={loading}
-                    className="bg-purple-600 text-white p-3 rounded"
-                >
-                    {loading ? "Creating..." : "Create Service"}
-                </button>
-            </form>
-        </div>
-    );
+        <button
+          type="submit"
+          disabled={loading}
+          className="bg-purple-600 hover:bg-purple-700 text-white p-3 rounded transition"
+        >
+          {loading ? "Creating..." : "Create Service"}
+        </button>
+      </form>
+    </div>
+  );
 };
 
 export default Services;

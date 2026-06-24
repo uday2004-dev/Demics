@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post("/create-service", adminAuthMiddleware, upload.single("photo"),createService);
 router.get("/getAllServices",adminAuthMiddleware,getServices)
-router.get("/:id",adminAuthMiddleware,getServiceById)
+router.get("/:id",getServiceById)
 router.delete("/:id",adminAuthMiddleware,deleteService)
 router.patch("/:id",adminAuthMiddleware,editServices)
 

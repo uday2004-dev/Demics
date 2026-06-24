@@ -7,9 +7,9 @@ import { Project } from "../models/projectSchema.js";
 // Create Service
 export const createService = async (req, res) => {
   try {
-    const { name } = req.body;
+    const { name,description } = req.body;
 
-    if (!name || !req.file) {
+    if (!name ||!description|| !req.file) {
       return res.status(400).json({
         success: false,
         message: "Please fill all fields",
@@ -34,6 +34,7 @@ export const createService = async (req, res) => {
 
     const newService = await Service.create({
       name,
+      description,
       photo: result.secure_url,
     });
 
@@ -172,3 +173,6 @@ export const editServices = async (req, res) => {
     });
   }
 };
+
+
+
