@@ -8,6 +8,7 @@ import Home from "../components/Home";
 import AboutUs from "../components/AboutUs";
 import Services from "../components/Services";
 import Work from "../components/Work";
+import OpenBlogs from "../components/OpenBlogs";
 import Blogs from "../components/Blogs";
 
 const router = createBrowserRouter([
@@ -61,6 +62,16 @@ const router = createBrowserRouter([
       </>
     ),
   },
+  {
+  path: "/blogs/:id",
+  element: (
+    <>
+      <NavBar />
+      <OpenBlogs />
+      <Footer />
+    </>
+  ),
+},
 ]);
 
 const App = () => {

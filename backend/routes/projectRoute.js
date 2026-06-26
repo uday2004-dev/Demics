@@ -19,6 +19,6 @@ router.post(
 );
 router.get("/", getProjects);
 router.get("/:id", getProjectById);
-router.delete("/:id",deleteProject)
+router.delete("/:id",adminAuthMiddleware,deleteProject)
 
 export default router;

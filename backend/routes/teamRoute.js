@@ -12,8 +12,8 @@ import { upload } from "../middleware/multer.js";
   upload.single("photo"), // ye key Postman wali key se match honi chahiye
   createTeam
 );
-    router.get("/",adminAuthMiddleware,getTeam)
-    router.get("/:id",adminAuthMiddleware,getSingleTeam)
+    router.get("/",getTeam)
+    router.get("/:id",getSingleTeam)
     router.delete("/:id",adminAuthMiddleware,deleteTeam)
 
     export default router
