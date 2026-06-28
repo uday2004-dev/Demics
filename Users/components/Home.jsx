@@ -5,6 +5,8 @@ import ServicesCard from "../resuable component/ServicesCard";
 import Project from "../resuable component/Project";
 import Testimonial from "./Testimonial";
 import Form from "../resuable component/Form"
+import grid from "../src/assets/grid.png"
+import blur from "../src/assets/blurEffect.png"
 
 
 const Home = () => {
@@ -12,13 +14,26 @@ const Home = () => {
     <div className="bg-[#111111] overflow-hidden">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="min-h-screen flex items-center">
-        <div className="max-w-7xl mx-auto px-8 pt-24">
-          <div className="grid md:grid-cols-[1.2fr_0.8fr] items-center gap-16">
+      <section className="relative min-h-screen overflow-hidden bg-[#111111] flex items-center">
+
+        {/* Background Grid */}
+        <img
+          src={grid}
+          alt="Grid"
+          className="absolute bottom-0 left-0 w-full object-cover z-0 opacity-60"
+        />
+
+        {/* Purple Glow */}
+        <div className="absolute bottom-0 left-0 w-[700px] h-[350px] bg-purple-700/20 blur-[180px] rounded-full z-0" />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-8">
+          <div className="grid md:grid-cols-[1.15fr_0.85fr] items-center">
 
             {/* Left */}
-            <div>
+            <div className="-mt-10">
               <h1 className="text-white leading-none mb-8">
+
                 <span
                   className="italic text-5xl md:text-6xl"
                   style={{ fontFamily: "serif" }}
@@ -35,13 +50,14 @@ const Home = () => {
                 <span className="text-6xl md:text-7xl font-bold">
                   Digital-First World
                 </span>
+
               </h1>
 
               <p className="text-gray-400 max-w-xl leading-8 mb-10">
                 We help brands stand out with impactful design, smart digital
                 strategies, and engaging content. From websites and branding to
-                social media and marketing campaigns, our team brings your
-                vision to life with creativity and precision.
+                social media and marketing campaigns, our team brings your vision
+                to life with creativity and precision.
               </p>
 
               <button className="px-8 py-4 rounded-full bg-gradient-to-r from-[#B84DFF] to-[#7A00FF] text-white font-medium">
@@ -50,38 +66,25 @@ const Home = () => {
             </div>
 
             {/* Right */}
-            <div className="flex justify-center md:justify-end">
+            <div className="relative flex justify-center md:justify-end pr-20 -mt-16">
+
+              {/* Purple Glow */}
+              <div className="absolute top-1/2 right-12 -translate-y-1/2 w-[320px] h-[320px] bg-purple-600/35 blur-[120px] rounded-full"></div>
+
+              {/* Hero Image */}
               <img
                 src={heroImg}
                 alt="Hero"
-                className="w-[350px] md:w-[420px] object-contain"
+                className="relative z-20 w-[300px] object-contain -translate-y-6 translate-x-4"
               />
+
             </div>
 
           </div>
         </div>
+
       </section>
 
-      {/* ================= PARTNER STRIP ================= */}
-      {/* <div className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 py-8">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid grid-cols-2 md:grid-cols-7 gap-8 text-center text-white">
-            {[
-              "EVOLUTION",
-              "pigment play",
-              "L.A. COLORS",
-              "L.A. Girl",
-              "LORD & BERRY",
-              "MILANI",
-              "Gartner",
-            ].map((brand) => (
-              <div key={brand}>
-                <h4 className="font-bold">{brand}</h4>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> */}
 
       <div className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 py-8 overflow-hidden">
         <div className="animate-marquee">
@@ -117,7 +120,6 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-20 items-center">
 
-            {/* Left Content */}
             <div>
               <h2 className="text-white leading-tight">
                 <span className="text-4xl md:text-6xl font-bold">
@@ -157,22 +159,28 @@ const Home = () => {
               </button>
             </div>
 
-            {/* Right Rocket */}
-            <div className="flex justify-center md:justify-end">
-              <img
-                src={rocket}
-                alt="Rocket"
-                className="w-[420px] md:w-[550px] object-contain"
-              />
-            </div>
 
+
+            <div className="relative flex items-center justify-between">
+
+
+
+              <div className="flex justify-center md:justify-end w-full relative z-10">
+                <img
+                  src={rocket}
+                  alt="Rocket"
+                  className="w-[420px] md:w-[550px] object-contain"
+                />
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
       <section className="py-28 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-8">
 
-          {/* Heading */}
+  
           <div className="mb-16">
             <h3
               className="text-5xl md:text-6xl italic text-white"
@@ -185,7 +193,7 @@ const Home = () => {
 
           </div>
 
-          {/* Services Cards */}
+     
           <ServicesCard />
         </div>
       </section>
@@ -205,7 +213,7 @@ const Home = () => {
 
           </div>
 
-          {/* Services Cards */}
+
           <Project />
         </div>
       </section>
@@ -213,7 +221,29 @@ const Home = () => {
       <section className="py-28 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-8">
 
+          <h1 className="text-white leading-none mb-8">
 
+            <span
+              className="italic text-5xl md:text-6xl"
+              style={{ fontFamily: "serif" }}
+            >
+              Client
+            </span>
+
+            <span className="text-5xl md:text-6xl font-bold ml-3">
+              Testimonials:
+            </span>
+
+            <br />
+
+            <span className="text-6xl md:text-6xl font-bold">
+              Real Result, {"    "}
+            </span>
+            <span className="italic text-5xl md:text-6xl">
+              Real Feedback
+            </span>
+
+          </h1>
 
           {/* Testimonial Cards */}
           <Testimonial />
@@ -221,7 +251,7 @@ const Home = () => {
       </section>
       <section className="py-28 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-8">
-            <Form />
+          <Form />
         </div>
       </section>
 
@@ -232,3 +262,4 @@ const Home = () => {
 };
 
 export default Home;
+

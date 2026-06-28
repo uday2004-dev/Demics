@@ -27,7 +27,7 @@ const Testimonial = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#111111] overflow-hidden">
+    <section className="py-20 bg-[#111111] overflow-hidden mx-">
       <div className="space-y-8">
 
         {/* Row 1 - Right to Left */}

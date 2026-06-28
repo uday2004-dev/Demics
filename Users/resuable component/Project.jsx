@@ -64,7 +64,7 @@ const Project = () => {
   return (
     <section className="bg-black min-h-screen py-16 px-6">
       <div className="max-w-7xl mx-auto">
-      
+    
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {projects.map((project) => (

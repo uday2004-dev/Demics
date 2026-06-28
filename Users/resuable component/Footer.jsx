@@ -7,6 +7,7 @@ import {
 import { HiOutlineMail } from "react-icons/hi";
 import { FiPhone } from "react-icons/fi";
 import logo from "../src/assets/demics.png"
+import grid from "../src/assets/grid.png"
 
 const Footer = () => {
   return (
@@ -124,7 +125,11 @@ const Footer = () => {
       {/* Logo Section */}
       <div className="relative bg-[#151515]">
         <div className="absolute inset-0 bg-gradient-to-t from-purple-700/60 to-transparent" />
-
+  <img
+          src={grid}
+          alt="Grid"
+          className="absolute bottom-0 left-0 w-full object-cover z-0 opacity-60"
+        />
       <div className="max-w-7xl mx-auto px-8 py-16 relative flex justify-center">
   <img
     src={logo}

@@ -10,6 +10,9 @@ import Services from "../components/Services";
 import Work from "../components/Work";
 import OpenBlogs from "../components/OpenBlogs";
 import Blogs from "../components/Blogs";
+import TermsCondition from "../components/TermsCondition";
+import Form from "../resuable component/Form";
+
 
 const router = createBrowserRouter([
   {
@@ -72,7 +75,20 @@ const router = createBrowserRouter([
     </>
   ),
 },
+ {
+  path: "/terms-condition",
+  element: (
+    <>
+      <NavBar />
+      <TermsCondition />
+      <Form />
+      <Footer />
+    </>
+  ),
+}
 ]);
+
+
 
 const App = () => {
   return <RouterProvider router={router} />;

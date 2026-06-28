@@ -71,37 +71,3 @@ const ServicesCard = () => {
 
 export default ServicesCard;
 
-// import React from "react";
-
-// const ServicesCard = () => {
-//   return (
-//     <div className="flex justify-center bg-black py-10">
-//       <div className="w-[1000px] h-[420px] border border-purple-400 rounded-[30px] flex items-center justify-between px-16 bg-black">
-        
-//         {/* Image */}
-//         <div className="w-[320px] h-[320px] rounded-[20px] bg-gradient-to-b from-purple-600 to-fuchsia-500"></div>
-
-//         {/* Content */}
-//         <div className="w-[380px]">
-//           <h1
-//             className="text-white text-[72px] italic leading-none mb-6"
-//             style={{ fontFamily: "serif" }}
-//           >
-//             Branding
-//           </h1>
-
-//           <p className="text-white text-[20px] leading-8 mb-8">
-//             We craft custom websites, branding, and digital strategies to help
-//             your business stand out and thrive online.
-//           </p>
-
-//           <button className="bg-gradient-to-r from-purple-700 to-fuchsia-500 text-white px-8 py-3 rounded-full">
-//             LEARN MORE
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ServicesCard;

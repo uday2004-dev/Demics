@@ -214,12 +214,12 @@ const AboutUs = () => {
       </div>
 
       {/* TEAM */}
-     <div className="max-w-7xl mx-auto px-8 py-28">
+     <div className="max-w-7xl mx-auto px-8 py-28 ">
   <h2
     className="text-6xl italic mb-8"
     style={{ fontFamily: "serif" }}
   >
-    Our Team
+    Meet Our Founder
   </h2>
 
   <p className="text-gray-400 text-lg leading-8 max-w-4xl mb-16">
