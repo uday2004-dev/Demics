@@ -101,18 +101,9 @@ export const getProjects = async (req, res) => {
 };
 
 
-
 export const getProjectById = async (req, res) => {
   try {
     const { id } = req.params;
-
-
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-      return res.status(400).json({
-        success: false,
-        message: "Invalid project ID",
-      });
-    }
 
     const project = await Project.findById(id)
       .populate("service", "name photo")
@@ -130,13 +121,48 @@ export const getProjectById = async (req, res) => {
       project,
     });
   } catch (error) {
-    console.error(error);
     return res.status(500).json({
       success: false,
-      message: "Unable to fetch project",
+      message: error.message,
     });
   }
 };
+
+// export const getProjectById = async (req, res) => {
+//   try {
+//     const { id } = req.params;
+
+
+//     if (!mongoose.Types.ObjectId.isValid(id)) {
+//       return res.status(400).json({
+//         success: false,
+//         message: "Invalid project ID",
+//       });
+//     }
+
+//     const project = await Project.findById(id)
+//       .populate("service", "name photo")
+//       .lean();
+
+//     if (!project) {
+//       return res.status(404).json({
+//         success: false,
+//         message: "Project not found",
+//       });
+//     }
+
+//     return res.status(200).json({
+//       success: true,
+//       project,
+//     });
+//   } catch (error) {
+//     console.error(error);
+//     return res.status(500).json({
+//       success: false,
+//       message: "Unable to fetch project",
+//     });
+//   }
+// };
 
 
 export const deleteProject = async (req, res) => {
@@ -167,34 +193,63 @@ export const deleteProject = async (req, res) => {
 
 }
 
-
-// export const deleteService = async (req, res) => {
+// export const getProjectsByService = async (req, res) => {
 //   try {
 //     const { id } = req.params;
 
-//     const service = await Service.findById(id);
-
-//     if (!service) {
-//       return res.status(404).json({
+//     if (!mongoose.Types.ObjectId.isValid(id)) {
+//       return res.status(400).json({
 //         success: false,
-//         message: "Service not found",
+//         message: "Invalid service ID",
 //       });
 //     }
 
-//     await Service.findByIdAndDelete(id);
+//     const projects = await Project.find({ service: id })
+//       .populate("service", "name photo")
+//       .lean();
 
 //     return res.status(200).json({
 //       success: true,
-//       message: "Service deleted successfully",
+//       count: projects.length,
+//       projects,
 //     });
 //   } catch (error) {
 //     console.log(error);
 
 //     return res.status(500).json({
 //       success: false,
-//       message: "Failed to delete service",
+//       message: "Unable to fetch projects",
 //     });
 //   }
 // };
 
+export const getProjectsByService = async (req, res) => {
+  try {
+    const { id } = req.params;
 
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid service ID",
+      });
+    }
+
+    const projects = await Project.find({
+      service: id,
+    })
+      .populate("service", "title photo")
+      .lean();
+
+    return res.status(200).json({
+      success: true,
+      projects,
+    });
+  } catch (error) {
+    console.log(error);
+
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};

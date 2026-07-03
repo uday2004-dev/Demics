@@ -5,7 +5,7 @@ import {
   getProjectById,
   deleteProject,
 } from "../controllers/project.Controller.js";
-
+import { getProjectsByService } from "../controllers/project.Controller.js";
 import { upload } from "../middleware/multer.js"
 import adminAuthMiddleware from "../middleware/adminAuthMiddleware.js";
 
@@ -17,8 +17,12 @@ router.post(
   upload.single("photo"),
   createProject
 );
+
+
 router.get("/", getProjects);
+router.get("/service/:id", getProjectsByService);
 router.get("/:id", getProjectById);
-router.delete("/:id",adminAuthMiddleware,deleteProject)
+router.delete("/:id", adminAuthMiddleware, deleteProject);
+
 
 export default router;

@@ -145,6 +145,15 @@ export const editServices = async (req, res) => {
     const { id } = req.params;
     const updateData = req.body;
 
+    // 🔥 if name updated → regenerate slug
+    if (updateData.name) {
+      updateData.slug = updateData.name
+        .toLowerCase()
+        .trim()
+        .replace(/ /g, "-")
+        .replace(/[^\w-]+/g, "");
+    }
+
     const updatedService = await Service.findByIdAndUpdate(
       id,
       updateData,
@@ -176,3 +185,30 @@ export const editServices = async (req, res) => {
 
 
 
+export const getServiceDetails = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const service = await Service.findById(id);
+
+    if (!service) {
+      return res.status(404).json({
+        success: false,
+        message: "Service not found",
+      });
+    }
+
+    const projects = await Project.find({ service: id });
+
+    return res.status(200).json({
+      success: true,
+      service,
+      projects,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};

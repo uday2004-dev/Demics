@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -10,9 +12,17 @@ import Services from "../components/Services";
 import Work from "../components/Work";
 import OpenBlogs from "../components/OpenBlogs";
 import Blogs from "../components/Blogs";
-import TermsCondition from "../components/TermsCondition";
-import Form from "../resuable component/Form";
+import Contact from "../components/Contact";
+import Privacy from "../components/Privacy";
+import Terms from "../components/Terms";
 
+// import ServiceDetails from "../resuable component/ServiceDetails";
+// import SingleService from "../resuable component/SingleService";
+import Branding from "../components/Branding"; // 🔥 ADD THIS
+import Marketing from "../components/Marketing";
+import Adcreations from "../components/Adcreations";
+import WebDevelopment from "../components/WebDevelopment";
+import SocialMediaManagement from "../components/SocialMediaManagement";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +55,31 @@ const router = createBrowserRouter([
       </>
     ),
   },
+
+  // 🔥 SERVICE DETAILS (ID BASED)
+//  {
+//   path: "/services/:id",
+//   element: (
+//     <>
+//       <NavBar />
+//       <SingleService />
+//       <Footer />
+//     </>
+//   ),
+// },
+
+  // 🔥 BRANDING PAGE (STATIC ROUTE)
+  // {
+  //   path: "/branding",
+  //   element: (
+  //     <>
+  //       <NavBar />
+  //       <Branding />
+  //       <Footer />
+  //     </>
+  //   ),
+  // },
+
   {
     path: "/work",
     element: (
@@ -66,29 +101,128 @@ const router = createBrowserRouter([
     ),
   },
   {
-  path: "/blogs/:id",
+    path: "/blogs/:id",
+    element: (
+      <>
+        <NavBar />
+        <OpenBlogs />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/contact",
+    element: (
+      <>
+        <NavBar />
+        <Contact />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/terms-condition",
+    element: (
+      <>
+        <NavBar />
+        <Terms />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/privacy-policy",
+    element: (
+      <>
+        <NavBar />
+        <Privacy />
+        <Footer />
+      </>
+    ),
+  },
+  // {
+  //   path: "/marketing",
+  //   element: (
+  //     <>
+  //       <NavBar />
+  //       <Marketing />
+  //       <Footer />
+  //     </>
+  //   ),
+  // },
+  // {
+  //   path: "/adcreation",
+  //   element: (
+  //     <>
+  //       <NavBar />
+  //       <Adcreations />
+  //       <Footer />
+  //     </>
+  //   ),
+  // },
+  // {
+  //   path: "/development",
+  //   element: (
+  //     <>
+  //       <NavBar />
+  //       <WebDevelopment />
+  //       <Footer />
+  //     </>
+  //   ),
+  // },
+
+
+  {
+  path: "/branding/:id",
   element: (
     <>
       <NavBar />
-      <OpenBlogs />
+      <Branding />
       <Footer />
     </>
   ),
 },
- {
-  path: "/terms-condition",
+{
+  path: "/marketing/:id",
   element: (
     <>
       <NavBar />
-      <TermsCondition />
-      <Form />
+      <Marketing />
       <Footer />
     </>
   ),
-}
+},
+{
+  path: "/adcreation/:id",
+  element: (
+    <>
+      <NavBar />
+      <Adcreations />
+      <Footer />
+    </>
+  ),
+},
+{
+  path: "/development/:id",
+  element: (
+    <>
+      <NavBar />
+      <WebDevelopment />
+      <Footer />
+    </>
+  ),
+},
+{
+  path: "/socialmediamanagement/:id",
+  element: (
+    <>
+      <NavBar />
+  <SocialMediaManagement/>
+      <Footer />
+    </>
+  ),
+},
 ]);
-
-
 
 const App = () => {
   return <RouterProvider router={router} />;

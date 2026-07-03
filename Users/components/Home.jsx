@@ -14,46 +14,47 @@ const Home = () => {
     <div className="bg-[#111111] overflow-hidden">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative min-h-screen overflow-hidden bg-[#111111] flex items-center">
+      <section className="relative min-h-screen overflow-hidden bg-[#111111] flex items-center py-16 lg:py-0">
 
         {/* Background Grid */}
         <img
           src={grid}
           alt="Grid"
-          className="absolute bottom-0 left-0 w-full object-cover z-0 opacity-60"
+          className="absolute bottom-0 left-0 w-full h-full object-cover z-0 opacity-60"
         />
 
         {/* Purple Glow */}
-        <div className="absolute bottom-0 left-0 w-[700px] h-[350px] bg-purple-700/20 blur-[180px] rounded-full z-0" />
+        <div className="absolute bottom-0 left-0 w-[320px] sm:w-[450px] lg:w-[700px] h-[220px] sm:h-[280px] lg:h-[350px] bg-purple-700/20 blur-[120px] lg:blur-[180px] rounded-full z-0" />
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-8">
-          <div className="grid md:grid-cols-[1.15fr_0.85fr] items-center">
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-5 sm:px-8 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] items-center gap-14 lg:gap-0">
 
             {/* Left */}
-            <div className="-mt-10">
-              <h1 className="text-white leading-none mb-8">
+            <div className="mt-8 lg:-mt-10 text-center lg:text-left">
+
+              <h1 className="text-white leading-tight lg:leading-none mb-6 lg:mb-8">
 
                 <span
-                  className="italic text-5xl md:text-6xl"
+                  className="italic text-4xl sm:text-5xl lg:text-6xl"
                   style={{ fontFamily: "serif" }}
                 >
                   Creative Solutions
                 </span>
 
-                <span className="text-5xl md:text-6xl font-bold ml-3">
-                  for a
+                <span className="text-4xl sm:text-5xl lg:text-6xl font-bold lg:ml-3 ml-2">
+                  {" "}for a
                 </span>
 
                 <br />
 
-                <span className="text-6xl md:text-7xl font-bold">
+                <span className="text-5xl sm:text-6xl lg:text-7xl font-bold">
                   Digital-First World
                 </span>
 
               </h1>
 
-              <p className="text-gray-400 max-w-xl leading-8 mb-10">
+              <p className="text-gray-400 max-w-xl mx-auto lg:mx-0 leading-7 lg:leading-8 mb-8 lg:mb-10 text-sm sm:text-base">
                 We help brands stand out with impactful design, smart digital
                 strategies, and engaging content. From websites and branding to
                 social media and marketing campaigns, our team brings your vision
@@ -63,19 +64,20 @@ const Home = () => {
               <button className="px-8 py-4 rounded-full bg-gradient-to-r from-[#B84DFF] to-[#7A00FF] text-white font-medium">
                 BOOK A CALL
               </button>
+
             </div>
 
             {/* Right */}
-            <div className="relative flex justify-center md:justify-end pr-20 -mt-16">
+            <div className="relative flex justify-center lg:justify-end lg:pr-20 mt-10 lg:mt-0 lg:-mt-16">
 
               {/* Purple Glow */}
-              <div className="absolute top-1/2 right-12 -translate-y-1/2 w-[320px] h-[320px] bg-purple-600/35 blur-[120px] rounded-full"></div>
+              <div className="absolute top-1/2 left-1/2 lg:left-auto lg:right-12 -translate-x-1/2 lg:translate-x-0 -translate-y-1/2 w-[230px] sm:w-[280px] lg:w-[320px] h-[230px] sm:h-[280px] lg:h-[320px] bg-purple-600/35 blur-[90px] lg:blur-[120px] rounded-full"></div>
 
               {/* Hero Image */}
               <img
                 src={heroImg}
                 alt="Hero"
-                className="relative z-20 w-[300px] object-contain -translate-y-6 translate-x-4"
+                className="relative z-20 w-[240px] sm:w-[280px] lg:w-[300px] object-contain lg:-translate-y-6 lg:translate-x-4"
               />
 
             </div>
@@ -114,73 +116,77 @@ const Home = () => {
         </div>
       </div>
       {/* ================= ROCKET SECTION ================= */}
-      <section className="relative py-28">
-        <div className="absolute right-0 top-0 w-[700px] h-[700px] bg-purple-700/20 blur-[180px] rounded-full" />
+      <section className="relative py-20 lg:py-28 overflow-hidden">
 
-        <div className="max-w-7xl mx-auto px-8 relative z-10">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
+  {/* Purple Glow */}
+  <div className="absolute right-0 top-0 w-[300px] sm:w-[500px] lg:w-[700px] h-[300px] sm:h-[500px] lg:h-[700px] bg-purple-700/20 blur-[120px] lg:blur-[180px] rounded-full" />
 
-            <div>
-              <h2 className="text-white leading-tight">
-                <span className="text-4xl md:text-6xl font-bold">
-                  we are a{" "}
-                </span>
+  <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
-                <span
-                  className="text-4xl md:text-6xl italic"
-                  style={{ fontFamily: "serif" }}
-                >
-                  design-led, strategy-driven
-                </span>
+      {/* Left */}
+      <div className="text-center lg:text-left">
 
-                <br />
+        <h2 className="text-white leading-tight">
 
-                <span className="text-4xl md:text-6xl font-bold">
-                  digital marketing and
-                </span>
+          <span className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+            we are a{" "}
+          </span>
 
-                <br />
+          <span
+            className="text-4xl sm:text-5xl lg:text-6xl italic"
+            style={{ fontFamily: "serif" }}
+          >
+            design-led, strategy-driven
+          </span>
 
-                <span className="text-4xl md:text-6xl font-bold">
-                  creative design agency
-                </span>
-              </h2>
+          <br />
 
-              <p className="mt-10 text-gray-400 leading-8 max-w-xl">
-                With DEMICS, your brand is designed with intention, your stories
-                are digitalized with emotion, and your presence evolves with
-                culture. We market across media, innovate with AI, create using
-                cutting-edge technology, and drive results through strategic
-                thinking.
-              </p>
+          <span className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+            digital marketing and
+          </span>
 
-              <button className="mt-10 px-8 py-4 rounded-full bg-gradient-to-r from-[#B84DFF] to-[#7A00FF] text-white font-medium">
-                LEARN MORE ABOUT US
-              </button>
-            </div>
+          <br />
 
+          <span className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+            creative design agency
+          </span>
 
+        </h2>
 
-            <div className="relative flex items-center justify-between">
+        <p className="mt-8 lg:mt-10 text-gray-400 leading-7 lg:leading-8 max-w-xl mx-auto lg:mx-0">
+          With DEMICS, your brand is designed with intention, your stories
+          are digitalized with emotion, and your presence evolves with
+          culture. We market across media, innovate with AI, create using
+          cutting-edge technology, and drive results through strategic
+          thinking.
+        </p>
 
+        <button className="mt-8 lg:mt-10 px-8 py-4 rounded-full bg-gradient-to-r from-[#B84DFF] to-[#7A00FF] text-white font-medium">
+          LEARN MORE ABOUT US
+        </button>
 
+      </div>
 
-              <div className="flex justify-center md:justify-end w-full relative z-10">
-                <img
-                  src={rocket}
-                  alt="Rocket"
-                  className="w-[420px] md:w-[550px] object-contain"
-                />
-              </div>
+      {/* Right */}
+      <div className="relative flex justify-center lg:justify-end">
 
-            </div>
-          </div>
-        </div>
-      </section>
+        <img
+          src={rocket}
+          alt="Rocket"
+          className="w-[280px] sm:w-[360px] md:w-[420px] lg:w-[550px] object-contain"
+        />
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
       <section className="py-28 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-8">
 
-  
+
           <div className="mb-16">
             <h3
               className="text-5xl md:text-6xl italic text-white"
@@ -193,7 +199,7 @@ const Home = () => {
 
           </div>
 
-     
+
           <ServicesCard />
         </div>
       </section>
@@ -262,4 +268,3 @@ const Home = () => {
 };
 
 export default Home;
-

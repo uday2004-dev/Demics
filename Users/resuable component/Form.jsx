@@ -44,7 +44,7 @@ const Form = () => {
 
       alert(
         error.response?.data?.message ||
-          "Something went wrong"
+        "Something went wrong"
       );
     } finally {
       setLoading(false);
@@ -52,8 +52,8 @@ const Form = () => {
   };
 
   return (
-    <section className="bg-black text-white py-20 px-6">
-      <div className="max-w-4xl mx-auto">
+    <section className="bg-[#161717] text-white py-20 px-6">
+      <div className="w-full max-w-[1320px] mx-auto px-6 lg:px-12 xl:px-20">
         <h1 className="text-5xl font-light mb-10">
           Interested in <br />
           <span className="font-normal">

@@ -21,7 +21,12 @@ const blogsSchema = mongoose.Schema({
     heading: {
         type: String,
         required: true,
-    }
+    },
+    slug: {
+    type: String,
+    required: true,
+    unique: true,
+}
 },
     {
         timestamps: true,
