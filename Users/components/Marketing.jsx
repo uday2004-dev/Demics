@@ -22,7 +22,7 @@ import targeting from "../src/assets/targeting.png"
 import plant from "../src/assets/plant.png"
 import ServiceProjects from "./ServiceProjects";
 import { useParams } from "react-router-dom";
-
+import marketing from "../src/assets/marketingHeader.png"
 
 
 
@@ -119,29 +119,27 @@ const Marketing = () => {
       const { id } = useParams();
     return (
         <div >
-            <section className="relative min-h-screen overflow-hidden flex items-center justify-center bg-gradient-to-r from-[#9B6DFF] via-[#3A0F6B] to-[#12001E]">
+            {/* <section className="relative min-h-screen overflow-hidden flex items-center justify-center bg-gradient-to-r from-[#9B6DFF] via-[#3A0F6B] to-[#12001E]">
 
-                {/* Left Glow */}
+         
                 <div className="absolute left-0 top-0 h-full w-[40%] bg-[#A56EFF]/30 blur-[140px] z-0" />
 
-                {/* Grid Image */}
+            
                 <img
                     src={grid}
                     alt="Grid"
                     className="absolute bottom-0 left-0 w-full object-cover opacity-60 z-0 pointer-events-none"
                 />
 
-                {/* Left Illustration */}
                 <img
                     src={Graphic_Element}
                     alt=""
                     className="absolute left-8 top-24 w-[340px] xl:w-[390px] z-20"
                 />
 
-                {/* Content */}
                 <div className="relative z-30 flex flex-col items-center text-center px-8">
 
-                    {/* Heading */}
+                   
                     <h1
                         className="text-white italic font-light leading-none
           text-[90px]
@@ -155,7 +153,7 @@ const Marketing = () => {
                         Marketing
                     </h1>
 
-                    {/* Green Stroke + Pen */}
+              
                     <div className="relative w-[760px] max-w-full -mt-6">
 
                         <img
@@ -164,7 +162,7 @@ const Marketing = () => {
                             className="w-full"
                         />
 
-                        {/* Pen */}
+            
                         <img
                             src={Capa_4}
                             alt=""
@@ -173,13 +171,20 @@ const Marketing = () => {
 
                     </div>
 
-                    {/* Description */}
                     <p className="mt-8 max-w-[930px] text-white/90 text-[18px] leading-[42px]">
                         we view marketing as a strategic growth engine—where creativity fuels engagement and data drives every decision. By blending market research, precision targeting, and compelling creative, we position your brand to capture attention, nurture interest, and convert prospects into lifelong customers. Whether launching a new product or scaling an established offering, our holistic campaigns deliver measurable uplift across every channel.
                     </p>
 
                 </div>
-            </section>
+            </section> */}
+
+                 <section className="w-full pt-24 bg-[#12001E]">
+                          <img
+                            src={marketing}
+                            alt="Hero"
+                            className="w-full h-auto block"
+                          />
+                        </section>
 
             <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
 
@@ -201,16 +206,7 @@ const Marketing = () => {
           px-7 pt-16 pb-8
           text-center"
                             >
-                                {/* Icon */}
-                                {/* <div className="absolute -top-10 left-1/2 -translate-x-1/2">
-                                    <div className="w-20 h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center">
-                                        <img
-                                            src={item.icon}
-                                            alt=""
-                                            className="w-9 h-9 object-contain"
-                                        />
-                                    </div>
-                                </div> */}
+                          
 <div className="absolute -top-10 left-1/2 -translate-x-1/2">
   <div className="w-20 h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center overflow-hidden">
     <img
@@ -223,12 +219,6 @@ const Marketing = () => {
                                 <h3 className="text-white text-2xl font-medium mb-5">
                                     {item.title}
                                 </h3>
-
-                                {/* <ul className="space-y-2 text-[#D8D8D8] text-[15px] leading-7 list-none">
-                                    {item.points.map((point, i) => (
-                                        <li className="decoration-none" key={i}>• {point}</li>
-                                    ))}
-                                </ul> */}
                                 <ul className="list-none space-y-2 text-[#D8D8D8] text-[15px] leading-7">
                                     {item.points.map((point, i) => (
                                         <li key={i}>• {point}</li>

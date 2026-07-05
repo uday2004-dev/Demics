@@ -1,130 +1,3 @@
-// import React, { useEffect, useState } from "react";
-// import { FiArrowUpRight } from "react-icons/fi";
-
-// const Project = () => {
-//   const [projects, setProjects] = useState([]);
-//   const [serviceName, setServiceName] = useState("");
-//   const [loading, setLoading] = useState(true);
-
-//   const fetchService = async (serviceId) => {
-//     try {
-//       const res = await fetch(
-//         `http://localhost:3000/api/services/${serviceId}`
-//       );
-
-//       const data = await res.json();
-
-//       setServiceName(
-//         data?.name ||
-//           data?.service?.name ||
-//           data?.data?.name ||
-//           "Projects"
-//       );
-//     } catch (error) {
-//       console.log("Error fetching service:", error);
-//     }
-//   };
-
-//   const fetchProjects = async () => {
-//     try {
-//       const res = await fetch("http://localhost:3000/api/projects");
-//       const data = await res.json();
-
-//       const projectsData = data.projects || data;
-
-//       setProjects(projectsData);
-
-//       if (projectsData.length > 0 && projectsData[0].service) {
-//         const serviceId =
-//           typeof projectsData[0].service === "object"
-//             ? projectsData[0].service._id
-//             : projectsData[0].service;
-
-//         fetchService(serviceId);
-//       }
-//     } catch (error) {
-//       console.log("Error fetching projects:", error);
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   useEffect(() => {
-//     fetchProjects();
-//   }, []);
-
-//   if (loading) {
-//     return (
-//       <section className="w-full bg-black min-h-screen flex justify-center items-center">
-//         <h1 className="text-white text-2xl">Loading...</h1>
-//       </section>
-//     );
-//   }
-
-//   return (
-//     <section className="w-full bg-[#161717] py-16">
-//       <div className="w-full max-w-[1320px] mx-auto px-6 lg:px-12 xl:px-20">
-
-//         {/* Optional heading */}
-//         <h2 className="text-white text-4xl md:text-6xl font-light mb-12">
-//           {/* {serviceName || "Projects"} */}
-//         </h2>
-
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-//           {projects.map((project) => (
-//             <div key={project._id}>
-//               <div className="aspect-square overflow-hidden rounded-[24px]">
-//                 <img
-//                   src={project.photo}
-//                   alt={project.title}
-//                   className="w-full h-full object-cover rounded-[24px]"
-//                 />
-//               </div>
-
-//               <div className="mt-5 flex justify-between items-start gap-4">
-//                 <div className="flex-1">
-//                   <h2 className="text-white text-2xl font-medium mb-3 uppercase">
-//                     {project.title}
-//                   </h2>
-
-//                   {project.liveProject && (
-//                     <a
-//                       href={project.liveProject}
-//                       target="_blank"
-//                       rel="noopener noreferrer"
-//                       className="inline-block bg-[#222] text-gray-300 px-4 py-2 rounded-lg mb-4 text-sm"
-//                     >
-//                       {project.liveProject}
-//                     </a>
-//                   )}
-
-//                   <p className="text-gray-400 text-sm leading-7">
-//                     {project.description}
-//                   </p>
-//                 </div>
-
-//                 {project.liveProject && (
-//                   <a
-//                     href={project.liveProject}
-//                     target="_blank"
-//                     rel="noopener noreferrer"
-//                     className="w-12 h-12 rounded-xl bg-[#222] flex items-center justify-center shrink-0"
-//                   >
-//                     <FiArrowUpRight size={22} className="text-purple-500" />
-//                   </a>
-//                 )}
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Project;
-
 import React, { useEffect, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 
@@ -206,7 +79,9 @@ const Project = () => {
 
               {/* IMAGE */}
               <div className="aspect-square overflow-hidden rounded-[16px] md:rounded-[24px]">
+              {/* <div className="aspect-square overflow-hidden rounded-[16px] md:rounded-[24px] bg-[#161717]"> */}
                 <img
+
                   src={project.photo}
                   alt={project.title}
                   className="w-full h-full object-cover"
@@ -214,9 +89,10 @@ const Project = () => {
               </div>
 
               {/* CONTENT */}
-              <div className="mt-4 md:mt-5 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+              <div className="mt-4 md:mt-5 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 ">
+          
 
-                <div className="flex-1">
+                <div className="flex-1  bg-[#161717]">
 
                   <h2 className="text-white text-lg sm:text-xl md:text-2xl font-medium mb-2 md:mb-3 uppercase">
                     {project.title}

@@ -26,8 +26,9 @@ import partner from "../src/assets/partner.png"
 import analys from "../src/assets/analys.png"
 import audience from "../src/assets/audience.png"
 import accelarate from "../src/assets/accelarate.png"
-import trust from"../src/assets/trust.png"
-import ROI from"../src/assets/ROI.png"
+import trust from "../src/assets/trust.png"
+import ROI from "../src/assets/ROI.png"
+import socialmediaHeader from "../src/assets/socialmediaHeader.png"
 
 
 
@@ -40,7 +41,7 @@ const SocialMediaManagement = () => {
             className: "lg:col-span-2",
         },
         {
-            icon:accelarate,
+            icon: accelarate,
             title: "Accelerated Follower Growth",
             desc: "Combine organic tactics and paid boosts to rapidly expand your social community.",
             className: "",
@@ -66,7 +67,7 @@ const SocialMediaManagement = () => {
                 "Identify the right platforms, post",
                 "cadence, and tone to reach your",
                 "unique audience.",
-            
+
             ],
         },
         {
@@ -76,11 +77,11 @@ const SocialMediaManagement = () => {
                 "Produce scroll-stopping visuals, ",
                 "reels, stories, and copy that ",
                 "reflect your brand voice.",
-            
+
             ],
         },
         {
-            icon:CRM,
+            icon: CRM,
             title: "Community Management",
             points: [
                 "Monitor conversations, respond",
@@ -105,7 +106,7 @@ const SocialMediaManagement = () => {
                 "Leverage trusted voices in your ",
                 "industry to expand reach and ",
                 "boost credibility.",
-        
+
             ],
         },
         {
@@ -123,29 +124,27 @@ const SocialMediaManagement = () => {
 
     return (
         <div >
-            <section className="relative min-h-screen overflow-hidden flex items-center justify-center bg-gradient-to-r from-[#9B6DFF] via-[#3A0F6B] to-[#12001E]">
+            {/* <section className="relative min-h-screen overflow-hidden flex items-center justify-center bg-gradient-to-r from-[#9B6DFF] via-[#3A0F6B] to-[#12001E]">
 
-                {/* Left Glow */}
                 <div className="absolute left-0 top-0 h-full w-[40%] bg-[#A56EFF]/30 blur-[140px] z-0" />
 
-                {/* Grid Image */}
+               
                 <img
                     src={grid}
                     alt="Grid"
                     className="absolute bottom-0 left-0 w-full object-cover opacity-60 z-0 pointer-events-none"
                 />
 
-                {/* Left Illustration */}
                 <img
                     src={Graphic_Element}
                     alt=""
                     className="absolute left-8 top-24 w-[340px] xl:w-[390px] z-20"
                 />
 
-                {/* Content */}
+            
                 <div className="relative z-30 flex flex-col items-center text-center px-8">
 
-                    {/* Heading */}
+               
                     <h1
                         className="text-white italic font-light leading-none
           text-[90px]
@@ -159,7 +158,6 @@ const SocialMediaManagement = () => {
                         Social Media Management
                     </h1>
 
-                    {/* Green Stroke + Pen */}
                     <div className="relative w-[760px] max-w-full -mt-6">
 
                         <img
@@ -168,7 +166,7 @@ const SocialMediaManagement = () => {
                             className="w-full"
                         />
 
-                        {/* Pen */}
+                    
                         <img
                             src={Capa_4}
                             alt=""
@@ -177,12 +175,20 @@ const SocialMediaManagement = () => {
 
                     </div>
 
-                    {/* Description */}
+             
                     <p className="mt-8 max-w-[930px] text-white/90 text-[18px] leading-[42px]">
-                       we transform social platforms into growth engines. From strategic content calendars to real-time community engagement, we craft authentic conversations that resonate, inspire action, and build lasting relationships. Our blend of creative storytelling, targeted amplification, and data-driven optimization ensures your brand cuts through the noise and turns followers into advocates.
+                        we transform social platforms into growth engines. From strategic content calendars to real-time community engagement, we craft authentic conversations that resonate, inspire action, and build lasting relationships. Our blend of creative storytelling, targeted amplification, and data-driven optimization ensures your brand cuts through the noise and turns followers into advocates.
                     </p>
 
                 </div>
+            </section> */}
+
+            <section className="w-full pt-24 bg-[#12001E]">
+              <img
+                src={socialmediaHeader}
+                alt="Hero"
+                className="w-full h-auto block"
+              />
             </section>
 
             <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
@@ -190,7 +196,7 @@ const SocialMediaManagement = () => {
                 <div className="max-w-[1280px] mx-auto">
 
                     <h2 className="text-white text-center text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-20">
-                      Assets preview
+                        Assets preview
                     </h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
@@ -205,25 +211,16 @@ const SocialMediaManagement = () => {
           px-7 pt-16 pb-8
           text-center"
                             >
-                                {/* Icon */}
-                                {/* <div className="absolute -top-10 left-1/2 -translate-x-1/2">
-                                    <div className="w-20 h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center">
+
+                                <div className="absolute -top-10 left-1/2 -translate-x-1/2">
+                                    <div className="w-20 h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center overflow-hidden">
                                         <img
                                             src={item.icon}
                                             alt=""
-                                            className="w-9 h-9 object-contain"
+                                            className="w-[70px] h-[70px] object-contain"
                                         />
                                     </div>
-                                </div> */}
-<div className="absolute -top-10 left-1/2 -translate-x-1/2">
-  <div className="w-20 h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center overflow-hidden">
-    <img
-      src={item.icon}
-      alt=""
-      className="w-[70px] h-[70px] object-contain"
-    />
-  </div>
-</div>
+                                </div>
                                 <h3 className="text-white text-2xl font-medium mb-5">
                                     {item.title}
                                 </h3>
@@ -260,9 +257,9 @@ const SocialMediaManagement = () => {
 
                         {benefits.map((item, index) => (
 
-                                  <div
-  key={index}
-  className={`
+                            <div
+                                key={index}
+                                className={`
     ${item.className}
     rounded-[26px]
     border-t border-l
@@ -273,7 +270,7 @@ const SocialMediaManagement = () => {
     min-h-[180px]
     flex flex-col justify-center
   `}
->
+                            >
 
                                 <img
                                     src={item.icon}

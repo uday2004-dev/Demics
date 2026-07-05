@@ -20,7 +20,7 @@ const Home = () => {
         <img
           src={grid}
           alt="Grid"
-          className="absolute bottom-0 left-0 w-full h-full object-cover z-0 opacity-60"
+          className="absolute bottom-0 left-0 w-full h-[350px] object-cover z-0 opacity-60"
         />
 
         {/* Purple Glow */}
@@ -174,13 +174,14 @@ const Home = () => {
         <img
           src={rocket}
           alt="Rocket"
-          className="w-[280px] sm:w-[360px] md:w-[420px] lg:w-[550px] object-contain"
+          className="w-[150px] sm:w-[300px] md:w-[420px] lg:w-[550px] object-contain"
         />
 
       </div>
 
     </div>
   </div>
+
 
 </section>
       <section className="py-28 bg-[#111111]">
@@ -203,6 +204,10 @@ const Home = () => {
           <ServicesCard />
         </div>
       </section>
+
+
+      {/* ================= BLUR EFFECT ================= */}
+
       <section className="py-28 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-8">
 

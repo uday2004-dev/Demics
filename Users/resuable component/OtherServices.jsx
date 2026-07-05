@@ -1,12 +1,12 @@
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";
 // import { Link, useParams } from "react-router-dom";
-
 // const serviceRoutes = {
 //   branding: (id) => `/branding/${id}`,
 //   marketing: (id) => `/marketing/${id}`,
+//   "social media management": (id) => `/socialmediamanagement/${id}`,
 //   "ad creation": (id) => `/adcreation/${id}`,
-//   "web development": (id) => `/development/${id}`,
+//   website: (id) => `/development/${id}`, // ya "web development", jo DB me hai
 // };
 
 // const OtherServices = () => {
@@ -15,7 +15,7 @@
 
 //   useEffect(() => {
 //     fetchServices();
-//   }, []);
+//   }, [id]);
 
 //   const fetchServices = async () => {
 //     try {
@@ -27,57 +27,78 @@
 //       );
 
 //       if (res.data.success) {
-//         const filtered = res.data.services.filter(
+//         const filteredServices = res.data.services.filter(
 //           (service) => service._id !== id
 //         );
 
-//         setServices(filtered);
+//         setServices(filteredServices);
 //       }
 //     } catch (error) {
 //       console.log(error);
 //     }
 //   };
 
+//   if (!services.length) {
+//     return (
+//       <section className="py-28 bg-[#111111]">
+//         <div className="max-w-7xl mx-auto px-8">
+//           <h2
+//             className="text-5xl md:text-6xl italic text-white mb-16"
+//             style={{ fontFamily: "serif" }}
+//           >
+//             Other Services
+//           </h2>
+
+//           <div className="text-white text-center py-10">
+//             No other services found.
+//           </div>
+//         </div>
+//       </section>
+//     );
+//   }
+
 //   return (
-//     <section className="py-24 bg-[#111111]">
+//     <section className="py-28 bg-[#111111]">
 //       <div className="max-w-7xl mx-auto px-8">
-//         <h2
-//           className="text-white text-5xl md:text-6xl italic mb-16"
-//           style={{ fontFamily: "serif" }}
-//         >
-//           Other Services
-//         </h2>
+//         {/* Heading */}
+//         <div className="mb-16">
+//           <h2
+//             className="text-5xl md:text-6xl italic text-white"
+//             style={{ fontFamily: "serif" }}
+//           >
+//             Other Services
+//           </h2>
+//         </div>
 
 //         <div className="space-y-10">
 //           {services.map((service, index) => (
-//             <div
-//               key={service._id}
-//               className="flex justify-center"
-//             >
+//             <div key={service._id} className="flex justify-center">
 //               <div
-//                 className={`w-full max-w-[1000px] border border-white/20 rounded-[30px] bg-black flex flex-col md:flex-row items-center gap-10 p-8 lg:p-12 ${
+//                 className={`w-full max-w-[1000px] border border-white/30 rounded-[20px] md:rounded-[30px] bg-black flex flex-col md:flex-row items-center gap-8 md:gap-12 p-6 md:p-10 lg:px-16 lg:py-12 ${
 //                   index % 2 !== 0 ? "md:flex-row-reverse" : ""
 //                 }`}
 //               >
-//                 {/* Image */}
+//                 {/* IMAGE */}
 //                 <div className="w-full md:w-[320px] flex justify-center">
-//                   <img
-//                     src={service.photo}
-//                     alt={service.name}
-//                     className="w-[280px] h-[280px] object-cover rounded-2xl"
-//                   />
+//                   <div className="w-[200px] sm:w-[250px] md:w-[320px] h-[200px] sm:h-[250px] md:h-[320px] rounded-[20px] overflow-hidden">
+//                     <img
+//                       src={service.photo}
+//                       alt={service.name}
+//                       className="w-full h-full object-cover"
+//                     />
+//                   </div>
 //                 </div>
 
-//                 {/* Content */}
-//                 <div className="w-full md:w-[420px] text-center md:text-left">
-//                   <h3
-//                     className="text-white text-5xl italic mb-6"
+//                 {/* CONTENT */}
+//                 <div className="w-full md:w-[380px] text-center md:text-left">
+//                   <h1
+//                     className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-[72px] italic leading-tight mb-4 md:mb-6"
 //                     style={{ fontFamily: "serif" }}
 //                   >
 //                     {service.name}
-//                   </h3>
+//                   </h1>
 
-//                   <p className="text-gray-300 leading-8 mb-8">
+//                   <p className="text-white text-sm sm:text-base md:text-lg lg:text-[20px] leading-6 md:leading-8 mb-6 md:mb-8">
 //                     {service.description}
 //                   </p>
 
@@ -90,7 +111,7 @@
 //                         : "/services"
 //                     }
 //                   >
-//                     <button className="bg-[#8301FE] hover:bg-[#6d00d4] transition text-white px-8 py-3 rounded-full">
+//                     <button className="bg-[#8301FE] text-white px-6 md:px-8 py-2 md:py-3 rounded-full hover:bg-[#6a00cc] transition">
 //                       LEARN MORE
 //                     </button>
 //                   </Link>
@@ -106,7 +127,6 @@
 
 // export default OtherServices;
 
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
@@ -114,8 +134,9 @@ import { Link, useParams } from "react-router-dom";
 const serviceRoutes = {
   branding: (id) => `/branding/${id}`,
   marketing: (id) => `/marketing/${id}`,
+  "social media management": (id) => `/socialmediamanagement/${id}`,
   "ad creation": (id) => `/adcreation/${id}`,
-  "web development": (id) => `/development/${id}`,
+  website: (id) => `/development/${id}`,
 };
 
 const OtherServices = () => {
@@ -149,16 +170,16 @@ const OtherServices = () => {
 
   if (!services.length) {
     return (
-      <section className="py-28 bg-[#111111]">
-        <div className="max-w-7xl mx-auto px-8">
+      <section className="py-16 sm:py-20 lg:py-28 bg-[#111111]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-5xl md:text-6xl italic text-white mb-16"
+            className="text-white italic text-center md:text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-10 md:mb-16"
             style={{ fontFamily: "serif" }}
           >
             Other Services
           </h2>
 
-          <div className="text-white text-center py-10">
+          <div className="text-white text-center py-10 text-base sm:text-lg">
             No other services found.
           </div>
         </div>
@@ -167,29 +188,65 @@ const OtherServices = () => {
   }
 
   return (
-    <section className="py-28 bg-[#111111]">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="py-16 sm:py-20 lg:py-28 bg-[#111111]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* Heading */}
-        <div className="mb-16">
+        <div className="mb-10 md:mb-16">
           <h2
-            className="text-5xl md:text-6xl italic text-white"
+            className="text-white italic text-center md:text-left
+            text-3xl
+            min-[375px]:text-4xl
+            md:text-5xl
+            lg:text-6xl"
             style={{ fontFamily: "serif" }}
           >
             Other Services
           </h2>
         </div>
 
-        <div className="space-y-10">
+        <div className="space-y-8 md:space-y-10">
           {services.map((service, index) => (
             <div key={service._id} className="flex justify-center">
               <div
-                className={`w-full max-w-[1000px] border border-white/30 rounded-[20px] md:rounded-[30px] bg-black flex flex-col md:flex-row items-center gap-8 md:gap-12 p-6 md:p-10 lg:px-16 lg:py-12 ${
-                  index % 2 !== 0 ? "md:flex-row-reverse" : ""
-                }`}
+                className={`
+                  w-full
+                  max-w-[1100px]
+                  border border-white/20
+                  rounded-[22px] md:rounded-[30px]
+                  bg-black
+                  flex flex-col
+                  md:flex-row
+                  items-center
+                  gap-6
+                  md:gap-10
+                  lg:gap-12
+                  p-5
+                  sm:p-6
+                  md:p-8
+                  lg:px-14
+                  lg:py-12
+                  ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}
+                `}
               >
                 {/* IMAGE */}
-                <div className="w-full md:w-[320px] flex justify-center">
-                  <div className="w-[200px] sm:w-[250px] md:w-[320px] h-[200px] sm:h-[250px] md:h-[320px] rounded-[20px] overflow-hidden">
+                <div className="w-full md:w-[40%] flex justify-center">
+                  <div
+                    className="
+                      w-[180px]
+                      h-[180px]
+                      min-[375px]:w-[210px]
+                      min-[375px]:h-[210px]
+                      sm:w-[240px]
+                      sm:h-[240px]
+                      md:w-[280px]
+                      md:h-[280px]
+                      lg:w-[320px]
+                      lg:h-[320px]
+                      rounded-[20px]
+                      overflow-hidden
+                    "
+                  >
                     <img
                       src={service.photo}
                       alt={service.name}
@@ -199,15 +256,37 @@ const OtherServices = () => {
                 </div>
 
                 {/* CONTENT */}
-                <div className="w-full md:w-[380px] text-center md:text-left">
+                <div className="flex-1 text-center md:text-left">
                   <h1
-                    className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-[72px] italic leading-tight mb-4 md:mb-6"
+                    className="
+                      text-white
+                      italic
+                      leading-tight
+                      mb-4
+                      text-[30px]
+                      min-[375px]:text-[34px]
+                      sm:text-5xl
+                      md:text-6xl
+                      lg:text-7xl
+                    "
                     style={{ fontFamily: "serif" }}
                   >
                     {service.name}
                   </h1>
 
-                  <p className="text-white text-sm sm:text-base md:text-lg lg:text-[20px] leading-6 md:leading-8 mb-6 md:mb-8">
+                  <p
+                    className="
+                      text-white/90
+                      text-[14px]
+                      min-[375px]:text-[15px]
+                      sm:text-base
+                      lg:text-lg
+                      leading-7
+                      lg:leading-8
+                      mb-6
+                      lg:mb-8
+                    "
+                  >
                     {service.description}
                   </p>
 
@@ -220,7 +299,23 @@ const OtherServices = () => {
                         : "/services"
                     }
                   >
-                    <button className="bg-[#8301FE] text-white px-6 md:px-8 py-2 md:py-3 rounded-full hover:bg-[#6a00cc] transition">
+                    <button
+                      className="
+                        bg-[#8301FE]
+                        hover:bg-[#6a00cc]
+                        transition-all
+                        duration-300
+                        text-white
+                        rounded-full
+                        px-6
+                        py-2.5
+                        sm:px-8
+                        sm:py-3
+                        text-sm
+                        sm:text-base
+                        font-medium
+                      "
+                    >
                       LEARN MORE
                     </button>
                   </Link>
@@ -229,6 +324,7 @@ const OtherServices = () => {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

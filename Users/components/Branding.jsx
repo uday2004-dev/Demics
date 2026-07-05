@@ -17,6 +17,7 @@ import ServiceProjects from "./ServiceProjects";
 import Form from "../resuable component/Form";
 import { useParams } from "react-router-dom";
 import OtherServices from "../resuable component/OtherServices";
+import brandingImg from "../src/assets/brandingImg.png"
 const Branding = () => {
     const benefits = [
         {
@@ -109,29 +110,28 @@ const Branding = () => {
 
     return (
         <div >
-            <section className="relative min-h-screen overflow-hidden flex items-center justify-center bg-gradient-to-r from-[#9B6DFF] via-[#3A0F6B] to-[#12001E]">
+            {/* <section className="relative min-h-screen overflow-hidden flex items-center justify-center bg-gradient-to-r from-[#9B6DFF] via-[#3A0F6B] to-[#12001E]">
 
-                {/* Left Glow */}
+               
                 <div className="absolute left-0 top-0 h-full w-[40%] bg-[#A56EFF]/30 blur-[140px] z-0" />
 
-                {/* Grid Image */}
+             
                 <img
                     src={grid}
                     alt="Grid"
                     className="absolute bottom-0 left-0 w-full object-cover opacity-60 z-0 pointer-events-none"
                 />
 
-                {/* Left Illustration */}
+     
                 <img
                     src={Graphic_Element}
                     alt=""
                     className="absolute left-8 top-24 w-[340px] xl:w-[390px] z-20"
                 />
 
-                {/* Content */}
+             
                 <div className="relative z-30 flex flex-col items-center text-center px-8">
 
-                    {/* Heading */}
                     <h1
                         className="text-white italic font-light leading-none
           text-[90px]
@@ -145,7 +145,7 @@ const Branding = () => {
                         Branding
                     </h1>
 
-                    {/* Green Stroke + Pen */}
+
                     <div className="relative w-[760px] max-w-full -mt-6">
 
                         <img
@@ -154,7 +154,7 @@ const Branding = () => {
                             className="w-full"
                         />
 
-                        {/* Pen */}
+             
                         <img
                             src={Capa_4}
                             alt=""
@@ -163,7 +163,7 @@ const Branding = () => {
 
                     </div>
 
-                    {/* Description */}
+                
                     <p className="mt-8 max-w-[930px] text-white/90 text-[18px] leading-[42px]">
                         Branding is the foundation of how a business is perceived in the
                         minds of its audience. It goes far beyond just a logo or a name —
@@ -178,7 +178,16 @@ const Branding = () => {
                     </p>
 
                 </div>
-            </section>
+            </section> */}
+       
+
+<section className="w-full pt-24 bg-[#12001E]">
+  <img
+    src={brandingImg}
+    alt="Hero"
+    className="w-full h-auto block"
+  />
+</section>
 
             <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
 

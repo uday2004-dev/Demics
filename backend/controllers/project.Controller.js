@@ -223,33 +223,62 @@ export const deleteProject = async (req, res) => {
 //   }
 // };
 
+// export const getProjectsByService = async (req, res) => {
+//   try {
+//     const { id } = req.params;
+
+//     if (!mongoose.Types.ObjectId.isValid(id)) {
+//       return res.status(400).json({
+//         success: false,
+//         message: "Invalid service ID",
+//       });
+//     }
+
+//     const projects = await Project.find({
+//       service: id,
+//     })
+//       .populate("service", "title photo")
+//       .lean();
+
+//     return res.status(200).json({
+//       success: true,
+//       projects,
+//     });
+//   } catch (error) {
+//     console.log(error);
+
+//     return res.status(500).json({
+//       success: false,
+//       message: error.message,
+//     });
+//   }
+// };
+
+
 export const getProjectsByService = async (req, res) => {
   try {
     const { id } = req.params;
 
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-      return res.status(400).json({
-        success: false,
-        message: "Invalid service ID",
-      });
-    }
+    console.log("Service ID:", id);
 
-    const projects = await Project.find({
-      service: id,
-    })
-      .populate("service", "title photo")
-      .lean();
+    const projects = await Project.find({ service: id }).populate(
+      "service",
+      "name photo"
+    );
 
-    return res.status(200).json({
+    console.log(
+      projects.map((p) => ({
+        title: p.title,
+        service: p.service?.name,
+        serviceId: p.service?._id,
+      }))
+    );
+
+    return res.json({
       success: true,
       projects,
     });
   } catch (error) {
     console.log(error);
-
-    return res.status(500).json({
-      success: false,
-      message: error.message,
-    });
   }
 };

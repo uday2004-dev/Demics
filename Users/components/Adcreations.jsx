@@ -23,6 +23,7 @@ import Elements from "../src/assets/Elements.png";
 import aim from "../src/assets/aim.png"
 import spring from "../src/assets/spring.png"
 import fly from "../src/assets/fly.png"
+import adcreation from "../src/assets/adcreationHeader.png"
 
 
 
@@ -176,114 +177,13 @@ const Adcreations = () => {
                 </div>
             </section> */}
 
-<div className="relative z-30 flex flex-col items-center text-center px-8">
-
-  {/* Heading */}
-  <div className="relative inline-block">
-    <h1
-      className="text-white italic font-light leading-none
-      text-[90px] md:text-[130px] lg:text-[170px] xl:text-[190px]"
-      style={{ fontFamily: "Playfair Display, serif" }}
-    >
-      Ad Creation
-    </h1>
-
-    {/* Left Plane */}
-    <img
-      src={fly}
-      alt=""
-      className="absolute -left-28 top-6 w-32 lg:w-40"
-    />
-
-    {/* Right Target */}
-    <img
-      src={aim}
-      alt=""
-      className="absolute -right-28 bottom-2 w-32 lg:w-40"
-    />
-  </div>
-
-  {/* Green Scribble */}
-  <div className="relative w-[760px] max-w-full -mt-8">
-    <img
-      src={spring}
-      alt=""
-      className="w-full"
-    />
-  </div>
-
-  {/* Description */}
-  <p className="mt-8 max-w-[900px] text-white/90 text-[17px] leading-8">
-    We craft ads that don’t just look great—they perform. By marrying
-    strategic messaging with eye-catching design and data-backed insights,
-    we deliver creative executions that grab attention, spark emotion, and
-    compel users to click. Whether it’s social, display, video, or native,
-    every ad we produce is optimized for impact and ROI.
-  </p>
-
-</div>
-
-            <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
-
-                <div className="max-w-[1280px] mx-auto">
-
-                    <h2 className="text-white text-center text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-20">
-                      What We Provide
-                    </h2>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-
-                        {MarketingAssets.map((item, index) => (
-                            <div
-                                key={index}
-                                className="relative w-full min-h-[280px] rounded-[24px]
-          border border-white/30
-          bg-white/[0.03]
-          backdrop-blur-sm
-          px-7 pt-16 pb-8
-          text-center"
-                            >
-                                {/* Icon */}
-                                {/* <div className="absolute -top-10 left-1/2 -translate-x-1/2">
-                                    <div className="w-20 h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center">
-                                        <img
-                                            src={item.icon}
-                                            alt=""
-                                            className="w-9 h-9 object-contain"
-                                        />
-                                    </div>
-                                </div> */}
-<div className="absolute -top-10 left-1/2 -translate-x-1/2">
-  <div className="w-20 h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center overflow-hidden">
-    <img
-      src={item.icon}
-      alt=""
-      className="w-[70px] h-[70px] object-contain"
-    />
-  </div>
-</div>
-                                <h3 className="text-white text-2xl font-medium mb-5">
-                                    {item.title}
-                                </h3>
-
-                                {/* <ul className="space-y-2 text-[#D8D8D8] text-[15px] leading-7 list-none">
-                                    {item.points.map((point, i) => (
-                                        <li className="decoration-none" key={i}>• {point}</li>
-                                    ))}
-                                </ul> */}
-                                <ul className="list-none space-y-2 text-[#D8D8D8] text-[15px] leading-7">
-                                    {item.points.map((point, i) => (
-                                        <li key={i}>• {point}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-
-                    </div>
-
-                </div>
-
-            </section>
+            <section className="w-full pt-24 bg-[#12001E]">
+                                      <img
+                                        src={adcreation}
+                                        alt="Hero"
+                                        className="w-full h-auto block"
+                                      />
+                                    </section>
 
 
 

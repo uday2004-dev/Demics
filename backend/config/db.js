@@ -1,23 +1,14 @@
 import mongoose from "mongoose";
-import { Service } from "../models/servicesSchema.js";
 
 const connectDB = async () => {
-    try {
-        const connection = await mongoose.connect(process.env.MONGO_URL)
-        if (connection) {
-            console.log("database is connected")
-              console.log("DB Name:", mongoose.connection.db.databaseName);
-              const indexes = await Service.collection.indexes();
-console.log(indexes);
+  try {
+    const connection = await mongoose.connect(process.env.MONGO_URL);
 
-await Service.collection.dropIndex("slug_1");
+    console.log("Database connected");
+    console.log("DB Name:", mongoose.connection.db.databaseName);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-console.log("slug_1 index deleted");
-        }
-    } catch (error) {
-        console.log(error)
-
-    }
-}
-
-export default connectDB
+export default connectDB;
