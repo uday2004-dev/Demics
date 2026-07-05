@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Form from "../resuable component/Form";
 
 
 const Contact = () => {
@@ -152,6 +153,8 @@ const Contact = () => {
       </div>
 
 
+
+
        <div className="w-full px-6 md:px-12 lg:px-20 py-20">
         <h2
           className="text-6xl italic mb-16"
@@ -190,6 +193,13 @@ const Contact = () => {
           </div>
         ))}
       </div>
+
+        <section className="py-24 bg-[#151415]">
+                <div className="max-w-[1320px] mx-auto px-6 lg:px-12 xl:px-20">
+                    <Form />
+                </div>
+            </section>
+
 
     
     </div>
