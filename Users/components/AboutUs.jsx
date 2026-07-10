@@ -254,65 +254,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      {/* WHY CHOOSE US */}
-      {/* <div className="max-w-6xl mx-auto px-8 py-16">
-        <h2
-          className="text-6xl italic mb-16"
-          style={{ fontFamily: "serif" }}
-        >
-          Why Choose Us
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-8">
-
-          <div className="bg-[#1a1a1a] border border-gray-700 rounded-3xl p-8">
-            <h3 className="text-2xl mb-4">
-              Future-First Thinking
-            </h3>
-
-            <p className="text-gray-400">
-              We combine creativity with technology to build
-              experiences that stay ahead of trends.
-            </p>
-          </div>
-
-          <div className="bg-[#1a1a1a] border border-gray-700 rounded-3xl p-8">
-            <h3 className="text-2xl mb-4">
-              Custom-Crafted Strategies
-            </h3>
-
-            <p className="text-gray-400">
-              Every business is unique, so every solution we
-              create is customized.
-            </p>
-          </div>
-
-          <div className="bg-[#1a1a1a] border border-gray-700 rounded-3xl p-8">
-            <h3 className="text-2xl mb-4">
-              Data-Driven Results
-            </h3>
-
-            <p className="text-gray-400">
-              We rely on insights, analytics and KPIs to
-              maximize campaign performance.
-            </p>
-          </div>
-
-          <div className="bg-[#1a1a1a] border border-gray-700 rounded-3xl p-8">
-            <h3 className="text-2xl mb-4">
-              High-End Design Expertise
-            </h3>
-
-            <p className="text-gray-400">
-              Stunning visuals and premium user experiences
-              that leave a lasting impression.
-            </p>
-          </div>
-
-        </div>
-      </div> */}
-
-
 
 
       <section className="bg-[#101110] py-28">
@@ -411,7 +352,7 @@ const AboutUs = () => {
       </div>
 
       {/* TEAM */}
-      <div className="max-w-7xl mx-auto px-8 py-28 ">
+      {/* <div className="max-w-7xl mx-auto px-8 py-28 ">
         <h2
           className="text-6xl italic mb-8"
           style={{ fontFamily: "serif" }}
@@ -450,7 +391,53 @@ const AboutUs = () => {
             </div>
           ))}
         </div>
+      </div> */}
+
+
+<div className="max-w-7xl mx-auto px-8 py-28">
+  <h2
+    className="text-6xl italic mb-16"
+    style={{ fontFamily: "serif" }}
+  >
+    Meet Our Founder
+  </h2>
+
+  {teams.map((member) => (
+    <div
+      key={member._id}
+      className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+    >
+      {/* Left Side Image */}
+      <div className="overflow-hidden rounded-3xl">
+        <img
+          src={member.photo}
+          alt={member.name}
+          className="w-full h-[550px] object-cover rounded-3xl transition duration-500 hover:scale-105"
+        />
       </div>
+
+      {/* Right Side Text */}
+      <div>
+        <h3 className="text-5xl font-semibold mb-4">
+          {member.name}
+        </h3>
+
+        <p className="text-xl text-gray-400 mb-8">
+          {member.designation}
+        </p>
+
+        <p className="text-gray-400 text-lg leading-8">
+          We’re a group of passionate designers, strategists, and
+          problem-solvers dedicated to helping brands succeed online.
+          With diverse skills and a shared commitment to quality, we
+          work together to bring fresh ideas, creative solutions, and
+          reliable support to every project.
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+
 
       {/* FAQ */}
       <div className="w-full px-6 md:px-12 lg:px-20 py-20">

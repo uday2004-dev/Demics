@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import connectDB from "./config/db.js";
 import adminLogin from "./routes/adminLogin.js";
-import { createProject } from "./controllers/project.Controller.js";
 import projectRoutes from "./routes/projectRoute.js"
 import serviceRoute from "./routes/serviceRoute.js";
 import testimonialRoute from "./routes/testimonialRoute.js"
@@ -20,6 +19,10 @@ console.log("API KEY =>", process.env.CLOUDINARY_API_KEY);
 connectDB();
 
 const PORT = process.env.PORT;
+
+app.use('/', (req, res) => {
+  res.send("Server is running")
+})
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
