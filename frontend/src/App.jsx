@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import Home from '../components/Home'
+
 import Login from '../components/Login'
 import SideBar from '../components/SideBar'
 import ProtectedRoute from '../components/ProtectedRoute'
@@ -12,7 +12,7 @@ import Services from '../components/Services'
 import Blogs from '../components/Blogs'
 import Testimonial from '../components/Testimonial'
 import CreateBlogs from '../components/CreateBlogs'
-import CreateTesti from '../components/createTesti'
+import CreateTesti from '../components/CreateTesti'
 
 import TeamCreate from '../components/TeamCreate'
 import Team from '../components/Team'
