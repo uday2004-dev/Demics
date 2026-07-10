@@ -1,9 +1,19 @@
+// import api from "./axios";
+
+// export const createTestimonial = (data) => {
+//   return api.post("/testimonial/createTestimonial", data);
+// };
+
+// export const getTestimonial = () => {
+//   return api.get("/testimonial/allTestimonial");
+// };
+
 import api from "./axios";
 
 export const createTestimonial = (data) => {
-  return api.post("/testimonial/createTestimonial", data);
+  return api.post("/api/testimonial/createTestimonial", data);
 };
 
 export const getTestimonial = () => {
-  return api.get("/testimonial/allTestimonial");
+  return api.get("/api/testimonial/allTestimonial");
 };

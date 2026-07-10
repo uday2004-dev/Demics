@@ -1,17 +1,34 @@
+// import api from "./axios";
+
+// export const getProjects = () => {
+//   return api.get("/projects");
+// };
+
+// export const createProject = (formData) => {
+//   return api.post("/projects/create", formData);
+// };
+
+// export const updateProject = (id, formData) => {
+//   return api.put(`/projects/${id}`, formData);
+// };
+
+// export const deleteProject = (id) => {
+//   return api.delete(`/projects/${id}`);
+// };
 import api from "./axios";
 
 export const getProjects = () => {
-  return api.get("/projects");
+  return api.get("/api/projects");
 };
 
 export const createProject = (formData) => {
-  return api.post("/projects/create", formData);
+  return api.post("/api/projects/create", formData);
 };
 
 export const updateProject = (id, formData) => {
-  return api.put(`/projects/${id}`, formData);
+  return api.put(`/api/projects/${id}`, formData);
 };
 
 export const deleteProject = (id) => {
-  return api.delete(`/projects/${id}`);
+  return api.delete(`/api/projects/${id}`);
 };

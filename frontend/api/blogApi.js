@@ -1,22 +1,44 @@
+// import api from "./axios";
+
+
+// export const getBlogs = () => {
+//   return api.get("/blog/getAllBlogs");
+// };
+
+// export const getBlogById = (id) => {
+//   return api.get(`/blog/${id}`);
+// };
+
+// export const createBlog = (formData) => {
+//   return api.post("/blog/create", formData);
+// };
+
+// export const updateBlog = (id, formData) => {
+//   return api.patch(`/blog/${id}`, formData);
+// };
+
+// export const deleteBlog = (id) => {
+//   return api.delete(`/blog/${id}`);
+// };
+
 import api from "./axios";
 
-
 export const getBlogs = () => {
-  return api.get("/blog/getAllBlogs");
+  return api.get("/api/blog/getAllBlogs");
 };
 
 export const getBlogById = (id) => {
-  return api.get(`/blog/${id}`);
+  return api.get(`/api/blog/${id}`);
 };
 
 export const createBlog = (formData) => {
-  return api.post("/blog/create", formData);
+  return api.post("/api/blog/create", formData);
 };
 
 export const updateBlog = (id, formData) => {
-  return api.patch(`/blog/${id}`, formData);
+  return api.patch(`/api/blog/${id}`, formData);
 };
 
 export const deleteBlog = (id) => {
-  return api.delete(`/blog/${id}`);
+  return api.delete(`/api/blog/${id}`);
 };
