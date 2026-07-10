@@ -20,13 +20,12 @@ connectDB();
 
 const PORT = process.env.PORT;
 
-app.use('/', (req, res) => {
-  res.send("Server is running")
-})
-
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
-// app.use(cookieParser());
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 // app.use(
 //   cors({
 //     origin: [
@@ -38,6 +37,7 @@ app.use('/', (req, res) => {
 //   })
 // );
 
+
 app.use(
   cors({
     origin: [
@@ -48,6 +48,8 @@ app.use(
     credentials: true,
   })
 );
+
+
 app.use("/api/admin", adminLogin);
 app.use("/api/projects", projectRoutes);
 app.use("/api/services",serviceRoute)
