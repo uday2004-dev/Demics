@@ -16,7 +16,7 @@ const router = express.Router();
 router.post("/create", createInquiry);
 
 // Admin
-router.get("/", adminAuthMiddleware,adminAuthMiddleware, getInquiries);
+router.get("/", adminAuthMiddleware, getInquiries);
 router.get("/stats", adminAuthMiddleware, getDashboardStats);
 router.get("/:id", adminAuthMiddleware, getSingleInquiry);
 router.put("/convert/:id", adminAuthMiddleware, convertInquiry);
