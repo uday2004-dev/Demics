@@ -1,8 +1,5 @@
 import React from "react";
-import Graphic_Element from "../src/assets/Graphic_Element.png";
 
-import Capa_4 from "../src/assets/Capa_4.png";
-import grid from "../src/assets/grid.png";
 import Form from "../resuable component/Form";
 import creative from "../src/assets/creative.png"
 import copy from "../src/assets/copy.png"
@@ -19,10 +16,7 @@ import ServiceProjects from "./ServiceProjects";
 import { useParams } from "react-router-dom";
 
 // for header
-import Elements from "../src/assets/Elements.png";
-import aim from "../src/assets/aim.png"
-import spring from "../src/assets/spring.png"
-import fly from "../src/assets/fly.png"
+
 import adcreation from "../src/assets/adcreationHeader.png"
 
 

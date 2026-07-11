@@ -18,9 +18,13 @@ const Blogs = () => {
 
   const fetchServices = async () => {
     try {
+      // const res = await fetch(
+      //   "http://localhost:3000/api/services/getAllServices"
+      //   // import.meta.env.VITE_API_URL
+      // );
       const res = await fetch(
-        "http://localhost:3000/api/services/getAllServices"
-      );
+  `${import.meta.env.VITE_API_URL}/api/services/getAllServices`
+);
 
       const data = await res.json();
 
@@ -29,26 +33,58 @@ const Blogs = () => {
       console.log("Service Error:", error);
     }
   };
+//   const fetchServices = async () => {
+//   try {
+//     console.log(import.meta.env.VITE_API_URL);
+
+//     const res = await fetch(import.meta.env.VITE_API_URL);
+
+//     const data = await res.json();
+//     setServices(data.services || []);
+//   } catch (error) {
+//     console.log("Service Error:", error);
+//   }
+// };
+
+  // const fetchBlogs = async () => {
+  //   try {
+  //     // const res = await fetch(
+  //     //   "http://localhost:3000/api/blog/getAllBlogs"
+  //     // );
+  //       `${import.meta.env.VITE_API_URL}/api/blog/getAllBlogs`
+
+  //     const data = await res.json();
+
+  //     const blogData = data.blogs || [];
+
+  //     setAllBlogs(blogData);
+  //     setBlogs(blogData);
+  //   } catch (error) {
+  //     console.log("Blog Error:", error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
 
   const fetchBlogs = async () => {
-    try {
-      const res = await fetch(
-        "http://localhost:3000/api/blog/getAllBlogs"
-      );
+  try {
+    const res = await fetch(
+      `${import.meta.env.VITE_API_URL}/api/blog/getAllBlogs`
+    );
 
-      const data = await res.json();
+    const data = await res.json();
 
-      const blogData = data.blogs || [];
+    const blogData = data.blogs || [];
 
-      setAllBlogs(blogData);
-      setBlogs(blogData);
-    } catch (error) {
-      console.log("Blog Error:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
+    setAllBlogs(blogData);
+    setBlogs(blogData);
+  } catch (error) {
+    console.log("Blog Error:", error);
+  } finally {
+    setLoading(false);
+  }
+};
   const filterBlogs = (serviceId) => {
     setActiveService(serviceId);
 

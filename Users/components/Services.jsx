@@ -119,7 +119,7 @@
 import React from "react";
 import ServicesCard from "../resuable component/ServicesCard";
 import Form from "../resuable component/Form";
-import ProcessCard from "./ProcessCard";
+import ProcessCard from "../components/ProcessCard"
 import arrow from "../src/assets/arrow.png";
 
 const Services = () => {
