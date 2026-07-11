@@ -13,18 +13,34 @@ const Work = () => {
     fetchProjects();
   }, []);
 
+  // const fetchServices = async () => {
+  //   try {
+  //     // const res = await fetch(
+  //     //   "http://localhost:3000/api/services/getAllServices"
+  //     // );
+  //     const res = await api.get("/api/services/getAllServices");
+  //     // const data = await res.json();
+  //       const data = res.data;
+
+  //     setServices(data.services || data.data || []);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+
   const fetchServices = async () => {
     try {
-      // const res = await fetch(
-      //   "http://localhost:3000/api/services/getAllServices"
-      // );
       const res = await api.get("/api/services/getAllServices");
-      // const data = await res.json();
-        const data = res.data;
+
+      console.log("Response:", res);
+      console.log("Response.data:", res.data);
+
+      const data = res.data || {};
 
       setServices(data.services || data.data || []);
     } catch (error) {
-      console.log(error);
+      console.log("Service Error:", error);
     }
   };
 
@@ -37,7 +53,7 @@ const Work = () => {
       // const data = await res.json();
       const res = await api.get("/api/projects");
       // const data = await res.json();
-        const data = res.data;
+      const data = res.data;
 
       const projectData = data.projects || [];
 

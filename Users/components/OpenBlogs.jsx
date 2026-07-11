@@ -14,13 +14,28 @@ const OpenBlogs = () => {
     fetchBlog();
   }, [id]);
 
+  // const fetchBlog = async () => {
+  //   try {
+  //     // const res = await fetch(
+  //     //   `http://localhost:3000/api/blog/${id}`
+  //     // );
+  //     const res = await api.get(`/api/blog/${id}`);
+  //     // const data = await res.json();
+
+  //     if (data.success) {
+  //       setBlog(data.blog);
+  //       fetchLatestBlogs(data.blog._id);
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
   const fetchBlog = async () => {
     try {
-      // const res = await fetch(
-      //   `http://localhost:3000/api/blog/${id}`
-      // );
       const res = await api.get(`/api/blog/${id}`);
-      const data = await res.json();
+
+      const data = res.data;
 
       if (data.success) {
         setBlog(data.blog);
@@ -31,14 +46,17 @@ const OpenBlogs = () => {
     }
   };
 
+
+
   const fetchLatestBlogs = async (currentBlogId) => {
     try {
-      const res = await fetch(
-        "http://localhost:3000/api/blog/getAllBlogs"
-      );
+      // const res = await fetch(
+      //   "http://localhost:3000/api/blog/getAllBlogs"
+      // );
 
-      const data = await res.json();
-
+      // const data = await res.json();
+      const res = await api.get("/api/blog/getAllBlogs");
+      const data = res.data;
       const latestBlogs =
         data.blogs
           ?.filter((item) => item._id !== currentBlogId)
