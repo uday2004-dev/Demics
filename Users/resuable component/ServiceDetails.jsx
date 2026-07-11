@@ -14,11 +14,14 @@ const ServiceDetails = () => {
         // const res = await axios.get(
         //   `http://localhost:3000/api/services/${id}`
         // );
-        const res = await api.get(`/api/services/${id}`,
-            {
-          withCredentials: true,
-        }
-        );
+        // const res = await api.get(`/api/services/${id}`,
+        //     {
+        //   withCredentials: true,
+        // }
+        // );
+        const res = await axios.get("/api/service");
+
+        console.log(res.data); 
         setService(res.data.service);
       } catch (error) {
         console.log(error);
