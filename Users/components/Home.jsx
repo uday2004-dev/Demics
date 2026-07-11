@@ -6,7 +6,7 @@ import Project from "../resuable component/Project";
 import Testimonial from "./Testimonial";
 import Form from "../resuable component/Form"
 import grid from "../src/assets/grid.png"
-import blur from "../src/assets/blurEffect.png"
+// import blur from "../src/assets/blurEffect.png"
 
 
 const Home = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import Form from "../resuable component/Form"
-
+import api from "../utls/axios";
 const Work = () => {
   const [allProjects, setAllProjects] = useState([]);
   const [projects, setProjects] = useState([]);
@@ -15,10 +15,10 @@ const Work = () => {
 
   const fetchServices = async () => {
     try {
-      const res = await fetch(
-        "http://localhost:3000/api/services/getAllServices"
-      );
-
+      // const res = await fetch(
+      //   "http://localhost:3000/api/services/getAllServices"
+      // );
+const res = await api.get("/api/services/getAllServices");
       const data = await res.json();
 
       setServices(data.services || data.data || []);

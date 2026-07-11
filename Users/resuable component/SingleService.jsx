@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
+import api from "../utls/axios";
 
 const SingleService = () => {
   const { id } = useParams();
@@ -17,8 +18,10 @@ const SingleService = () => {
     try {
       setLoading(true);
 
-      const res = await axios.get(
-        `http://localhost:3000/api/services/${id}/details`,
+      const res =
+      //  await axios.get(
+      //   `http://localhost:3000/api/services/${id}/details `
+      await api.get(`/api/services/${id}/details`,
         {
           withCredentials: true,
         }

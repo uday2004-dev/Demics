@@ -111,64 +111,7 @@ const Marketing = () => {
       const { id } = useParams();
     return (
         <div >
-            {/* <section className="relative min-h-screen overflow-hidden flex items-center justify-center bg-gradient-to-r from-[#9B6DFF] via-[#3A0F6B] to-[#12001E]">
-
          
-                <div className="absolute left-0 top-0 h-full w-[40%] bg-[#A56EFF]/30 blur-[140px] z-0" />
-
-            
-                <img
-                    src={grid}
-                    alt="Grid"
-                    className="absolute bottom-0 left-0 w-full object-cover opacity-60 z-0 pointer-events-none"
-                />
-
-                <img
-                    src={Graphic_Element}
-                    alt=""
-                    className="absolute left-8 top-24 w-[340px] xl:w-[390px] z-20"
-                />
-
-                <div className="relative z-30 flex flex-col items-center text-center px-8">
-
-                   
-                    <h1
-                        className="text-white italic font-light leading-none
-          text-[90px]
-          md:text-[130px]
-          lg:text-[170px]
-          xl:text-[190px]"
-                        style={{
-                            fontFamily: "Playfair Display, serif",
-                        }}
-                    >
-                        Marketing
-                    </h1>
-
-              
-                    <div className="relative w-[760px] max-w-full -mt-6">
-
-                        <img
-                            src={Elements}
-                            alt=""
-                            className="w-full"
-                        />
-
-            
-                        <img
-                            src={Capa_4}
-                            alt=""
-                            className="absolute -top-[155px] right-[-195px] w-[220px] xl:w-[250px]"
-                        />
-
-                    </div>
-
-                    <p className="mt-8 max-w-[930px] text-white/90 text-[18px] leading-[42px]">
-                        we view marketing as a strategic growth engine—where creativity fuels engagement and data drives every decision. By blending market research, precision targeting, and compelling creative, we position your brand to capture attention, nurture interest, and convert prospects into lifelong customers. Whether launching a new product or scaling an established offering, our holistic campaigns deliver measurable uplift across every channel.
-                    </p>
-
-                </div>
-            </section> */}
 
                  <section className="w-full pt-24 bg-[#12001E]">
                           <img
@@ -314,18 +257,7 @@ const Marketing = () => {
 
 
 
-            {/* 
-      <section className="py-28 bg-[#111111]">
-        <div className="max-w-7xl mx-auto px-8">
-          <h3 className="text-5xl md:text-6xl italic text-white mb-16">
-            Featured Projects
-          </h3>
-
-          <BrandingProjects serviceId={id} />
-        </div>
-      </section>
-        */}
-
+       
 
 
 

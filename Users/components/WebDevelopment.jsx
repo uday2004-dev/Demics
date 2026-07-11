@@ -1,8 +1,4 @@
-import React from "react";
-import Graphic_Element from "../src/assets/Graphic_Element.png";
-import Elements from "../src/assets/Elements.png";
-import Capa_4 from "../src/assets/Capa_4.png";
-import grid from "../src/assets/grid.png";
+
 import Form from "../resuable component/Form";
 import split from "../src/assets/split.png"
 import faster from "../src/assets/faster.png"

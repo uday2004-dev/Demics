@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
+import api from "../utls/axios";
 
 const Project = () => {
   const [projects, setProjects] = useState([]);
@@ -8,10 +9,14 @@ const Project = () => {
 
   const fetchService = async (serviceId) => {
     try {
-      const res = await fetch(
-        `http://localhost:3000/api/services/${serviceId}`
-      );
-
+      // const res = await fetch(
+      //   `http://localhost:3000/api/services/${serviceId}`
+      // );
+   const res = await api.get(`/api/services/${serviceId}`,
+      {
+          withCredentials: true,
+        }
+   );
       const data = await res.json();
 
       setServiceName(

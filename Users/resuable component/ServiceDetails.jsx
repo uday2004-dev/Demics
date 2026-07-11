@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
+import api from "../utls/axios";
 
 const ServiceDetails = () => {
   const { id } = useParams();
@@ -10,8 +11,13 @@ const ServiceDetails = () => {
   useEffect(() => {
     const fetchService = async () => {
       try {
-        const res = await axios.get(
-          `http://localhost:3000/api/services/${id}`
+        // const res = await axios.get(
+        //   `http://localhost:3000/api/services/${id}`
+        // );
+        const res = await api.get(`/api/services/${id}`,
+            {
+          withCredentials: true,
+        }
         );
         setService(res.data.service);
       } catch (error) {

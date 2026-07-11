@@ -148,21 +148,13 @@ const Blogs = () => {
                     </div>
 
                     <div className="mt-5">
-                      {/* <p className="text-purple-500 text-sm uppercase mb-2">
-                        {blog.services?.name}
-                      </p>
-
-                      <h2 className="text-white text-2xl mb-3 group-hover:text-purple-400 transition">
-                        {blog.title}
-                      </h2> */}
+            
 
                       <h3 className="text-gray-300 text-lg mb-3">
                         {blog.heading}
                       </h3>
 
-                      {/* <p className="text-gray-400 leading-7 line-clamp-3">
-                        {blog.description}
-                      </p> */}
+   
                     </div>
                   </div>
                 ))}

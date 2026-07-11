@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Form from "../resuable component/Form";
+import api from "../utls/axios";
 
 const OpenBlogs = () => {
   const { id } = useParams();
@@ -15,10 +16,10 @@ const OpenBlogs = () => {
 
   const fetchBlog = async () => {
     try {
-      const res = await fetch(
-        `http://localhost:3000/api/blog/${id}`
-      );
-
+      // const res = await fetch(
+      //   `http://localhost:3000/api/blog/${id}`
+      // );
+      const res = await api.get(`/api/blog/${id}`);
       const data = await res.json();
 
       if (data.success) {

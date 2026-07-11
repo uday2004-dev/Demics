@@ -51,9 +51,9 @@
 
 
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { FiArrowUpRight } from "react-icons/fi";
-
+import api from "../utls/axios";
 const BrandingProjects = ({ serviceId }) => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -66,13 +66,13 @@ const BrandingProjects = ({ serviceId }) => {
 
   const fetchProjects = async () => {
     try {
-      const res = await axios.get(
-        `http://localhost:3000/api/projects/service/${serviceId}`,
-        {
-          withCredentials: true,
-        }
-      );
-
+      // const res = await axios.get(
+      //   `http://localhost:3000/api/projects/service/${serviceId}`,
+      //   {
+      //     withCredentials: true,
+      //   }
+      // );
+const res = await api.get(`/api/projects/service/${serviceId}`);
       if (res.data.success) {
         setProjects(res.data.projects);
       }

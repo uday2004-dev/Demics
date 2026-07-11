@@ -144,7 +144,8 @@
 
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
+import api from "../utls/axios"; 
 
 const serviceRoutes = {
   branding: (id) => `/branding/${id}`,
@@ -158,26 +159,44 @@ const ServicesCard = () => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // const fetchServices = async () => {
+  //   try {
+  //     const res = await axios.get(
+  //       // "http://localhost:3000/api/services/getAllServices",
+  //         `${import.meta.env.VITE_API_URL}/api/services/getAllServices`,
+  //       {
+  //         withCredentials: true,
+  //       }
+  //     );
+
+  //     if (res.data.success) {
+  //       setServices(res.data.services);
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
+
   const fetchServices = async () => {
-    try {
-      const res = await axios.get(
-        // "http://localhost:3000/api/services/getAllServices",
-          `${import.meta.env.VITE_API_URL}/api/services/getAllServices`,
+  try {
+    const res = await api.get("/api/services/getAllServices",
         {
           withCredentials: true,
         }
-      );
+    );
 
-      if (res.data.success) {
-        setServices(res.data.services);
-      }
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
+    if (res.data.success) {
+      setServices(res.data.services);
     }
-  };
-
+  } catch (error) {
+    console.log(error);
+  } finally {
+    setLoading(false);
+  }
+};
   useEffect(() => {
     fetchServices();
   }, []);

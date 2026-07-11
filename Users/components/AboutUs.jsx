@@ -10,6 +10,7 @@ import hash from "../src/assets/hash.png"
 import arrow1 from "../src/assets/arrow1.png"
 import arrow2 from "../src/assets/arrow2.png"
 import laptop from "../src/assets/laptop.png"
+import api from "../utls/axios";
 const AboutUs = () => {
   const [teams, setTeams] = useState([]);
   const [openFaq, setOpenFaq] = useState(null);
@@ -43,21 +44,32 @@ const AboutUs = () => {
     fetchTeam();
   }, []);
 
+  // const fetchTeam = async () => {
+  //   try {
+  //     const res = await fetch(
+  //       "http://localhost:3000/api/team/  "
+  //     );
+
+  //     const data = await res.json();
+
+  //     if (data.success) {
+  //       setTeams(data.teams);
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
   const fetchTeam = async () => {
-    try {
-      const res = await fetch(
-        "http://localhost:3000/api/team/  "
-      );
+  try {
+    const res = await api.get("/api/team");
 
-      const data = await res.json();
-
-      if (data.success) {
-        setTeams(data.teams);
-      }
-    } catch (error) {
-      console.log(error);
+    if (res.data.success) {
+      setTeams(res.data.teams);
     }
-  };
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   const faqs = [
     {
