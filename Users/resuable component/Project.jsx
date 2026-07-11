@@ -33,12 +33,16 @@ const Project = () => {
   const fetchProjects = async () => {
     try {
       // const res = await fetch("http://localhost:3000/api/projects");
-       const res = await api.get(`/api/services/${serviceId}`,
-        {
-          withCredentials: true,
-        }
-      );
-      const data = await res.json();
+      //  const res = await api.get(`/api/services/${serviceId}`,
+      //   {
+      //     withCredentials: true,
+      //   }
+      // );
+      const res = await api.get(`/api/services/${serviceId}`, {
+        withCredentials: true,
+      });
+
+      const data = res.data;
 
       const projectsData = data.projects || data;
 
