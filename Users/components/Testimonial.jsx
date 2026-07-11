@@ -94,15 +94,17 @@
 // export default Testimonial;
 
 import React, { useEffect, useState } from "react";
+import api from "../utls/axios";
 
 const Testimonial = () => {
   const [testimonials, setTestimonials] = useState([]);
 
   const fetchTestimonials = async () => {
     try {
-      const res = await fetch(
-        "http://localhost:3000/api/testimonial/allTestimonial"
-      );
+      // const res = await fetch(
+      //   "http://localhost:3000/api/testimonial/allTestimonial"
+      // );
+      const res = await api.get("/api/testimonial/allTestimonial");
 
       const data = await res.json();
 

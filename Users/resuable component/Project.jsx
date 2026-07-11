@@ -12,18 +12,18 @@ const Project = () => {
       // const res = await fetch(
       //   `http://localhost:3000/api/services/${serviceId}`
       // );
-   const res = await api.get(`/api/services/${serviceId}`,
-      {
+      const res = await api.get(`/api/services/${serviceId}`,
+        {
           withCredentials: true,
         }
-   );
+      );
       const data = await res.json();
 
       setServiceName(
         data?.name ||
-          data?.service?.name ||
-          data?.data?.name ||
-          "Projects"
+        data?.service?.name ||
+        data?.data?.name ||
+        "Projects"
       );
     } catch (error) {
       console.log("Error fetching service:", error);
@@ -32,7 +32,12 @@ const Project = () => {
 
   const fetchProjects = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/projects");
+      // const res = await fetch("http://localhost:3000/api/projects");
+       const res = await api.get(`/api/services/${serviceId}`,
+        {
+          withCredentials: true,
+        }
+      );
       const data = await res.json();
 
       const projectsData = data.projects || data;
@@ -84,7 +89,7 @@ const Project = () => {
 
               {/* IMAGE */}
               <div className="aspect-square overflow-hidden rounded-[16px] md:rounded-[24px]">
-              {/* <div className="aspect-square overflow-hidden rounded-[16px] md:rounded-[24px] bg-[#161717]"> */}
+                {/* <div className="aspect-square overflow-hidden rounded-[16px] md:rounded-[24px] bg-[#161717]"> */}
                 <img
 
                   src={project.photo}
@@ -95,7 +100,7 @@ const Project = () => {
 
               {/* CONTENT */}
               <div className="mt-4 md:mt-5 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 ">
-          
+
 
                 <div className="flex-1  bg-[#161717]">
 
