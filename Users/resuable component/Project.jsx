@@ -7,28 +7,48 @@ const Project = () => {
   const [serviceName, setServiceName] = useState("");
   const [loading, setLoading] = useState(true);
 
-  const fetchService = async (serviceId) => {
-    try {
-      // const res = await fetch(
-      //   `http://localhost:3000/api/services/${serviceId}`
-      // );
-      const res = await api.get(`/api/services/${serviceId}`,
-        {
-          withCredentials: true,
-        }
-      );
-      const data = await res.json();
+  // const fetchService = async (serviceId) => {
+  //   try {
+  //     // const res = await fetch(
+  //     //   `http://localhost:3000/api/services/${serviceId}`
+  //     // );
+  //     const res = await api.get(`/api/services/${serviceId}`,
+  //       {
+  //         withCredentials: true,
+  //       }
+  //     );
+  //     const data = await res.json();
 
-      setServiceName(
-        data?.name ||
-        data?.service?.name ||
-        data?.data?.name ||
-        "Projects"
-      );
-    } catch (error) {
-      console.log("Error fetching service:", error);
-    }
-  };
+  //     setServiceName(
+  //       data?.name ||
+  //       data?.service?.name ||
+  //       data?.data?.name ||
+  //       "Projects"
+  //     );
+  //   } catch (error) {
+  //     console.log("Error fetching service:", error);
+  //   }
+  // };
+
+  const fetchService = async (serviceId) => {
+  try {
+    const res = await api.get(`/api/services/${serviceId}`, {
+      withCredentials: true,
+    });
+
+    const data = res.data;
+
+    setServiceName(
+      data?.name ||
+      data?.service?.name ||
+      data?.data?.name ||
+      "Projects"
+    );
+
+  } catch (error) {
+    console.log("Error fetching service:", error);
+  }
+};
 
   const fetchProjects = async () => {
     try {
