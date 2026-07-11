@@ -26,7 +26,8 @@ const Blogs = () => {
   `${import.meta.env.VITE_API_URL}/api/services/getAllServices`
 );
 
-      const data = await res.json();
+      // const data = await res.json();
+       const data = res.data;
 
       setServices(data.services || []);
     } catch (error) {
