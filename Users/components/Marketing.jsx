@@ -1,14 +1,6 @@
 import React from "react";
-import Graphic_Element from "../src/assets/Graphic_Element.png";
-import Elements from "../src/assets/Elements.png";
-import Capa_4 from "../src/assets/Capa_4.png";
-import grid from "../src/assets/grid.png";
-import OtherServices from "../resuable component/OtherServices";
 
-import future from "../src/assets/brain.png"
-import support from "../src/assets/handShake.png"
-import revision from "../src/assets/infinity.png"
-import custom from "../src/assets/puzzleCube.png"
+import OtherServices from "../resuable component/OtherServices";
 import Form from "../resuable component/Form";
 import rightSearch from "../src/assets/rightSearch.png"
 import Speaker from "../src/assets/Speaker.png"
