@@ -121,6 +121,7 @@ import ServicesCard from "../resuable component/ServicesCard";
 import Form from "../resuable component/Form";
 // import ProcessCard from "../components/ProcessCard"
 import ProcessCard from "./ProcessCard";
+// import ProcessCard from './components/ProcessCard'
 import arrow from "../src/assets/arrow.png";
 
 const Services = () => {
@@ -217,7 +218,7 @@ md:leading-8">
             Design & Development Process
           </h2>
 
-          <ProcessCard />
+          < ProcessCard/>
         </div>
       </section>
 

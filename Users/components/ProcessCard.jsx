@@ -5,7 +5,7 @@ import Line1 from "../src/assets/Line 1.png";
 import Line2 from "../src/assets/Line 2.png";
 import search from "../src/assets/search.png";
 import calender from "../src/assets/calender.png";
-import checkList from "../src/assets/checkList.png";
+import checkList from "../src/assets/checklist.png";
 import dab from "../src/assets/dab.png";
 import paintingBrush from "../src/assets/paintingBrush.png";
 import rocket2 from "../src/assets/rocket2.png";

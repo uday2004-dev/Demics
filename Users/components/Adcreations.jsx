@@ -8,7 +8,7 @@ import format from "../src/assets/format.png"
 import split from "../src/assets/split.png"
 import complience from "../src/assets/complience.png"
 import stronger from "../src/assets/stronger.png"
-import higher from "../src/assets/higher.png"
+import higher from "../src/assets/Higher.png"
 import faster from "../src/assets/faster.png"
 import Transparent from "../src/assets/Transparent.png"
 import OtherServices from "../resuable component/OtherServices";
