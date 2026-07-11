@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Form from "../resuable component/Form";
+import api from "../utls/axios";
 
 const Blogs = () => {
   const navigate = useNavigate();
@@ -16,44 +17,72 @@ const Blogs = () => {
     fetchBlogs();
   }, []);
 
+  //   const fetchServices = async () => {
+  //     try {
+  //       // const res = await fetch(
+  //       //   "http://localhost:3000/api/services/getAllServices"
+  //       //   // import.meta.env.VITE_API_URL
+  //       // );
+  //       const res = await fetch(
+  //   `${import.meta.env.VITE_API_URL}/api/services/getAllServices`
+  // );
+
+  //       // const data = await res.json();
+  //        const data = res.data;
+
+  //       setServices(data.services || []);
+  //     } catch (error) {
+  //       console.log("Service Error:", error);
+  //     }
+  //   };
+
+
   const fetchServices = async () => {
     try {
-      // const res = await fetch(
-      //   "http://localhost:3000/api/services/getAllServices"
-      //   // import.meta.env.VITE_API_URL
-      // );
-      const res = await fetch(
-  `${import.meta.env.VITE_API_URL}/api/services/getAllServices`
-);
+      const res = await api.get("/api/services/getAllServices");
 
-      // const data = await res.json();
-       const data = res.data;
-
-      setServices(data.services || []);
+      setServices(res.data.services || []);
     } catch (error) {
       console.log("Service Error:", error);
     }
   };
 
 
+  //   const fetchBlogs = async () => {
+  //   try {
+  //     const res = await fetch(
+  //       `${import.meta.env.VITE_API_URL}/api/blog/getAllBlogs`
+  //     );
+
+  //     const data = await res.json();
+
+  //     const blogData = data.blogs || [];
+
+  //     setAllBlogs(blogData);
+  //     setBlogs(blogData);
+  //   } catch (error) {
+  //     console.log("Blog Error:", error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
   const fetchBlogs = async () => {
-  try {
-    const res = await fetch(
-      `${import.meta.env.VITE_API_URL}/api/blog/getAllBlogs`
-    );
+    try {
+      const res = await api.get("/api/blog/getAllBlogs");
 
-    const data = await res.json();
+      const blogData = res.data.blogs || [];
 
-    const blogData = data.blogs || [];
+      setAllBlogs(blogData);
+      setBlogs(blogData);
+    } catch (error) {
+      console.log("Blog Error:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    setAllBlogs(blogData);
-    setBlogs(blogData);
-  } catch (error) {
-    console.log("Blog Error:", error);
-  } finally {
-    setLoading(false);
-  }
-};
+
   const filterBlogs = (serviceId) => {
     setActiveService(serviceId);
 
@@ -101,11 +130,10 @@ const Blogs = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-16">
             <button
               onClick={() => filterBlogs("all")}
-              className={`px-6 py-3 rounded-full transition ${
-                activeService === "all"
+              className={`px-6 py-3 rounded-full transition ${activeService === "all"
                   ? "bg-purple-600 text-white"
                   : "bg-[#1f1f1f] text-gray-300"
-              }`}
+                }`}
             >
               All Blogs
             </button>
@@ -114,11 +142,10 @@ const Blogs = () => {
               <button
                 key={service._id}
                 onClick={() => filterBlogs(service._id)}
-                className={`px-6 py-3 rounded-full transition ${
-                  activeService === service._id
+                className={`px-6 py-3 rounded-full transition ${activeService === service._id
                     ? "bg-purple-600 text-white"
                     : "bg-[#1f1f1f] text-gray-300"
-                }`}
+                  }`}
               >
                 {service.name}
               </button>
@@ -149,13 +176,13 @@ const Blogs = () => {
                     </div>
 
                     <div className="mt-5">
-            
+
 
                       <h3 className="text-gray-300 text-lg mb-3">
                         {blog.heading}
                       </h3>
 
-   
+
                     </div>
                   </div>
                 ))}

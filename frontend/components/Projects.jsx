@@ -6,7 +6,6 @@ import { getServices } from "../api/servicesApi";
 
 const Projects = () => {
   const navigate = useNavigate();
-
   const [projects, setProjects] = useState([]);
   const [services, setServices] = useState([]);
   const [selectedService, setSelectedService] =
