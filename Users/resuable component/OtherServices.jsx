@@ -139,6 +139,35 @@ const serviceRoutes = {
   website: (id) => `/development/${id}`,
 };
 
+// const OtherServices = () => {
+//   const { id } = useParams();
+//   const [services, setServices] = useState([]);
+
+//   useEffect(() => {
+//     fetchServices();
+//   }, [id]);
+
+//   const fetchServices = async () => {
+//     try {
+//       const res = await axios.get(
+//         "http://localhost:3000/api/services/getAllServices",
+//         {
+//           withCredentials: true,
+//         }
+//       );
+
+//       if (res.data.success) {
+//         const filteredServices = res.data.services.filter(
+//           (service) => service._id !== id
+//         );
+
+//         setServices(filteredServices);
+//       }
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
+
 const OtherServices = () => {
   const { id } = useParams();
   const [services, setServices] = useState([]);
@@ -150,7 +179,7 @@ const OtherServices = () => {
   const fetchServices = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:3000/api/services/getAllServices",
+        `${import.meta.env.VITE_API_URL}/api/services/getAllServices`,
         {
           withCredentials: true,
         }
@@ -167,7 +196,6 @@ const OtherServices = () => {
       console.log(error);
     }
   };
-
   if (!services.length) {
     return (
       <section className="py-16 sm:py-20 lg:py-28 bg-[#111111]">

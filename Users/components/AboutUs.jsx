@@ -100,109 +100,109 @@ const AboutUs = () => {
   return (
     <section className="bg-[#111111] text-white overflow-hidden">
 
-   
 
 
-   {/* HERO */}
-<section className="bg-[#111111] pt-36 px-5 lg:px-10">
-  <div className="max-w-[1440px] mx-auto">
 
-    <div className="relative overflow-hidden rounded-[36px] bg-gradient-to-br from-[#B98BFF] via-[#5317C8] to-[#13021F] min-h-[760px]">
+      {/* HERO */}
+      <section className="bg-[#111111] pt-36 px-5 lg:px-10">
+        <div className="max-w-[1440px] mx-auto">
 
-      {/* Glow */}
-      <div className="absolute -top-28 -left-24 w-[520px] h-[520px] rounded-full bg-[#D9B6FF]/40 blur-[120px]" />
+          <div className="relative overflow-hidden rounded-[36px] bg-gradient-to-br from-[#B98BFF] via-[#5317C8] to-[#13021F] min-h-[760px]">
 
-      {/* Grid */}
-      <img
-        src={grid}
-        alt=""
-        className="absolute bottom-0 left-0 w-full opacity-30 pointer-events-none"
-      />
+            {/* Glow */}
+            <div className="absolute -top-28 -left-24 w-[520px] h-[520px] rounded-full bg-[#D9B6FF]/40 blur-[120px]" />
 
-      {/* Hash */}
-      <img
-        src={hash}
-        alt=""
-        className="absolute
+            {/* Grid */}
+            <img
+              src={grid}
+              alt=""
+              className="absolute bottom-0 left-0 w-full opacity-30 pointer-events-none"
+            />
+
+            {/* Hash */}
+            <img
+              src={hash}
+              alt=""
+              className="absolute
         w-[120px]
         lg:w-[150px]
         top-[80px]
         left-[120px]"
-      />
+            />
 
-      {/* Arrow Right */}
-      <img
-        src={arrow2}
-        alt=""
-        className="absolute
+            {/* Arrow Right */}
+            <img
+              src={arrow2}
+              alt=""
+              className="absolute
         w-[90px]
         lg:w-[110px]
         top-[150px]
         right-[180px]"
-      />
+            />
 
-      {/* Arrow Left */}
-      <img
-        src={arrow1}
-        alt=""
-        className="absolute
+            {/* Arrow Left */}
+            <img
+              src={arrow1}
+              alt=""
+              className="absolute
         w-[85px]
         lg:w-[100px]
         left-[150px]
         bottom-[170px]"
-      />
+            />
 
-      {/* Laptop */}
-      <img
-        src={laptop}
-        alt=""
-        className="absolute
+            {/* Laptop */}
+            <img
+              src={laptop}
+              alt=""
+              className="absolute
         w-[120px]
         lg:w-[150px]
         right-[120px]
         bottom-[130px]"
-      />
+            />
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-20">
+            {/* Content */}
+            <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-20">
 
-        <h1
-          className="text-white italic leading-none
+              <h1
+                className="text-white italic leading-none
           text-[70px]
           md:text-[100px]
           lg:text-[120px]"
-          style={{ fontFamily: "Cormorant Garamond" }}
-        >
-          About us
-        </h1>
+                style={{ fontFamily: "Cormorant Garamond" }}
+              >
+                About us
+              </h1>
 
-        <h2 className="mt-8 max-w-4xl font-semibold leading-tight text-white
+              <h2 className="mt-8 max-w-4xl font-semibold leading-tight text-white
         text-[24px]
         md:text-[32px]
         lg:text-[36px]">
-          we are a design-led, strategy-driven digital
-          <br />
-          marketing and creative design agency
-        </h2>
+                we are a design-led, strategy-driven digital
+                <br />
+                marketing and creative design agency
+              </h2>
 
-        <div className="w-[70%] lg:w-[430px] h-[2px] bg-[#7C4DFF] mt-4 mb-5" />
+              <div className="w-[70%] lg:w-[430px] h-[2px] bg-[#7C4DFF] mt-4 mb-5" />
 
-        <p className="max-w-3xl text-gray-300 leading-7 text-[14px] lg:text-[15px]">
-          With DEMICS, your brand is designed with intention, your stories are
-          digitalized with emotion, and your presence evolves with culture.
-          We market across media, innovate with AI, create using cutting-edge
-          technology, and drive results through strategic thinking.
-        </p>
+              <p className="max-w-3xl text-gray-300 leading-7 text-[14px] lg:text-[15px]">
+                With DEMICS, your brand is designed with intention, your stories are
+                digitalized with emotion, and your presence evolves with culture.
+                We market across media, innovate with AI, create using cutting-edge
+                technology, and drive results through strategic thinking.
+              </p>
 
-      </div>
+            </div>
 
-      {/* Bottom Curve */}
-      <div className="absolute bottom-0 left-0 w-full h-[38px] bg-[#111111] rounded-t-[38px]" />
+            {/* Bottom Curve */}
+            <div className="absolute bottom-0 left-0 w-full h-[38px] bg-[#111111] rounded-t-[38px]" />
 
-    </div>
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
 
 
@@ -351,92 +351,52 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* TEAM */}
-      {/* <div className="max-w-7xl mx-auto px-8 py-28 ">
+
+
+
+      <div className="max-w-7xl mx-auto px-8 py-28">
         <h2
-          className="text-6xl italic mb-8"
+          className="text-6xl italic mb-16"
           style={{ fontFamily: "serif" }}
         >
           Meet Our Founder
         </h2>
 
-        <p className="text-gray-400 text-lg leading-8 max-w-4xl mb-16">
-          We’re a group of passionate designers, strategists, and
-          problem-solvers dedicated to helping brands succeed online.
-          With diverse skills and a shared commitment to quality, we
-          work together to bring fresh ideas, creative solutions, and
-          reliable support to every project.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {teams.map((member) => (
-            <div key={member._id} className="group">
-              <div className="overflow-hidden rounded-3xl">
-                <img
-                  src={member.photo}
-                  alt={member.name}
-                  className="w-full h-[420px] object-cover rounded-3xl transition duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="mt-6">
-                <h3 className="text-2xl font-medium">
-                  {member.name}
-                </h3>
-
-                <p className="text-gray-400 mt-2">
-                  {member.designation}
-                </p>
-              </div>
+        {teams.map((member) => (
+          <div
+            key={member._id}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+          >
+            {/* Left Side Image */}
+            <div className="overflow-hidden rounded-3xl">
+              <img
+                src={member.photo}
+                alt={member.name}
+                className="w-full h-[550px] object-cover rounded-3xl transition duration-500 hover:scale-105"
+              />
             </div>
-          ))}
-        </div>
-      </div> */}
 
+            {/* Right Side Text */}
+            <div>
+              <h3 className="text-5xl font-semibold mb-4">
+                {member.name}
+              </h3>
 
-<div className="max-w-7xl mx-auto px-8 py-28">
-  <h2
-    className="text-6xl italic mb-16"
-    style={{ fontFamily: "serif" }}
-  >
-    Meet Our Founder
-  </h2>
+              <p className="text-xl text-gray-400 mb-8">
+                {member.designation}
+              </p>
 
-  {teams.map((member) => (
-    <div
-      key={member._id}
-      className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
-    >
-      {/* Left Side Image */}
-      <div className="overflow-hidden rounded-3xl">
-        <img
-          src={member.photo}
-          alt={member.name}
-          className="w-full h-[550px] object-cover rounded-3xl transition duration-500 hover:scale-105"
-        />
+              <p className="text-gray-400 text-lg leading-8">
+                We’re a group of passionate designers, strategists, and
+                problem-solvers dedicated to helping brands succeed online.
+                With diverse skills and a shared commitment to quality, we
+                work together to bring fresh ideas, creative solutions, and
+                reliable support to every project.
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
-
-      {/* Right Side Text */}
-      <div>
-        <h3 className="text-5xl font-semibold mb-4">
-          {member.name}
-        </h3>
-
-        <p className="text-xl text-gray-400 mb-8">
-          {member.designation}
-        </p>
-
-        <p className="text-gray-400 text-lg leading-8">
-          We’re a group of passionate designers, strategists, and
-          problem-solvers dedicated to helping brands succeed online.
-          With diverse skills and a shared commitment to quality, we
-          work together to bring fresh ideas, creative solutions, and
-          reliable support to every project.
-        </p>
-      </div>
-    </div>
-  ))}
-</div>
 
 
       {/* FAQ */}

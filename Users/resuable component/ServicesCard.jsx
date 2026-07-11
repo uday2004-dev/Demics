@@ -161,7 +161,8 @@ const ServicesCard = () => {
   const fetchServices = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:3000/api/services/getAllServices",
+        // "http://localhost:3000/api/services/getAllServices",
+          `${import.meta.env.VITE_API_URL}/api/services/getAllServices`,
         {
           withCredentials: true,
         }
