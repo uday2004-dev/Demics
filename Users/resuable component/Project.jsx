@@ -38,10 +38,10 @@ const Project = () => {
       //     withCredentials: true,
       //   }
       // );
-      const res = await api.get(`/api/services/${serviceId}`, {
+      const res = await api.get("/api/projects", {
         withCredentials: true,
       });
-
+      // const data = await res.json();
       const data = res.data;
 
       const projectsData = data.projects || data;

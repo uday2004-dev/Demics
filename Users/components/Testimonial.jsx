@@ -104,10 +104,15 @@ const Testimonial = () => {
       // const res = await fetch(
       //   "http://localhost:3000/api/testimonial/allTestimonial"
       // );
-      const res = await api.get("/api/testimonial/allTestimonial");
+      // const res = await api.get("/api/testimonial/allTestimonial");
 
-      const data = await res.json();
+      // const data = await res.json();
 
+      const res = await api.get("/api/testimonial/allTestimonial", {
+  withCredentials:true
+});
+
+const data = res.data;
       setTestimonials(data.testimonials || []);
     } catch (error) {
       console.log("Error fetching testimonials:", error);
