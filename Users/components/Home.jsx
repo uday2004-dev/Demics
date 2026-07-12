@@ -36,8 +36,9 @@ const Home = () => {
               <h1 className="text-white leading-tight lg:leading-none mb-6 lg:mb-8">
 
                 <span
-                  className="italic text-4xl sm:text-5xl lg:text-6xl"
+                  className="italic text-4xl sm:text-5xl lg:text-6xl italic"
                   style={{ fontFamily: "serif" }}
+                    // style={{ fontFamily: "'Cormorant Garamond', serif italic" }}
                 >
                   Creative Solutions
                 </span>
@@ -116,74 +117,214 @@ const Home = () => {
         </div>
       </div>
       {/* ================= ROCKET SECTION ================= */}
-      <section className="relative py-20 lg:py-28 overflow-hidden">
+      {/* <section className="relative py-20 lg:py-28 overflow-hidden">
 
-  {/* Purple Glow */}
-  <div className="absolute right-0 top-0 w-[300px] sm:w-[500px] lg:w-[700px] h-[300px] sm:h-[500px] lg:h-[700px] bg-purple-700/20 blur-[120px] lg:blur-[180px] rounded-full" />
+        
+        <div className="absolute right-0 top-0 w-[300px] sm:w-[500px] lg:w-[700px] h-[300px] sm:h-[500px] lg:h-[700px] bg-purple-700/20 blur-[120px] lg:blur-[180px] rounded-full" />
 
-  <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
-      {/* Left */}
+
+            <div className="text-center lg:text-left">
+
+              <h2 className="text-white leading-tight">
+
+                <span className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+                  we are a{" "}
+                </span>
+
+                <span
+                  className="text-4xl sm:text-5xl lg:text-6xl italic"
+                  style={{ fontFamily: "serif" }}
+                >
+                  design-led, strategy-driven
+                </span>
+
+                <br />
+
+                <span className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+                  digital marketing and
+                </span>
+
+                <br />
+
+                <span className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+                  creative design agency
+                </span>
+
+              </h2>
+
+              <p className="mt-8 lg:mt-10 text-gray-400 leading-7 lg:leading-8 max-w-xl mx-auto lg:mx-0">
+                With DEMICS, your brand is designed with intention, your stories
+                are digitalized with emotion, and your presence evolves with
+                culture. We market across media, innovate with AI, create using
+                cutting-edge technology, and drive results through strategic
+                thinking.
+              </p>
+
+              <button className="mt-8 lg:mt-10 px-8 py-4 rounded-full bg-gradient-to-r from-[#B84DFF] to-[#7A00FF] text-white font-medium">
+                LEARN MORE ABOUT US
+              </button>
+
+            </div>
+
+            
+            <div className="relative flex justify-center lg:justify-end">
+
+              <img
+                src={rocket}
+                alt="Rocket"
+                className="w-[150px] sm:w-[300px] md:w-[420px] lg:w-[550px] object-contain"
+              />
+
+            </div>
+
+          </div>
+        </div>
+
+
+      </section> */}
+
+      <section className="relative overflow-hidden py-12 sm:py-16 lg:py-28">
+
+        {/* <div className="absolute right-[-60px] top-[-60px] w-[220px] h-[220px] sm:w-[350px] sm:h-[350px] lg:right-0 lg:top-0 lg:w-[700px] lg:h-[700px] bg-purple-700/20 blur-[90px] sm:blur-[120px] lg:blur-[180px] rounded-full" />
+
+  <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+    <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-20">
+
       <div className="text-center lg:text-left">
 
-        <h2 className="text-white leading-tight">
+        <h2 className="text-white leading-[1.15]">
 
-          <span className="text-4xl sm:text-5xl lg:text-6xl font-bold">
-            we are a{" "}
+          <span className="block text-[30px] sm:text-[36px] md:text-[48px] lg:text-[60px] font-semibold">
+            We are a
           </span>
 
           <span
-            className="text-4xl sm:text-5xl lg:text-6xl italic"
+            className="block text-[30px] sm:text-[36px] md:text-[48px] lg:text-[60px] italic"
             style={{ fontFamily: "serif" }}
           >
             design-led, strategy-driven
           </span>
 
-          <br />
-
-          <span className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+          <span className="block text-[30px] sm:text-[36px] md:text-[48px] lg:text-[60px] font-semibold">
             digital marketing and
           </span>
 
-          <br />
-
-          <span className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+          <span className="block text-[30px] sm:text-[36px] md:text-[48px] lg:text-[60px] font-semibold">
             creative design agency
           </span>
 
         </h2>
 
-        <p className="mt-8 lg:mt-10 text-gray-400 leading-7 lg:leading-8 max-w-xl mx-auto lg:mx-0">
-          With DEMICS, your brand is designed with intention, your stories
-          are digitalized with emotion, and your presence evolves with
-          culture. We market across media, innovate with AI, create using
-          cutting-edge technology, and drive results through strategic
-          thinking.
-        </p>
+        <p className="mt-6 sm:mt-8 text-[15px] sm:text-base leading-7 text-gray-400 max-w-xl mx-auto lg:mx-0">
+          With DEMICS, your brand is designed with intention, your stories are
+          digitalized with emotion, and your presence evolves with culture. We
+          market across media, innovate with AI, create using cutting-edge
+          technology, and drive results through strategic thinking.
+        </p> */}
 
-        <button className="mt-8 lg:mt-10 px-8 py-4 rounded-full bg-gradient-to-r from-[#B84DFF] to-[#7A00FF] text-white font-medium">
+        <div className="absolute right-0 top-0 w-[300px] sm:w-[500px] lg:w-[700px] h-[300px] sm:h-[500px] lg:h-[700px] bg-purple-700/20 blur-[120px] lg:blur-[180px] rounded-full" />
+
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+
+
+            <div className="text-center lg:text-left">
+
+              <h2 className="text-white leading-tight">
+
+                <span className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+                  we are a{" "}
+                </span>
+
+                <span
+                  className="text-4xl sm:text-5xl lg:text-6xl italic"
+                  style={{ fontFamily: "serif" }}
+                >
+                  design-led, strategy-driven
+                </span>
+
+                <br />
+
+                <span className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+                  digital marketing and
+                </span>
+
+                <br />
+
+                <span className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+                  creative design agency
+                </span>
+
+              </h2>
+
+              <p className="mt-8 lg:mt-10 text-gray-400 leading-7 lg:leading-8 max-w-xl mx-auto lg:mx-0">
+                With DEMICS, your brand is designed with intention, your stories
+                are digitalized with emotion, and your presence evolves with
+                culture. We market across media, innovate with AI, create using
+                cutting-edge technology, and drive results through strategic
+                thinking.
+              </p>
+
+
+              {/* <button
+          className="
+            mt-8
+            w-full
+            sm:w-auto
+            px-8
+            py-3.5
+            rounded-full
+            bg-gradient-to-r
+            from-[#B84DFF]
+            to-[#7A00FF]
+            text-white
+            text-sm
+            sm:text-base
+            font-medium
+            transition-all
+            duration-300
+            hover:scale-105
+          "
+        >
           LEARN MORE ABOUT US
-        </button>
+        </button> */}
 
-      </div>
+              <button className="mt-8 lg:mt-10 px-8 py-4 rounded-full bg-gradient-to-r from-[#B84DFF] to-[#7A00FF] text-white font-medium">
+                LEARN MORE ABOUT US
+              </button>
 
-      {/* Right */}
-      <div className="relative flex justify-center lg:justify-end">
+            </div>
 
-        <img
-          src={rocket}
-          alt="Rocket"
-          className="w-[150px] sm:w-[300px] md:w-[420px] lg:w-[550px] object-contain"
-        />
+            {/* Rocket */}
+            <div className="flex justify-center lg:justify-end mt-2 lg:mt-0">
 
-      </div>
+              <img
+                src={rocket}
+                alt="Rocket"
+                className="
+            w-[250px]
+            xs:w-[200px]
+            sm:w-[250px]
+            md:w-[340px]
+            lg:w-[500px]
+            xl:w-[560px]
+            object-contain
+          "
+              />
 
-    </div>
-  </div>
+            </div>
 
+          </div>
 
-</section>
+        </div>
+
+      </section>
+
+      {/* 
       <section className="py-28 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-8">
 
@@ -200,6 +341,22 @@ const Home = () => {
 
           </div>
 
+
+          <ServicesCard />
+        </div>
+      </section> */}
+
+      <section className="bg-[#111111] py-12 sm:py-16 lg:py-28">
+        <div className="max-w-7xl mx-auto">
+
+          <div className="px-5 sm:px-6 lg:px-8 mb-8 sm:mb-10 lg:mb-16">
+            <h3
+              className="text-white italic text-[34px] sm:text-[42px] md:text-[52px] lg:text-[60px] leading-none"
+              style={{ fontFamily: "serif" }}
+            >
+              Our Services
+            </h3>
+          </div>
 
           <ServicesCard />
         </div>
@@ -232,7 +389,7 @@ const Home = () => {
       <section className="py-28 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-8">
 
-          <h1 className="text-white leading-none mb-8">
+          {/* <h1 className="text-white leading-none mb-8">
 
             <span
               className="italic text-5xl md:text-6xl"
@@ -254,6 +411,32 @@ const Home = () => {
               Real Feedback
             </span>
 
+          </h1> */}
+
+          <h1 className="text-white leading-tight mb-6 sm:mb-8">
+            <span
+              className="italic text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px]"
+              style={{ fontFamily: "serif" }}
+            >
+              Client
+            </span>
+
+            <span className="ml-2 sm:ml-3 text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px] font-semibold">
+              Testimonials:
+            </span>
+
+            <br />
+
+            <span className="text-[34px] sm:text-[44px] md:text-[56px] lg:text-[60px] font-semibold">
+              Real Results,
+            </span>{"  "}
+
+            <span
+              className="italic text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px]"
+              style={{ fontFamily: "serif" }}
+            >
+              Real Feedback
+            </span>
           </h1>
 
           {/* Testimonial Cards */}

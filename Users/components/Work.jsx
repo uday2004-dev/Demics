@@ -33,8 +33,8 @@ const Work = () => {
     try {
       const res = await api.get("/api/services/getAllServices");
 
-      console.log("Response:", res);
-      console.log("Response.data:", res.data);
+      // console.log("Response:", res);
+      // console.log("Response.data:", res.data);
 
       const data = res.data || {};
 
