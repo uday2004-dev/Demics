@@ -30,7 +30,8 @@ const Form = () => {
       //   data
       // );
 
-          const res = await api.post("/api/inquery/create");
+          const res = await api.post("/api/inquery/create",data);
+// api/inquery/create
 
       alert(res.data.message);
 
