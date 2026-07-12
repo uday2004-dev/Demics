@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
+import api from "../utls/axios";
 
 const Form = () => {
   const [data, setData] = useState({
