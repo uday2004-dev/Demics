@@ -12,7 +12,7 @@ import arrow from "../src/assets/arrow.png";
 
 const Services = () => {
   return (
-    <div className="bg-[#171717] overflow-hidden">
+    <div className=" bg-[#111111] overflow-hidden">
       {/* ================= HERO ================= */}
       <section className="relative overflow-hidden">
         {/* Background Glow */}
@@ -90,7 +90,7 @@ md:leading-8">
       </section>
 
       {/* ================= PROCESS ================= */}
-      <section className="py-10 sm:py-14 md:py-20 w-full">
+      <section className="py-10 sm:py-14 md:py-20 w-full  bg-[#111111]">
         <div className="mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-12 xl:px-20">
           <h2
             className="text-white italic
@@ -111,7 +111,7 @@ md:leading-8">
 
 
       {/* ================= SERVICES ================= */}
-      <section className="py-10 sm:py-14 md:py-20">
+      <section className="py-10 sm:py-14 md:py-20  bg-[#111111]">
         <div className="mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-12 xl:px-20">
           <h2
             className="text-white italic
@@ -130,7 +130,7 @@ md:leading-8">
       </section>
 
       {/* ================= FORM ================= */}
-      <section className="py-12 sm:py-16 md:py-24">
+      <section className="py-12 sm:py-16 md:py-24  bg-[#111111] ">
         <div className="mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-12 xl:px-20">
           <Form />
         </div>

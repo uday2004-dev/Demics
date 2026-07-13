@@ -226,7 +226,7 @@ const ServicesCard = () => {
                   w-full max-w-[1100px]
                   border border-white/20
                   rounded-[22px] sm:rounded-[28px] lg:rounded-[32px]
-                  bg-black
+                  bg-[#111111]
                   flex flex-col
                   md:flex-row
                   items-center

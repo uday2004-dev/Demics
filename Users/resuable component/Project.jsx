@@ -96,7 +96,7 @@ const Project = () => {
   }
 
   return (
-    <section className="w-full bg-[#161717] py-12 md:py-16">
+    <section className="w-full bg-[#101110] py-12 md:py-16">
 
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
 
@@ -126,7 +126,7 @@ const Project = () => {
               <div className="mt-4 md:mt-5 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 ">
 
 
-                <div className="flex-1  bg-[#161717]">
+                <div className="flex-1  bg-[#101110]">
 
                   <h2 className="text-white text-lg sm:text-xl md:text-2xl font-medium mb-2 md:mb-3 uppercase">
                     {project.title}

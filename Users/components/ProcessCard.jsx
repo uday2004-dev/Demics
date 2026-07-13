@@ -77,7 +77,7 @@ const ProcessCard = () => {
 
 
 
-<section className="relative bg-[#171717] py-20 lg:py-28 overflow-hidden isolate">
+<section className="relative  bg-[#111111] py-20 lg:py-28 overflow-hidden isolate">
   {/* <div className="max-w-7xl mx-auto px-5 md:px-8 relative"> */}
   <div className="w-full px-5 md:px-8 relative">
     {processData.map((item, index) => (

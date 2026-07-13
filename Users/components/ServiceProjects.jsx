@@ -102,7 +102,7 @@ const res = await api.get(`/api/projects/service/${serviceId}`);
   }
 
   return (
-    <section className="w-full bg-[#161717] py-12 md:py-16">
+    <section className="w-full bg-[#111111] py-12 md:py-16">
 
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
 

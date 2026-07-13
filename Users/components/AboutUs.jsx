@@ -219,7 +219,7 @@ const AboutUs = () => {
 
 
       {/* OUR VISION */}
-      <div className="max-w-7xl mx-auto px-8 pb-24">
+      <div className="max-w-screen mx-auto px-8 pb-24">
         <div className="relative overflow-hidden rounded-[40px] bg-[#171717]">
 
           {/* Purple Glow */}

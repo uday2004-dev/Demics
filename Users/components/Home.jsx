@@ -386,33 +386,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-28 bg-[#111111]">
+      {/* <section className="py-28 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-8">
-
-          {/* <h1 className="text-white leading-none mb-8">
-
-            <span
-              className="italic text-5xl md:text-6xl"
-              style={{ fontFamily: "serif" }}
-            >
-              Client
-            </span>
-
-            <span className="text-5xl md:text-6xl font-bold ml-3">
-              Testimonials:
-            </span>
-
-            <br />
-
-            <span className="text-6xl md:text-6xl font-bold">
-              Real Result, {"    "}
-            </span>
-            <span className="italic text-5xl md:text-6xl">
-              Real Feedback
-            </span>
-
-          </h1> */}
-
           <h1 className="text-white leading-tight mb-6 sm:mb-8">
             <span
               className="italic text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px]"
@@ -439,10 +414,47 @@ const Home = () => {
             </span>
           </h1>
 
-          {/* Testimonial Cards */}
+         
           <Testimonial />
         </div>
-      </section>
+      </section> */}
+
+      <section className="py-28 bg-[#111111]">
+  {/* Heading */}
+  <div className="max-w-7xl mx-auto px-8">
+    <h1 className="text-white leading-tight mb-6 sm:mb-8 text-left">
+      <span
+        className="italic text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px]"
+        style={{ fontFamily: "serif" }}
+      >
+        Client
+      </span>
+
+      <span className="ml-2 sm:ml-3 text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px] font-semibold">
+        Testimonials:
+      </span>
+
+      <br />
+
+      <span className="text-[34px] sm:text-[44px] md:text-[56px] lg:text-[60px] font-semibold">
+        Real Results,
+      </span>{" "}
+
+      <span
+        className="italic text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px]"
+        style={{ fontFamily: "serif" }}
+      >
+        Real Feedback
+      </span>
+    </h1>
+  </div>
+
+  {/* Full Width Testimonials */}
+  <Testimonial />
+</section>
+
+
+      
       <section className="py-28 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-8">
           <Form />

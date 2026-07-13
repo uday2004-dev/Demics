@@ -249,7 +249,7 @@ const Marketing = () => {
         </div>
       </section>
 
-            <section className="py-24 bg-[#151415]">
+            <section className="py-24 bg-[#111111]">
                 <div className="max-w-[1320px] mx-auto px-6 lg:px-12 xl:px-20">
                     <Form />
                 </div>

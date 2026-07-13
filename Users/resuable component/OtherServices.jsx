@@ -107,7 +107,7 @@ const fetchServices = async () => {
                   max-w-[1100px]
                   border border-white/20
                   rounded-[22px] md:rounded-[30px]
-                  bg-black
+                  bg-[#111111]
                   flex flex-col
                   md:flex-row
                   items-center
