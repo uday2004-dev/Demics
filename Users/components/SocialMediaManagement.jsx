@@ -184,11 +184,11 @@ const SocialMediaManagement = () => {
             </section> */}
 
             <section className="w-full pt-24 bg-[#12001E]">
-              <img
-                src={socialmediaHeader}
-                alt="Hero"
-                className="w-full h-auto block"
-              />
+                <img
+                    src={socialmediaHeader}
+                    alt="Hero"
+                    className="w-full h-auto block"
+                />
             </section>
 
             <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
@@ -225,11 +225,17 @@ const SocialMediaManagement = () => {
                                     {item.title}
                                 </h3>
 
-                                <ul className="space-y-2 text-[#D8D8D8] text-[15px] leading-7">
+                                {/* <ul className="space-y-2 text-[#D8D8D8] text-[15px] leading-7">
                                     {item.points.map((point, i) => (
                                         <li key={i}>• {point}</li>
                                     ))}
-                                </ul>
+                                </ul> */}
+
+                                <div className="space-y-1 text-[#D8D8D8] text-[15px] leading-7">
+                                    {item.points.map((point, i) => (
+                                        <p key={i}> {point}</p>
+                                    ))}
+                                </div>
                             </div>
                         ))}
 

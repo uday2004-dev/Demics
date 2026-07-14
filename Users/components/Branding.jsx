@@ -108,15 +108,15 @@ const Branding = () => {
     return (
         <div >
 
-       
 
-<section className="w-full pt-24 bg-[#12001E]">
-  <img
-    src={brandingImg}
-    alt="Hero"
-    className="w-full h-auto block"
-  />
-</section>
+
+            <section className="w-full pt-24 bg-[#12001E]">
+                <img
+                    src={brandingImg}
+                    alt="Hero"
+                    className="w-full h-auto block"
+                />
+            </section>
 
             <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
 
@@ -128,7 +128,7 @@ const Branding = () => {
                         by a Design Agency
                     </h2>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+                    <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
 
                         {brandingAssets.map((item, index) => (
                             <div
@@ -140,16 +140,16 @@ const Branding = () => {
           px-7 pt-16 pb-8
           text-center"
                             >
-                     
-<div className="absolute -top-10 left-1/2 -translate-x-1/2">
-  <div className="w-20 h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center overflow-hidden">
-    <img
-      src={item.icon}
-      alt=""
-      className="w-[70px] h-[70px] object-contain"
-    />
-  </div>
-</div>
+
+                                <div className="absolute -top-10 left-1/2 -translate-x-1/2">
+                                    <div className="w-20 h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src={item.icon}
+                                            alt=""
+                                            className="w-[70px] h-[70px] object-contain"
+                                        />
+                                    </div>
+                                </div>
                                 <h3 className="text-white text-2xl font-medium mb-5">
                                     {item.title}
                                 </h3>
@@ -183,9 +183,9 @@ const Branding = () => {
 
                         {benefits.map((item, index) => (
 
-                                 <div
-  key={index}
-  className={`
+                            <div
+                                key={index}
+                                className={`
     ${item.className}
     rounded-[26px]
     border-t border-l
@@ -196,7 +196,7 @@ const Branding = () => {
     min-h-[180px]
     flex flex-col justify-center
   `}
->
+                            >
 
                                 <img
                                     src={item.icon}

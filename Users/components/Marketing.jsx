@@ -154,11 +154,16 @@ const Marketing = () => {
                                 <h3 className="text-white text-2xl font-medium mb-5">
                                     {item.title}
                                 </h3>
-                                <ul className="list-none space-y-2 text-[#D8D8D8] text-[15px] leading-7">
+                                {/* <ul className="list-none space-y-2 text-[#D8D8D8] text-[15px] leading-7">
                                     {item.points.map((point, i) => (
                                         <li key={i}>• {point}</li>
                                     ))}
-                                </ul>
+                                </ul> */}
+                                  <div className="space-y-1 text-[#D8D8D8] text-[15px] leading-7">
+                                    {item.points.map((point, i) => (
+                                        <p key={i}> {point}</p>
+                                    ))}
+                                </div>
                             </div>
                         ))}
 

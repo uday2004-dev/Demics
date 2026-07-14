@@ -166,7 +166,15 @@ const WebDevelopment = () => {
                         we engineer websites that blend stunning design with rock-solid performance. From pixel-perfect layouts to seamless back-end architecture, we create digital destinations that load instantly, guide visitors intuitively, and convert at scale. By leveraging the latest frameworks, CMS platforms, and accessibility standards, we ensure your site not only looks impeccable across devices but also drives business results.
                     </p>
                 </div>
-            </section>
+            </section> */}
+
+                    <section className="w-full pt-24 bg-[#12001E]">
+                                      <img
+                                        src={website}
+                                        alt="Hero"
+                                        className="w-full h-auto block"
+                                      />
+                                    </section>
 
             <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
 
@@ -202,11 +210,16 @@ const WebDevelopment = () => {
                                     {item.title}
                                 </h3>
 
-                                <ul className="list-none space-y-2 text-[#D8D8D8] text-[15px] leading-7">
+                                {/* <ul className="list-none space-y-2 text-[#D8D8D8] text-[15px] leading-7">
                                     {item.points.map((point, i) => (
                                         <li key={i}>• {point}</li>
                                     ))}
-                                </ul>
+                                </ul> */}
+                                  <div className="space-y-1 text-[#D8D8D8] text-[15px] leading-7">
+                                    {item.points.map((point, i) => (
+                                        <p key={i}> {point}</p>
+                                    ))}
+                                </div>
                             </div>
                         ))}
 
@@ -214,14 +227,8 @@ const WebDevelopment = () => {
 
                 </div>
 
-            </section> */}
-            <section className="w-full pt-24 bg-[#12001E]">
-                                      <img
-                                        src={website}
-                                        alt="Hero"
-                                        className="w-full h-auto block"
-                                      />
-                                    </section>
+            </section>
+    
 
 
 

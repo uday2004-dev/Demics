@@ -122,6 +122,57 @@ const Adcreations = () => {
                                     </section>
 
 
+                                     <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
+
+                <div className="max-w-[1280px] mx-auto">
+
+                    <h2 className="text-white text-center text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-20">
+                        Assets preview
+                    </h2>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+
+                        {MarketingAssets.map((item, index) => (
+                            <div
+                                key={index}
+                                className="relative w-full min-h-[280px] rounded-[24px]
+          border border-white/30
+          bg-white/[0.03]
+          backdrop-blur-sm
+          px-7 pt-16 pb-8
+          text-center"
+                            >
+
+                                <div className="absolute -top-10 left-1/2 -translate-x-1/2">
+                                    <div className="w-20 h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src={item.icon}
+                                            alt=""
+                                            className="w-[70px] h-[70px] object-contain"
+                                        />
+                                    </div>
+                                </div>
+                                <h3 className="text-white text-2xl font-medium mb-5">
+                                    {item.title}
+                                </h3>
+
+                               
+
+                                <div className="space-y-1 text-[#D8D8D8] text-[15px] leading-7">
+                                    {item.points.map((point, i) => (
+                                        <p key={i}> {point}</p>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
 
             <section className="bg-[#101110] py-28">
 
