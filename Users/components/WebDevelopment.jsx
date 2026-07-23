@@ -14,6 +14,7 @@ import ServiceProjects from "../components/ServiceProjects"
 import OtherServices from "../resuable component/OtherServices";
 import { useParams } from "react-router-dom";
 import website from "../src/assets/websiteHeader.png"
+import WebsiteHeader from "./WebsiteHeader";
 
 
 
@@ -168,13 +169,17 @@ const WebDevelopment = () => {
                 </div>
             </section> */}
 
-                    <section className="w-full pt-24 bg-[#12001E]">
+            {/* <section className="w-full pt-24 bg-[#12001E]">
                                       <img
                                         src={website}
                                         alt="Hero"
                                         className="w-full h-auto block"
                                       />
-                                    </section>
+                                    </section> */}
+            <section className="w-full pt-24 bg-[#12001E]">
+
+                <WebsiteHeader />
+            </section>
 
             <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
 
@@ -196,7 +201,7 @@ const WebDevelopment = () => {
           px-7 pt-16 pb-8
           text-center"
                             >
-                         
+
                                 <div className="absolute -top-10 left-1/2 -translate-x-1/2">
                                     <div className="w-20 h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center overflow-hidden">
                                         <img
@@ -215,7 +220,7 @@ const WebDevelopment = () => {
                                         <li key={i}>• {point}</li>
                                     ))}
                                 </ul> */}
-                                  <div className="space-y-1 text-[#D8D8D8] text-[15px] leading-7">
+                                <div className="space-y-1 text-[#D8D8D8] text-[15px] leading-7">
                                     {item.points.map((point, i) => (
                                         <p key={i}> {point}</p>
                                     ))}
@@ -228,7 +233,7 @@ const WebDevelopment = () => {
                 </div>
 
             </section>
-    
+
 
 
 
@@ -248,10 +253,10 @@ const WebDevelopment = () => {
 
                         {benefits.map((item, index) => (
 
-    
-        <div
-  key={index}
-  className={`
+
+                            <div
+                                key={index}
+                                className={`
     ${item.className}
     rounded-[26px]
     border-t border-l
@@ -262,7 +267,7 @@ const WebDevelopment = () => {
     min-h-[180px]
     flex flex-col justify-center
   `}
->
+                            >
 
                                 <img
                                     src={item.icon}
@@ -323,7 +328,7 @@ const WebDevelopment = () => {
 
 
 
-   
+
 
 
 

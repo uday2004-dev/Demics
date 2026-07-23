@@ -15,6 +15,7 @@ import plant from "../src/assets/plant.png"
 import ServiceProjects from "./ServiceProjects";
 import { useParams } from "react-router-dom";
 import marketing from "../src/assets/marketingHeader.png"
+import MarketingHeader from "./MarketingHeader";
 
 
 
@@ -113,13 +114,17 @@ const Marketing = () => {
         <div >
          
 
-                 <section className="w-full pt-24 bg-[#12001E]">
+                 {/* <section className="w-full pt-24 bg-[#12001E]">
                           <img
                             src={marketing}
                             alt="Hero"
                             className="w-full h-auto block"
                           />
-                        </section>
+                        </section> */}
+                             <section className="w-full pt-24 bg-[#12001E]">
+           
+                <MarketingHeader/>
+            </section>
 
             <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
 

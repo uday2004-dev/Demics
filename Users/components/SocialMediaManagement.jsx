@@ -29,6 +29,7 @@ import accelarate from "../src/assets/accelarate.png"
 import trust from "../src/assets/trust.png"
 import ROI from "../src/assets/ROI.png"
 import socialmediaHeader from "../src/assets/socialmediaHeader.png"
+import SocialHeader from "./SocialHeader";
 
 
 
@@ -124,71 +125,10 @@ const SocialMediaManagement = () => {
 
     return (
         <div >
-            {/* <section className="relative min-h-screen overflow-hidden flex items-center justify-center bg-gradient-to-r from-[#9B6DFF] via-[#3A0F6B] to-[#12001E]">
+  
+                <section className="w-full pt-24 bg-[#12001E]">
 
-                <div className="absolute left-0 top-0 h-full w-[40%] bg-[#A56EFF]/30 blur-[140px] z-0" />
-
-               
-                <img
-                    src={grid}
-                    alt="Grid"
-                    className="absolute bottom-0 left-0 w-full object-cover opacity-60 z-0 pointer-events-none"
-                />
-
-                <img
-                    src={Graphic_Element}
-                    alt=""
-                    className="absolute left-8 top-24 w-[340px] xl:w-[390px] z-20"
-                />
-
-            
-                <div className="relative z-30 flex flex-col items-center text-center px-8">
-
-               
-                    <h1
-                        className="text-white italic font-light leading-none
-          text-[90px]
-          md:text-[130px]
-          lg:text-[170px]
-          xl:text-[190px]"
-                        style={{
-                            fontFamily: "Playfair Display, serif",
-                        }}
-                    >
-                        Social Media Management
-                    </h1>
-
-                    <div className="relative w-[760px] max-w-full -mt-6">
-
-                        <img
-                            src={Elements}
-                            alt=""
-                            className="w-full"
-                        />
-
-                    
-                        <img
-                            src={Capa_4}
-                            alt=""
-                            className="absolute -top-[155px] right-[-195px] w-[220px] xl:w-[250px]"
-                        />
-
-                    </div>
-
-             
-                    <p className="mt-8 max-w-[930px] text-white/90 text-[18px] leading-[42px]">
-                        we transform social platforms into growth engines. From strategic content calendars to real-time community engagement, we craft authentic conversations that resonate, inspire action, and build lasting relationships. Our blend of creative storytelling, targeted amplification, and data-driven optimization ensures your brand cuts through the noise and turns followers into advocates.
-                    </p>
-
-                </div>
-            </section> */}
-
-            <section className="w-full pt-24 bg-[#12001E]">
-                <img
-                    src={socialmediaHeader}
-                    alt="Hero"
-                    className="w-full h-auto block"
-                />
+                <SocialHeader/>
             </section>
 
             <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">

@@ -239,8 +239,8 @@ const AboutUs = () => {
             {/* Right Content */}
             <div>
               <h2
-                className="text-[72px] leading-none italic text-white mb-8"
-                style={{ fontFamily: "serif" }}
+                className="text-[72px] leading-none  font-awesome  text-white mb-8"
+                // style={{ fontFamily: "serif" }}
               >
                 Our Vision
               </h2>
@@ -273,9 +273,9 @@ const AboutUs = () => {
         <div className="max-w-[1200px] mx-auto px-6">
 
           <h2
-            className="text-white italic mb-16
+            className="text-white  font-awesome mb-16
       text-5xl lg:text-7xl"
-            style={{ fontFamily: "Playfair Display, serif" }}
+            // style={{ fontFamily: "Playfair Display, serif" }}
           >
             Client Benefits
           </h2>
@@ -326,8 +326,8 @@ const AboutUs = () => {
       {/* STATS */}
       <div className="max-w-6xl mx-auto px-8 py-24 text-center">
         <h2
-          className="text-6xl italic mb-20"
-          style={{ fontFamily: "serif" }}
+          className="text-6xl  font-awesome mb-20"
+          // style={{ fontFamily: "serif" }}
         >
           What Have We Done
         </h2>
@@ -368,8 +368,8 @@ const AboutUs = () => {
 
       <div className="max-w-7xl mx-auto px-8 py-28">
         <h2
-          className="text-6xl italic mb-16"
-          style={{ fontFamily: "serif" }}
+          className="text-6xl  font-awesome mb-16"
+          // style={{ fontFamily: "serif" }}
         >
           Meet Our Founder
         </h2>

@@ -15,6 +15,7 @@ import Form from "../resuable component/Form";
 import { useParams } from "react-router-dom";
 import OtherServices from "../resuable component/OtherServices";
 import brandingImg from "../src/assets/brandingImg.png"
+import BrandingHero from "./BrandingHero";
 const Branding = () => {
     const benefits = [
         {
@@ -111,11 +112,12 @@ const Branding = () => {
 
 
             <section className="w-full pt-24 bg-[#12001E]">
-                <img
+                {/* <img
                     src={brandingImg}
                     alt="Hero"
                     className="w-full h-auto block"
-                />
+                /> */}
+                <BrandingHero/>
             </section>
 
             <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">

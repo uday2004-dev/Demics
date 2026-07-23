@@ -18,6 +18,7 @@ import { useParams } from "react-router-dom";
 // for header
 
 import adcreation from "../src/assets/adcreationHeader.png"
+import AdHeader from "./AdHeader";
 
 
 
@@ -108,21 +109,25 @@ const Adcreations = () => {
             ],
         },
     ];
-    const {id}=useParams
+    const { id } = useParams
     return (
         <div >
 
 
-            <section className="w-full pt-24 bg-[#12001E]">
+            {/* <section className="w-full pt-24 bg-[#12001E]">
                                       <img
                                         src={adcreation}
                                         alt="Hero"
                                         className="w-full h-auto block"
                                       />
-                                    </section>
+                                    </section> */}
+            <section className="w-full pt-24 bg-[#12001E]">
+
+                <AdHeader />
+            </section>
 
 
-                                     <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
+            <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
 
                 <div className="max-w-[1280px] mx-auto">
 
@@ -156,7 +161,7 @@ const Adcreations = () => {
                                     {item.title}
                                 </h3>
 
-                               
+
 
                                 <div className="space-y-1 text-[#D8D8D8] text-[15px] leading-7">
                                     {item.points.map((point, i) => (
@@ -190,9 +195,9 @@ const Adcreations = () => {
 
                         {benefits.map((item, index) => (
 
-                                <div
-  key={index}
-  className={`
+                            <div
+                                key={index}
+                                className={`
     ${item.className}
     rounded-[26px]
     border-t border-l
@@ -203,7 +208,7 @@ const Adcreations = () => {
     min-h-[180px]
     flex flex-col justify-center
   `}
->
+                            >
                                 <img
                                     src={item.icon}
                                     alt=""

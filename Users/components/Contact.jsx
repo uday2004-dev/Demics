@@ -64,7 +64,7 @@ const Contact = () => {
 
       {/* TITLE */}
       <div className="text-center mb-14">
-        <h1 className="text-5xl md:text-7xl italic font-serif mb-6">
+        <h1 className="text-5xl md:text-7xl  font-awesome mb-6">
           Contact us
         </h1>
 
@@ -74,7 +74,7 @@ const Contact = () => {
 
         <p className="text-xl md:text-3xl font-semibold">
           Your{" "}
-          <span className="italic font-serif text-white">
+          <span className=" font-awesome text-white">
             Project or Vision
           </span>{" "}
           Here

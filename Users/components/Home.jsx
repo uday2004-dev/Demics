@@ -36,8 +36,8 @@ const Home = () => {
               <h1 className="text-white leading-tight lg:leading-none mb-6 lg:mb-8">
 
                 <span
-                  className="italic text-4xl sm:text-5xl lg:text-6xl italic"
-                  style={{ fontFamily: "serif" }}
+                  className="  font-awesome text-4xl sm:text-5xl lg:text-6xl italic"
+                  // style={{ fontFamily: "serif" }}
                     // style={{ fontFamily: "'Cormorant Garamond', serif italic" }}
                 >
                   Creative Solutions
@@ -241,8 +241,8 @@ const Home = () => {
                 </span>
 
                 <span
-                  className="text-4xl sm:text-5xl lg:text-6xl italic"
-                  style={{ fontFamily: "serif" }}
+                  className="text-4xl   font-awesome sm:text-5xl lg:text-6xl italic"
+                  // style={{ fontFamily: "serif" }}
                 >
                   design-led, strategy-driven
                 </span>
@@ -351,8 +351,8 @@ const Home = () => {
 
           <div className="px-5 sm:px-6 lg:px-8 mb-8 sm:mb-10 lg:mb-16">
             <h3
-              className="text-white italic text-[34px] sm:text-[42px] md:text-[52px] lg:text-[60px] leading-none"
-              style={{ fontFamily: "serif" }}
+              className="text-white    font-awesome text-[34px] sm:text-[42px] md:text-[52px] lg:text-[60px] leading-none"
+              // style={{ fontFamily: "serif" }}
             >
               Our Services
             </h3>
@@ -371,8 +371,8 @@ const Home = () => {
           {/* Heading */}
           <div className="mb-16">
             <h3
-              className="text-5xl md:text-6xl italic text-white"
-              style={{ fontFamily: "serif" }}
+              className="text-5xl md:text-6xl  font-awesome text-white"
+              // style={{ fontFamily: "serif" }}
             >
               Featured Projects
             </h3>
@@ -424,8 +424,8 @@ const Home = () => {
   <div className="max-w-7xl mx-auto px-8">
     <h1 className="text-white leading-tight mb-6 sm:mb-8 text-left">
       <span
-        className="italic text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px]"
-        style={{ fontFamily: "serif" }}
+        className=" font-awesome text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px]"
+        // style={{ fontFamily: "serif" }}
       >
         Client
       </span>
@@ -441,8 +441,8 @@ const Home = () => {
       </span>{" "}
 
       <span
-        className="italic text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px]"
-        style={{ fontFamily: "serif" }}
+        className=" font-awesome text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px]"
+        // style={{ fontFamily: "serif" }}
       >
         Real Feedback
       </span>

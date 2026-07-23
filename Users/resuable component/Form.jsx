@@ -121,7 +121,7 @@ const Form = () => {
 
     <section className="bg-[#101110] text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
       <div className="w-full max-w-[1320px] mx-auto">
-        <h1 className="text-[34px] leading-tight sm:text-[42px] lg:text-5xl font-light mb-8 sm:mb-10">
+        <h1 className=" font-awesome text-[34px] leading-tight sm:text-[42px] lg:text-5xl font-light mb-8 sm:mb-10">
           Interested in <br />
           <span className="font-normal">Working Together?</span>
         </h1>

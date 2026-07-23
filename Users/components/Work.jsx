@@ -103,8 +103,8 @@ const Work = () => {
 
           {/* Heading */}
           <h1
-            className="text-white text-6xl italic text-center mb-14"
-            style={{ fontFamily: "serif" }}
+            className="text-white text-6xl  font-awesome text-center mb-14"
+            // style={{ fontFamily: "serif" }}
           >
             Our Projects
           </h1>

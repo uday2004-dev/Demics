@@ -59,7 +59,7 @@ const ServiceDetails = () => {
           className="w-[300px] h-[300px] mx-auto rounded-2xl object-cover"
         />
 
-        <h1 className="text-4xl md:text-6xl font-bold mt-6">
+        <h1 className="text-4xl font-awesome  md:text-6xl font-bold mt-6">
           {service.name}
         </h1>
 

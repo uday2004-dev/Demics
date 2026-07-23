@@ -26,14 +26,14 @@ const Services = () => {
             {/* Left */}
             <div className="text-center lg:text-left">
               <h1
-                className="text-white italic leading-[1.05]
+                className="text-white  font-awesome leading-[1.05]
 text-[34px]
 min-[375px]:text-[38px]
 sm:text-5xl
 md:text-6xl
 lg:text-[72px]
 xl:text-[82px]"
-                style={{ fontFamily: "serif" }}
+                // style={{ fontFamily: "serif" }}
               >
                 Unlock your
                 <br />
@@ -64,7 +64,7 @@ object-contain"
           <div className="mt-10 sm:mt-14 md:mt-20 lg:mt-24">
             <h2
 
-              className="text-white italic text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-center lg:text-left" style={{ fontFamily: "serif" }}
+              className="text-white  font-awesome text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-center lg:text-left" 
             >
               Perks of Choosing DEMICS
             </h2>
@@ -93,13 +93,13 @@ md:leading-8">
       <section className="py-10 sm:py-14 md:py-20 w-full  bg-[#111111]">
         <div className="mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-12 xl:px-20">
           <h2
-            className="text-white italic
+            className="text-white  font-awesome
             text-3xl
             sm:text-4xl
             md:text-5xl
             lg:text-6xl
             mb-10 md:mb-12 text-center lg:text-left"
-            style={{ fontFamily: "serif" }}
+            // style={{ fontFamily: "serif" }}
           >
             Design & Development Process
           </h2>
@@ -114,13 +114,13 @@ md:leading-8">
       <section className="py-10 sm:py-14 md:py-20  bg-[#111111]">
         <div className="mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-12 xl:px-20">
           <h2
-            className="text-white italic
+            className="text-white  font-awesome
             text-3xl
             sm:text-4xl
             md:text-5xl
             lg:text-6xl
             mb-10 md:mb-14 text-center lg:text-left"
-            style={{ fontFamily: "serif" }}
+            // style={{ fontFamily: "serif" }}
           >
             Explore our Services
           </h2>

@@ -144,7 +144,6 @@
 
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import axios from "axios";
 import api from "../utls/axios"; 
 
 const serviceRoutes = {
@@ -159,25 +158,6 @@ const ServicesCard = () => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // const fetchServices = async () => {
-  //   try {
-  //     const res = await axios.get(
-  //       // "http://localhost:3000/api/services/getAllServices",
-  //         `${import.meta.env.VITE_API_URL}/api/services/getAllServices`,
-  //       {
-  //         withCredentials: true,
-  //       }
-  //     );
-
-  //     if (res.data.success) {
-  //       setServices(res.data.services);
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
 
 
   const fetchServices = async () => {
@@ -270,7 +250,7 @@ const ServicesCard = () => {
                   <h1
                     className="
                       text-white
-                      italic
+                      font-awesome
                       leading-tight
                       mb-4
                       text-[30px]
@@ -279,7 +259,7 @@ const ServicesCard = () => {
                       md:text-6xl
                       lg:text-7xl
                     "
-                    style={{ fontFamily: "serif" }}
+                    // style={{ fontFamily: "serif" }}
                   >
                     {service.name}
                   </h1>
@@ -302,14 +282,6 @@ const ServicesCard = () => {
 
                   <Link
                     to={route}
-                    onClick={() => {
-                      console.log("================================");
-                      console.log("Clicked:", service.name);
-                      console.log("ID:", service._id);
-                      console.log("Key:", serviceKey);
-                      console.log("Route:", route);
-                      console.log("================================");
-                    }}
                   >
                     <button
                       className="
