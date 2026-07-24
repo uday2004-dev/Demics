@@ -11,6 +11,7 @@ import arrow1 from "../src/assets/arrow1.png"
 import arrow2 from "../src/assets/arrow2.png"
 import laptop from "../src/assets/laptop.png"
 import api from "../utls/axios";
+import AboutHeader from "./AboutHeader";
 const AboutUs = () => {
   const [teams, setTeams] = useState([]);
   const [openFaq, setOpenFaq] = useState(null);
@@ -116,105 +117,10 @@ const AboutUs = () => {
 
 
       {/* HERO */}
-      <section className="bg-[#111111] pt-36 px-5 lg:px-10">
-        <div className="max-w-[1440px] mx-auto">
+       <section className="w-full pt-24 bg-[#12001E]">
 
-          <div className="relative overflow-hidden rounded-[36px] bg-gradient-to-br from-[#B98BFF] via-[#5317C8] to-[#13021F] min-h-[760px]">
-
-            {/* Glow */}
-            <div className="absolute -top-28 -left-24 w-[520px] h-[520px] rounded-full bg-[#D9B6FF]/40 blur-[120px]" />
-
-            {/* Grid */}
-            <img
-              src={grid}
-              alt=""
-              className="absolute bottom-0 left-0 w-full opacity-30 pointer-events-none"
-            />
-
-            {/* Hash */}
-            <img
-              src={hash}
-              alt=""
-              className="absolute
-        w-[120px]
-        lg:w-[150px]
-        top-[80px]
-        left-[120px]"
-            />
-
-            {/* Arrow Right */}
-            <img
-              src={arrow2}
-              alt=""
-              className="absolute
-        w-[90px]
-        lg:w-[110px]
-        top-[150px]
-        right-[180px]"
-            />
-
-            {/* Arrow Left */}
-            <img
-              src={arrow1}
-              alt=""
-              className="absolute
-        w-[85px]
-        lg:w-[100px]
-        left-[150px]
-        bottom-[170px]"
-            />
-
-            {/* Laptop */}
-            <img
-              src={laptop}
-              alt=""
-              className="absolute
-        w-[120px]
-        lg:w-[150px]
-        right-[120px]
-        bottom-[130px]"
-            />
-
-            {/* Content */}
-            <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-20">
-
-              <h1
-                className="text-white italic leading-none
-          text-[70px]
-          md:text-[100px]
-          lg:text-[120px]"
-                style={{ fontFamily: "Cormorant Garamond" }}
-              >
-                About us
-              </h1>
-
-              <h2 className="mt-8 max-w-4xl font-semibold leading-tight text-white
-        text-[24px]
-        md:text-[32px]
-        lg:text-[36px]">
-                we are a design-led, strategy-driven digital
-                <br />
-                marketing and creative design agency
-              </h2>
-
-              <div className="w-[70%] lg:w-[430px] h-[2px] bg-[#7C4DFF] mt-4 mb-5" />
-
-              <p className="max-w-3xl text-gray-300 leading-7 text-[14px] lg:text-[15px]">
-                With DEMICS, your brand is designed with intention, your stories are
-                digitalized with emotion, and your presence evolves with culture.
-                We market across media, innovate with AI, create using cutting-edge
-                technology, and drive results through strategic thinking.
-              </p>
-
-            </div>
-
-            {/* Bottom Curve */}
-            <div className="absolute bottom-0 left-0 w-full h-[38px] bg-[#111111] rounded-t-[38px]" />
-
-          </div>
-
-        </div>
-      </section>
+                <AboutHeader/>
+            </section>
 
 
 
