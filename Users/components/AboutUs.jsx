@@ -279,7 +279,8 @@ const AboutUs = () => {
         >
           Meet Our Founder
         </h2> */}
-        <h2 className="text-3xl sm:text-4xl md:text-6xl font-awesome mb-16 whitespace-nowrap">
+        {/* <h2 className="text-3xl sm:text-4xl md:text-6xl font-awesome mb-16 whitespace-nowrap"> */}
+        <h2 className="text-[38px] sm:text-5xl md:text-6xl font-awesome mb-16 whitespace-nowrap">
           Meet Our Founder
         </h2>
 
