@@ -61,16 +61,16 @@ const AboutUs = () => {
   //   }
   // };
   const fetchTeam = async () => {
-  try {
-    const res = await api.get("/api/team");
+    try {
+      const res = await api.get("/api/team");
 
-    if (res.data.success) {
-      setTeams(res.data.teams);
+      if (res.data.success) {
+        setTeams(res.data.teams);
+      }
+    } catch (error) {
+      console.log(error);
     }
-  } catch (error) {
-    console.log(error);
-  }
-};
+  };
 
   const faqs = [
     {
@@ -117,10 +117,10 @@ const AboutUs = () => {
 
 
       {/* HERO */}
-       <section className="w-full pt-24 bg-[#12001E]">
+      <section className="w-full pt-24 bg-[#12001E]">
 
-                <AboutHeader/>
-            </section>
+        <AboutHeader />
+      </section>
 
 
 
@@ -146,7 +146,7 @@ const AboutUs = () => {
             <div>
               <h2
                 className="text-[72px] leading-none  font-awesome  text-white mb-8"
-                // style={{ fontFamily: "serif" }}
+              // style={{ fontFamily: "serif" }}
               >
                 Our Vision
               </h2>
@@ -181,7 +181,7 @@ const AboutUs = () => {
           <h2
             className="text-white  font-awesome mb-16
       text-5xl lg:text-7xl"
-            // style={{ fontFamily: "Playfair Display, serif" }}
+          // style={{ fontFamily: "Playfair Display, serif" }}
           >
             Client Benefits
           </h2>
@@ -233,7 +233,7 @@ const AboutUs = () => {
       <div className="max-w-6xl mx-auto px-8 py-24 text-center">
         <h2
           className="text-6xl  font-awesome mb-20"
-          // style={{ fontFamily: "serif" }}
+        // style={{ fontFamily: "serif" }}
         >
           What Have We Done
         </h2>
@@ -273,10 +273,13 @@ const AboutUs = () => {
 
 
       <div className="max-w-7xl mx-auto px-8 py-28">
-        <h2
+        {/* <h2
           className="text-6xl  font-awesome mb-16"
-          // style={{ fontFamily: "serif" }}
+        // style={{ fontFamily: "serif" }}
         >
+          Meet Our Founder
+        </h2> */}
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-awesome mb-16 whitespace-nowrap">
           Meet Our Founder
         </h2>
 
@@ -286,13 +289,30 @@ const AboutUs = () => {
             className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
           >
             {/* Left Side Image */}
-            <div className="overflow-hidden rounded-3xl">
-              <img
+            {/* <div className="overflow-hidden rounded-3xl">
+            <img
                 src={member.photo}
                 alt={member.name}
                 className="w-full h-[550px] object-cover rounded-3xl transition duration-500 hover:scale-105"
               />
+            <img
+                src={member.photo}
+                alt={member.name}
+                className="w-full h-[550px] object-cover object-[center_20%] rounded-3xl transition duration-500 hover:scale-105"
+
+              />
+            </div> */}
+
+            <div className="relative w-full h-[550px] overflow-hidden rounded-3xl">
+              <img
+                src={member.photo}
+                alt={member.name}
+                className="absolute inset-0 w-full h-full object-cover object-[center_15%] transition-all duration-500 ease-in-out hover:scale-110"
+              />
             </div>
+
+
+
 
             {/* Right Side Text */}
             <div>
