@@ -16,7 +16,7 @@ const teamSchema = new mongoose.Schema(
     },
     profileLink: {
       type: String,
-      // required: true,
+      required: false,
     },
   },
   {

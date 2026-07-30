@@ -16,8 +16,19 @@ export const createTeam = async (req, res) => {
       });
     }
 
+    // if (
+    //   [name, designation, profileLink].some(
+    //     (field) => !field?.trim()
+    //   )
+    // ) {
+    //   return res.status(400).json({
+    //     success: false,
+    //     message: "Please fill all required fields",
+    //   });
+    // }
+
     if (
-      [name, designation, profileLink].some(
+      [name, designation].some(
         (field) => !field?.trim()
       )
     ) {
