@@ -273,14 +273,9 @@ const AboutUs = () => {
 
 
       <div className="max-w-7xl mx-auto px-8 py-28">
-        {/* <h2
-          className="text-6xl  font-awesome mb-16"
-        // style={{ fontFamily: "serif" }}
-        >
-          Meet Our Founder
-        </h2> */}
-        {/* <h2 className="text-3xl sm:text-4xl md:text-6xl font-awesome mb-16 whitespace-nowrap"> */}
-        <h2 className="text-[38px] sm:text-5xl md:text-6xl font-awesome mb-16 whitespace-nowrap">
+
+        {/* <h2 className="text-[clamp(2rem,7vw,3.75rem)] font-awesome mb-16 whitespace-nowrap"> */}
+        <h2 className="text-[42px] sm:text-5xl md:text-6xl font-awesome mb-16 whitespace-nowrap">
           Meet Our Founder
         </h2>
 
@@ -317,10 +312,12 @@ const AboutUs = () => {
 
             {/* Right Side Text */}
             <div>
-              <h3 className="text-5xl font-semibold mb-4">
+              {/* <h3 className="text-5xl font-semibold mb-4">
                 {member.name}
-              </h3>
-
+              </h3> */}
+<h3 className="text-[38px] sm:text-4xl md:text-5xl font-semibold mb-4">
+  {member.name}
+</h3>
               <p className="text-xl text-gray-400 mb-8">
                 {member.designation}
               </p>
