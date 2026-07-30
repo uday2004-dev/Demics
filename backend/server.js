@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
 //   })
 // );
 
-import cors from "cors";
+
 
 app.use(
   cors({
