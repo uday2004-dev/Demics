@@ -93,7 +93,7 @@ const Footer = () => {
       </div>
 
       {/* PARTNER STRIP */}
-      <div className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 py-8 relative z-10">
+      {/* <div className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 py-8 relative z-10">
         <div className="max-w-7xl mx-auto px-8">
           <div className="grid grid-cols-2 md:grid-cols-7 gap-8 items-center text-center">
             {[
@@ -113,6 +113,33 @@ const Footer = () => {
               </div>
             ))}
           </div>
+        </div>
+      </div> */}
+      <div className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 py-8 overflow-hidden">
+        <div className="animate-marquee">
+          {[
+            "EVOLUTION",
+            "pigment play",
+            "L.A. COLORS",
+            "L.A. Girl",
+            "LORD & BERRY",
+            "MILANI",
+            "Gartner",
+            "EVOLUTION",
+            "pigment play",
+            "L.A. COLORS",
+            "L.A. Girl",
+            "LORD & BERRY",
+            "MILANI",
+            "Gartner",
+          ].map((brand, index) => (
+            <div
+              key={index}
+              className="mx-12 text-white font-bold text-lg whitespace-nowrap"
+            >
+              {brand}
+            </div>
+          ))}
         </div>
       </div>
 

@@ -117,7 +117,7 @@ const Branding = () => {
                     alt="Hero"
                     className="w-full h-auto block"
                 /> */}
-                <BrandingHero/>
+                <BrandingHero />
             </section>
 
             <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
@@ -156,11 +156,16 @@ const Branding = () => {
                                     {item.title}
                                 </h3>
 
-                                <ul className="space-y-2 text-[#D8D8D8] text-[15px] leading-7">
+                                <ul className="space-y-2 text-[#D8D8D8] text-[15px] leading-7 ">
                                     {item.points.map((point, i) => (
                                         <li key={i}>• {point}</li>
                                     ))}
                                 </ul>
+                                {/* <ul className="inline-block text-left space-y-2 text-[#D8D8D8] text-[15px] leading-7">
+                                    {item.points.map((point, i) => (
+                                        <li key={i}>• {point}</li>
+                                    ))}
+                                </ul> */}
                             </div>
                         ))}
 

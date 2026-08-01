@@ -7,6 +7,7 @@ import Testimonial from "./Testimonial";
 import Form from "../resuable component/Form"
 import grid from "../src/assets/grid.png"
 import { useNavigate } from "react-router-dom";
+import heroImg2 from "../src/assets/heroImg2.svg"
 // import blur from "../src/assets/blurEffect.png"
 
 
@@ -80,10 +81,17 @@ const Home = () => {
 
               {/* Hero Image */}
               <img
-                src={heroImg}
+                src={heroImg2}
                 alt="Hero"
                 className="relative z-20 w-[240px] sm:w-[280px] lg:w-[300px] object-contain lg:-translate-y-6 lg:translate-x-4"
               />
+              {/* <img
+  src={heroImg}
+  alt="Hero"
+  className="relative z-20 w-[240px] sm:w-[280px] lg:w-[300px] h-auto object-contain lg:-translate-y-6 lg:translate-x-4"
+  loading="eager"
+  decoding="async"
+/> */}
 
             </div>
 
