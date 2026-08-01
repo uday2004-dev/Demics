@@ -41,6 +41,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
+      "http://localhost:5174",
       "https://frontend-seven-rose-54.vercel.app",
       "https://demics.vercel.app",
       "https://demicscreativehub.com",
