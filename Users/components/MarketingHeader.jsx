@@ -190,17 +190,25 @@ import blub from "../src/assets/Blub.png";
 import element from "../src/assets/Elements.png";
 import shine3 from "../src/assets/shine3.png";
 import shine from "../src/assets/shine.png";
-import mobileMarketingHeader from "../src/assets/mobile-marketingheader.png";
+import mobileMarketingHeader from "../src/assets/mobile-marketing.jpg";
 
 const MarketingHeader = () => {
   return (
     <>
       {/* ================= Mobile View ================= */}
-      <section className="block md:hidden">
+      {/* <section className="block md:hidden">
         <img
           src={mobileMarketingHeader}
           alt="Marketing Header"
           className="w-full h-auto object-cover"
+        />
+      </section> */}
+
+      <section className="block md:hidden  -mt-2 overflow-hidden">
+        <img
+          src={mobileMarketingHeader}
+          alt="Branding Hero"
+          className="w-full h-auto object-cover -translate-y-2"
         />
       </section>
 

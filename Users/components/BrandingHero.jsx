@@ -159,11 +159,13 @@ const BrandingHero = () => {
         />
       </section> */}
 
-  <section className="block md:hidden -mt-1 -mr-1 overflow-hidden">
+
+
+<section className="block md:hidden  -mt-2 overflow-hidden">
   <img
     src={mobileHero}
     alt="Branding Hero"
-    className="w-full h-auto object-cover scale-[1.03] origin-top"
+    className="w-full h-auto object-cover -translate-y-2"
   />
 </section>
 

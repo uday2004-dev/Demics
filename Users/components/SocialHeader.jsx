@@ -118,19 +118,27 @@ import grid from "../src/assets/grid.png";
 import a from "../src/assets/@.png";
 import rocket from "../src/assets/rocketHeader.png";
 import heart from "../src/assets/heart.png";
-import mobileSocialHeader from "../src/assets/mobile-socialHeader.png";
+import mobileSocialHeader from "../src/assets/mobile-socialHeader.jpg";
 
 const SocialHeader = () => {
   return (
     <>
       {/* ================= Mobile View ================= */}
-      <section className="block md:hidden">
+      {/* <section className="block md:hidden">
         <img
           src={mobileSocialHeader}
           alt="Social Media Header"
           className="w-full h-auto object-cover"
         />
-      </section>
+      </section> */}
+
+            <section className="block md:hidden overflow-hidden">
+              <img
+                src={mobileSocialHeader}
+                alt="Branding Hero"
+                className="w-full h-auto object-cover -translate-y-2"
+              />
+            </section>
 
       {/* ================= Desktop & Tablet ================= */}
       <section className="relative hidden min-h-[85vh] items-center justify-center overflow-hidden bg-[linear-gradient(103.43deg,#8a38f5_1.29%,#3d1273_39.23%,#040009_98.71%)] px-5 sm:px-8 md:flex md:px-12 lg:px-20">
