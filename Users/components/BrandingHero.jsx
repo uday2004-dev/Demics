@@ -144,23 +144,34 @@ import leftVector from "../src/assets/Vector.png";
 import rightFeather from "../src/assets/Capa_4.png";
 import grid from "../src/assets/grid.png";
 import element from "../src/assets/Elements.png";
-import mobileHero from "../src/assets/mobile-branding.png";
-import tabletBranding from "../src/assets/tablet-branding.png";
+import mobileHero from "../src/assets/mobile-branding.jpg";
+// import tabletBranding from "../src/assets/tablet-branding.png";
 
 const BrandingHero = () => {
   return (
     <>
       {/* ================= Mobile View ================= */}
-      <section className="block md:hidden">
+      {/* <section className="block md:hidden">
         <img
           src={mobileHero}
           alt="Branding Hero"
           className="w-full h-auto object-cover"
         />
-      </section>
+      </section> */}
 
-        {/* ================= Tablet View ================= */}
-  {/* <section className="hidden md:block lg:hidden">
+  <section className="block md:hidden -mt-1 -mr-1 overflow-hidden">
+  <img
+    src={mobileHero}
+    alt="Branding Hero"
+    className="w-full h-auto object-cover scale-[1.03] origin-top"
+  />
+</section>
+
+
+    
+
+      {/* ================= Tablet View ================= */}
+      {/* <section className="hidden md:block lg:hidden">
     <img
       src={tabletBranding}
       alt="Branding Hero"
