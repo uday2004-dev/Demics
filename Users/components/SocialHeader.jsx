@@ -118,7 +118,7 @@ import grid from "../src/assets/grid.png";
 import a from "../src/assets/@.png";
 import rocket from "../src/assets/rocketHeader.png";
 import heart from "../src/assets/heart.png";
-import mobileSocialHeader from "../src/assets/mobile-socialheader.png";
+import mobileSocialHeader from "../src/assets/mobile-socialHeader.png";
 
 const SocialHeader = () => {
   return (
