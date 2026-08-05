@@ -121,7 +121,7 @@ const Adcreations = () => {
                                         className="w-full h-auto block"
                                       />
                                     </section> */}
-            <section className="w-full pt-24 bg-[#12001E]">
+            <section className="w-full pt-15 bg-[#12001E]">
 
                 <AdHeader />
             </section>
