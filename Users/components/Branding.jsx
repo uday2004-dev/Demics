@@ -1,5 +1,267 @@
-import React from "react";
+// import React from "react";
+// import logoIcon from "../src/assets/square.png"
+// import identityIcon from "../src/assets/handhold.png"
+// import guidelineIcon from "../src/assets/penpencil.png"
+// import printIcon from "../src/assets/sheet.png"
+// import marketingIcon from "../src/assets/Icon.png"
+// import digitalIcon from "../src/assets/globe.png"
+// import future from "../src/assets/brain.png"
+// import support from "../src/assets/handShake.png"
+// import revision from "../src/assets/infinity.png"
+// import custom from "../src/assets/puzzleCube.png"
+// import ServiceProjects from "./ServiceProjects";
+// import Form from "../resuable component/Form";
+// import { useParams } from "react-router-dom";
+// import OtherServices from "../resuable component/OtherServices";
+// import BrandingHero from "./BrandingHero";
+// const Branding = () => {
+//     const benefits = [
+//         {
+//             icon: future,
+//             title: "Future-Ready Digital Assets",
+//             desc: "Designed to evolve with your brand and future technologies.",
+//             className: "lg:col-span-2",
+//         },
+//         {
+//             icon: support,
+//             title: "Expert Team Support",
+//             desc: "A skilled team by your side, every step of the way.",
+//             className: "",
+//         },
+//         {
+//             icon: revision,
+//             title: "Unlimited revisions",
+//             desc: "We refine until it's exactly how you envision it.",
+//             className: "",
+//         },
+//         {
+//             icon: custom,
+//             title: "Customization & Flexibility",
+//             desc: "Tailored solutions that adapt to your unique needs.",
+//             className: "lg:col-span-2",
+//         },]
 
+//     const brandingAssets = [
+//         {
+//             icon: logoIcon,
+//             title: "Logo Design",
+//             points: [
+//                 "Primary logo",
+//                 "Secondary/alternate logo",
+//                 "Icon or brand mark",
+//             ],
+//         },
+//         {
+//             icon: identityIcon,
+//             title: "Brand Identity",
+//             points: [
+//                 "Color palette",
+//                 "Typography system",
+//                 "Iconography and graphic elements",
+//                 "Brand patterns or textures",
+//             ],
+//         },
+//         {
+//             icon: guidelineIcon,
+//             title: "Brand Guidelines",
+//             points: [
+//                 "Usage rules for logo, colors, and fonts",
+//                 "Do's and don'ts for brand representation",
+//                 "Tone of voice, imagery style, and layout rules",
+//             ],
+//         },
+//         {
+//             icon: printIcon,
+//             title: "Print Collateral",
+//             points: [
+//                 "Business cards",
+//                 "Letterheads & envelopes",
+//                 "Invoice templates",
+//                 "Presentation templates",
+//             ],
+//         },
+//         {
+//             icon: marketingIcon,
+//             title: "Marketing Collateral",
+//             points: [
+//                 "Brochures & flyers",
+//                 "Product/service catalogues",
+//                 "Posters & banners",
+//                 "Brand launch kits",
+//             ],
+//         },
+//         {
+//             icon: digitalIcon,
+//             title: "Digital Branding Assets",
+//             points: [
+//                 "Social media templates",
+//                 "Display ad creatives",
+//                 "Email signature & newsletter templates",
+//                 "Website UI/UX mockups",
+//             ],
+//         },
+//     ];
+
+//     const { id } = useParams();
+
+//     return (
+//         <div >
+
+
+
+//             <section className="w-full pt-24 bg-[#12001E]">
+//                 {/* <img
+//                     src={brandingImg}
+//                     alt="Hero"
+//                     className="w-full h-auto block"
+//                 /> */}
+//                 <BrandingHero />
+//             </section>
+
+//             <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
+
+//                 <div className="max-w-[1280px] mx-auto">
+
+//                     <h2 className="text-white text-center text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-20">
+//                         Branding Assets to be Designed
+//                         <br />
+//                         by a Design Agency
+//                     </h2>
+
+//                     <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+
+//                         {brandingAssets.map((item, index) => (
+//                             <div
+//                                 key={index}
+//                                 className="relative w-full min-h-[280px] rounded-[24px]
+//           border border-white/30
+//           bg-white/[0.03]
+//           backdrop-blur-sm
+//           px-7 pt-16 pb-8
+//           text-center"
+//                             >
+
+//                                 <div className="absolute -top-10 left-1/2 -translate-x-1/2">
+//                                     <div className="w-20 h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center overflow-hidden">
+//                                         <img
+//                                             src={item.icon}
+//                                             alt=""
+//                                             className="w-[70px] h-[70px] object-contain"
+//                                         />
+//                                     </div>
+//                                 </div>
+//                                 <h3 className="text-white text-2xl font-medium mb-5">
+//                                     {item.title}
+//                                 </h3>
+
+//                                 <ul className="space-y-2 text-[#D8D8D8] text-[15px] leading-7 ">
+//                                     {item.points.map((point, i) => (
+//                                         <li key={i}>• {point}</li>
+//                                     ))}
+//                                 </ul>
+//                                 {/* <ul className="inline-block text-left space-y-2 text-[#D8D8D8] text-[15px] leading-7">
+//                                     {item.points.map((point, i) => (
+//                                         <li key={i}>• {point}</li>
+//                                     ))}
+//                                 </ul> */}
+//                             </div>
+//                         ))}
+
+//                     </div>
+
+//                 </div>
+
+//             </section>
+//             <section className="bg-[#101110] py-28">
+
+//                 <div className="max-w-[1200px] mx-auto px-6">
+
+//                     <h2
+//                         className="text-white italic mb-16
+//       text-5xl lg:text-7xl"
+//                         style={{ fontFamily: "Playfair Display, serif" }}
+//                     >
+//                         Client Benefits
+//                     </h2>
+
+//                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+//                         {benefits.map((item, index) => (
+
+//                             <div
+//                                 key={index}
+//                                 className={`
+//     ${item.className}
+//     rounded-[26px]
+//     border-t border-l
+//     border-white/60
+//     bg-white/[0.03]
+//     backdrop-blur-sm
+//     p-8
+//     min-h-[180px]
+//     flex flex-col justify-center
+//   `}
+//                             >
+
+//                                 <img
+//                                     src={item.icon}
+//                                     alt=""
+//                                     className="w-14 h-14 object-contain mb-8"
+//                                 />
+
+//                                 <h3 className="text-white text-[32px] font-medium mb-3">
+//                                     {item.title}
+//                                 </h3>
+
+//                                 <p className="text-white/70 text-lg leading-7 max-w-[420px]">
+//                                     {item.desc}
+//                                 </p>
+
+//                             </div>
+
+//                         ))}
+
+//                     </div>
+
+//                 </div>
+
+//             </section>
+//             <section className="py-28 bg-[#111111]">
+//                 <div className="max-w-7xl mx-auto px-8">
+
+//                     {/* Heading */}
+//                     <div className="mb-16">
+//                         <h3
+//                             className="text-5xl md:text-6xl italic text-white"
+//                             style={{ fontFamily: "serif" }}
+//                         >
+//                             Featured Projects
+//                         </h3>
+//                     </div>
+//                     <ServiceProjects serviceId={id} />
+//                 </div>
+//             </section>
+
+//             <section className="py-28 bg-[#111111]">
+//                 <div className="max-w-7xl mx-auto px-8">
+//                     <OtherServices />
+//                 </div>
+//             </section>
+
+
+//             <section className="py-24 bg-[#111111]">
+//                 <div className="max-w-[1320px] mx-auto px-6 lg:px-12 xl:px-20">
+//                     <Form />
+//                 </div>
+//             </section>
+//         </div>
+//     );
+// };
+
+// export default Branding;
+
+
+import React from "react";
 import logoIcon from "../src/assets/square.png"
 import identityIcon from "../src/assets/handhold.png"
 import guidelineIcon from "../src/assets/penpencil.png"
@@ -14,7 +276,6 @@ import ServiceProjects from "./ServiceProjects";
 import Form from "../resuable component/Form";
 import { useParams } from "react-router-dom";
 import OtherServices from "../resuable component/OtherServices";
-import brandingImg from "../src/assets/brandingImg.png"
 import BrandingHero from "./BrandingHero";
 const Branding = () => {
     const benefits = [
@@ -120,53 +381,235 @@ const Branding = () => {
                 <BrandingHero />
             </section>
 
-            <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
+            <section className="bg-[#101110] py-16 md:py-24 px-4 md:px-10 lg:px-16">
 
-                <div className="max-w-[1280px] mx-auto">
+                <div className="max-w-7xl mx-auto">
 
-                    <h2 className="text-white text-center text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-20">
+                    <h2 className="text-center text-white text-xl md:text-5xl  mb-12 md:mb-20">
                         Branding Assets to be Designed
                         <br />
                         by a Design Agency
                     </h2>
 
-                    <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+                    <div
+                        className="
+        grid
+
+        sm:grid-cols-1
+    
+            min-[375px]:grid-cols-2
+              md:grid-cols-2
+        lg:grid-cols-3
+
+        gap-x-3
+        gap-y-8
+
+   
+        sm:gap-x-5
+        sm:gap-y-10
+
+        md:gap-x-8
+        md:gap-y-16
+      "
+                    >
+
+
 
                         {brandingAssets.map((item, index) => (
+
                             <div
                                 key={index}
-                                className="relative w-full min-h-[280px] rounded-[24px]
-          border border-white/30
-          bg-white/[0.03]
-          backdrop-blur-sm
-          px-7 pt-16 pb-8
-          text-center"
+                                className="
+            relative
+  
+            aspect-square
+            md:aspect-auto
+
+        
+            md:min-h-[280px]
+
+            rounded-[24px]
+            border border-white/20
+            bg-white/[0.03]
+            backdrop-blur-sm
+
+            flex
+            flex-col
+            items-center
+            justify-center
+
+            px-3
+            py-4
+
+            sm:px-5
+            sm:py-6
+
+            md:px-7
+            md:pt-16
+            md:pb-8
+          "
                             >
 
-                                <div className="absolute -top-10 left-1/2 -translate-x-1/2">
-                                    <div className="w-20 h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center overflow-hidden">
+                                {/* Icon */}
+                                <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2">
+{/* 
+                                    <div
+                                        className="
+                w-12
+                h-12
+                            
+
+
+                sm:w-16
+                sm:h-16
+
+                md:w-20
+                md:h-20
+
+                rounded-full
+                bg-[#EEF1FF]
+
+                flex
+                items-center
+                justify-center
+              "
+                                    > */}
+                                    <div
+  className="
+    w-10
+    h-10
+
+    sm:w-14
+    sm:h-14
+
+    md:w-[72px]
+    md:h-[72px]
+
+    rounded-full
+    bg-[#EEF1FF]
+
+    flex
+    items-center
+    justify-center
+  "
+>
+{/* 
                                         <img
                                             src={item.icon}
                                             alt=""
-                                            className="w-[70px] h-[70px] object-contain"
-                                        />
+                                            className="
+  w-10
+  h-10
+
+  min-[375px]:w-10
+  min-[375px]:h-10
+
+  min-[425px]:w-14
+  min-[425px]:h-14
+
+  md:w-[70px]
+  md:h-[70px]
+
+  object-contain
+"
+                                        /> */}
+                                        <img
+  src={item.icon}
+  alt=""
+  className="
+    w-8
+    h-8
+
+    min-[375px]:w-8
+    min-[375px]:h-8
+
+    min-[425px]:w-12
+    min-[425px]:h-12
+
+    md:w-[62px]
+    md:h-[62px]
+
+    object-contain
+  "
+/>
+
                                     </div>
+
                                 </div>
-                                <h3 className="text-white text-2xl font-medium mb-5">
+
+                                {/* Title */}
+                                <h3
+                                    className="
+              text-white
+              text-left
+              font-semibold
+
+              text-[13px]
+
+              sm:text-[16px]
+
+              md:text-2xl
+
+              mb-2
+              md:mb-5
+            "
+                                >
                                     {item.title}
                                 </h3>
 
-                                <ul className="space-y-2 text-[#D8D8D8] text-[15px] leading-7 ">
+                                {/* Description */}
+                                {/* <div
+                                    className="
+                                    list-disc
+    pl-4
+              text-left
+              text-[#D8D8D8]
+
+              text-[9px]
+              leading-4
+
+              sm:text-[11px]
+              sm:leading-5
+
+              md:text-[15px]
+              md:leading-7
+
+              space-y-1
+            "
+                                >
+
                                     {item.points.map((point, i) => (
-                                        <li key={i}>• {point}</li>
+                                        <p key={i}>{point}</p>
                                     ))}
-                                </ul>
-                                {/* <ul className="inline-block text-left space-y-2 text-[#D8D8D8] text-[15px] leading-7">
-                                    {item.points.map((point, i) => (
-                                        <li key={i}>• {point}</li>
-                                    ))}
-                                </ul> */}
+
+                                </div> */}
+                                <ul
+  className="
+    list-disc
+    pl-4
+
+    text-left
+    text-[#D8D8D8]
+
+    text-[9px]
+    leading-4
+
+    sm:text-[11px]
+    sm:leading-5
+
+    md:text-[15px]
+    md:leading-7
+
+    space-y-1
+  "
+>
+  {item.points.map((point, i) => (
+    <li key={i}>{point}</li>
+  ))}
+</ul>
+
                             </div>
+
                         ))}
 
                     </div>
@@ -174,48 +617,56 @@ const Branding = () => {
                 </div>
 
             </section>
-            <section className="bg-[#101110] py-28">
 
-                <div className="max-w-[1200px] mx-auto px-6">
+            {/* ================= Client Benefits ================= */}
+
+            <section className="bg-[#101110] py-16 md:py-28">
+
+                <div className="max-w-7xl mx-auto px-4 md:px-8">
 
                     <h2
-                        className="text-white italic mb-16
-      text-5xl lg:text-7xl"
+                        className="text-white italic text-4xl md:text-7xl mb-10 md:mb-16"
                         style={{ fontFamily: "Playfair Display, serif" }}
                     >
                         Client Benefits
                     </h2>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-8">
 
                         {benefits.map((item, index) => (
 
                             <div
                                 key={index}
                                 className={`
-    ${item.className}
-    rounded-[26px]
+                  ${item.className || ""}
+                  rounded-[26px]
     border-t border-l
     border-white/60
     bg-white/[0.03]
     backdrop-blur-sm
     p-8
     min-h-[180px]
-    flex flex-col justify-center
-  `}
+   
+
+                  p-5
+                  md:p-8
+
+                  flex flex-col
+                  justify-center
+                `}
                             >
 
                                 <img
                                     src={item.icon}
                                     alt=""
-                                    className="w-14 h-14 object-contain mb-8"
+                                    className="w-10 md:w-14 mb-5 md:mb-8"
                                 />
 
-                                <h3 className="text-white text-[32px] font-medium mb-3">
+                                <h3 className="text-white text-xl md:text-[32px] font-semibold mb-2">
                                     {item.title}
                                 </h3>
 
-                                <p className="text-white/70 text-lg leading-7 max-w-[420px]">
+                                <p className="text-white/70 text-sm md:text-lg leading-6 md:leading-7">
                                     {item.desc}
                                 </p>
 
@@ -226,35 +677,53 @@ const Branding = () => {
                     </div>
 
                 </div>
-
             </section>
-            <section className="py-28 bg-[#111111]">
-                <div className="max-w-7xl mx-auto px-8">
 
-                    {/* Heading */}
-                    <div className="mb-16">
+            {/* ================= Featured Projects ================= */}
+
+            <section className="py-16 md:py-28 bg-[#111111]">
+
+                <div className="max-w-7xl mx-auto px-4 md:px-8">
+
+                    <div className="mb-10 md:mb-16">
+
                         <h3
-                            className="text-5xl md:text-6xl italic text-white"
-                            style={{ fontFamily: "serif" }}
+                            className="text-4xl md:text-6xl italic text-white"
+                            style={{ fontFamily: "Playfair Display, serif" }}
                         >
                             Featured Projects
                         </h3>
+
                     </div>
+
                     <ServiceProjects serviceId={id} />
+
                 </div>
+
             </section>
 
-            <section className="py-28 bg-[#111111]">
-                <div className="max-w-7xl mx-auto px-8">
+            {/* ================= Other Services ================= */}
+
+            <section className="py-16 md:py-28 bg-[#111111]">
+
+                <div className="max-w-7xl mx-auto px-4 md:px-8">
+
                     <OtherServices />
+
                 </div>
+
             </section>
 
+            {/* ================= Contact Form ================= */}
 
-            <section className="py-24 bg-[#111111]">
-                <div className="max-w-[1320px] mx-auto px-6 lg:px-12 xl:px-20">
+            <section className="py-16 md:py-24 bg-[#111111]">
+
+                <div className="max-w-[1320px] mx-auto px-4 md:px-8 lg:px-12 xl:px-20">
+
                     <Form />
+
                 </div>
+
             </section>
         </div>
     );
