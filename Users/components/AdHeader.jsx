@@ -131,6 +131,39 @@ const AdHeader = () => {
   "
 /> */}
 
+<img
+  src={spring}
+  alt=""
+  className="
+    absolute
+
+    top-3
+    left-1/3
+    -translate-x-1/2
+    w-12
+
+      min-[320px]:top-1
+    min-[320px]:w-15
+       min-[320px]:ml-2
+
+    min-[375px]:top-2
+    min-[375px]:w-14
+
+    min-[425px]:top-1
+    min-[425px]:w-14
+
+    sm:top-6
+    sm:w-20
+
+    md:top-12
+    md:left-[32%]
+    md:translate-x-0
+    md:w-60
+
+    z-20
+  "
+/>
+
             <div className="z-20 mx-auto max-w-5xl text-center">
  
 
