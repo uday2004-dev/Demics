@@ -1,176 +1,567 @@
-// import React from "react";
+import React from "react";
 
+import Form from "../resuable component/Form";
+import creative from "../src/assets/creative.png"
+import copy from "../src/assets/copy.png"
+import motion from "../src/assets/motion.png"
+import format from "../src/assets/format.png"
+import split from "../src/assets/split.png"
+import complience from "../src/assets/complience.png"
+import stronger from "../src/assets/stronger.png"
+import higher from "../src/assets/Higher.png"
+import faster from "../src/assets/faster.png"
+import Transparent from "../src/assets/Transparent.png"
+import OtherServices from "../resuable component/OtherServices";
+import ServiceProjects from "./ServiceProjects";
+import { useParams } from "react-router-dom";
+
+// for header
+
+import adcreation from "../src/assets/adcreationHeader.png"
+import AdHeader from "./AdHeader";
+
+
+
+const Adcreations = () => {
+    const benefits = [
+        {
+            icon: stronger,
+            title: "Stronger Brand Recall",
+            desc: "Consistent, high-impact visuals and messaging make your ads unforgettable.",
+            className: "lg:col-span-2",
+        },
+        {
+            icon: higher,
+            title: "Higher Engagement Rates",
+            desc: "Tailored creative and testing drive more clicks, views, and conversions.",
+            className: "",
+        },
+        {
+            icon: faster,
+            title: "Faster Time-to-Market",
+            desc: "End-to-end production workflows accelerate campaign launch across channels.",
+            className: "",
+        },
+        {
+            icon: Transparent,
+            title: "Transparent Performance Tracking",
+            desc: "Detailed creative-level metrics reveal what works, so you invest only in winners.",
+            className: "lg:col-span-2",
+        },]
+
+    const MarketingAssets = [
+        {
+            icon: creative,
+            title: "Creative Strategy",
+            points: [
+                "Develop big-idea frameworks  ",
+                "that align with your brand goals  ",
+                "and audience motivations.",
+
+            ],
+        },
+        {
+            icon: copy,
+            title: "Copy Messaging",
+            points: [
+                "Write clear, compelling  ",
+                "headlines and body text that ",
+                "drive curiosity and action. ",
+            ],
+        },
+        {
+            icon: motion,
+            title: "Motion Design",
+            points: [
+                "Produce scroll-stopping static ",
+                "and animated creatives tailored ",
+                "to each platform.",
+
+            ],
+        },
+        {
+            icon: format,
+            title: "Format Production",
+            points: [
+                "Export ads in all required specs ",
+                "—social sizes, banners, video ",
+                "cuts, and native templates.",
+
+            ],
+        },
+        {
+            icon: split,
+            title: "Split Testing",
+            points: [
+                "Continuously test creatives,  ",
+                "formats, and copy variants to  ",
+                "identify top performers.",
+            ],
+        },
+        {
+            icon: complience,
+            title: "Compliance Review",
+            points: [
+                "Ensure every asset adheres to ",
+                "brand guidelines, legal ",
+                "requirements, and platform policies.",
+
+            ],
+        },
+    ];
+    const { id } = useParams
+    return (
+        <div >
+
+
+            {/* <section className="w-full pt-24 bg-[#12001E]">
+                                      <img
+                                        src={adcreation}
+                                        alt="Hero"
+                                        className="w-full h-auto block"
+                                      />
+                                    </section> */}
+            <section className="w-full pt-15 bg-[#12001E]">
+
+                <AdHeader />
+            </section>
+
+
+            <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
+
+                <div className="max-w-[1280px] mx-auto">
+
+                    <h2 className="text-white text-center text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-20">
+                        Assets preview
+                    </h2>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+
+                        {MarketingAssets.map((item, index) => (
+                            <div
+                                key={index}
+                                className="relative w-full min-h-[280px] rounded-[24px]
+          border border-white/30
+          bg-white/[0.03]
+          backdrop-blur-sm
+          px-7 pt-16 pb-8
+          text-center"
+                            >
+
+                                <div className="absolute -top-10 left-1/2 -translate-x-1/2">
+                                    <div className="w-20 h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src={item.icon}
+                                            alt=""
+                                            className="w-[70px] h-[70px] object-contain"
+                                        />
+                                    </div>
+                                </div>
+                                <h3 className="text-white text-2xl font-medium mb-5">
+                                    {item.title}
+                                </h3>
+
+
+
+                                <div className="space-y-1 text-[#D8D8D8] text-[15px] leading-7">
+                                    {item.points.map((point, i) => (
+                                        <p key={i}> {point}</p>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <section className="bg-[#101110] py-28">
+
+                <div className="max-w-[1200px] mx-auto px-6">
+
+                    <h2
+                        className="text-white italic mb-16
+      text-5xl lg:text-7xl"
+                        style={{ fontFamily: "Playfair Display, serif" }}
+                    >
+                        Client Benefits
+                    </h2>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                        {benefits.map((item, index) => (
+
+                            <div
+                                key={index}
+                                className={`
+    ${item.className}
+    rounded-[26px]
+    border-t border-l
+    border-white/60
+    bg-white/[0.03]
+    backdrop-blur-sm
+    p-8
+    min-h-[180px]
+    flex flex-col justify-center
+  `}
+                            >
+                                <img
+                                    src={item.icon}
+                                    alt=""
+                                    className="w-14 h-14 object-contain mb-8"
+                                />
+
+                                <h3 className="text-white text-[32px] font-medium mb-3">
+                                    {item.title}
+                                </h3>
+
+                                <p className="text-white/70 text-lg leading-7 max-w-[420px]">
+                                    {item.desc}
+                                </p>
+
+                            </div>
+
+                        ))}
+
+                    </div>
+
+                </div>
+
+
+
+
+                <section className="py-28 bg-[#111111]">
+                    <div className="max-w-7xl mx-auto px-8">
+
+                        {/* Heading */}
+                        <div className="mb-16">
+                            <h3
+                                className="text-5xl md:text-6xl italic text-white"
+                                style={{ fontFamily: "serif" }}
+                            >
+                                Featured Projects
+                            </h3>
+                        </div>
+                        <ServiceProjects serviceId={id} />
+                    </div>
+                </section>
+
+
+                <section className="py-28 bg-[#111111]">
+                    <div className="max-w-7xl mx-auto px-8">
+
+                        <OtherServices />
+                    </div>
+                </section>
+
+            </section>
+
+            <section className="py-24 bg-[#111111]">
+                <div className="max-w-[1320px] mx-auto px-6 lg:px-12 xl:px-20">
+                    <Form />
+                </div>
+            </section>
+
+
+
+
+
+
+
+        </div>
+    );
+};
+
+export default Adcreations;
+
+
+
+// import React from "react";
 // import Form from "../resuable component/Form";
-// import creative from "../src/assets/creative.png"
-// import copy from "../src/assets/copy.png"
-// import motion from "../src/assets/motion.png"
-// import format from "../src/assets/format.png"
-// import split from "../src/assets/split.png"
-// import complience from "../src/assets/complience.png"
-// import stronger from "../src/assets/stronger.png"
-// import higher from "../src/assets/Higher.png"
-// import faster from "../src/assets/faster.png"
-// import Transparent from "../src/assets/Transparent.png"
 // import OtherServices from "../resuable component/OtherServices";
 // import ServiceProjects from "./ServiceProjects";
 // import { useParams } from "react-router-dom";
 
-// // for header
+// import creative from "../src/assets/creative.png";
+// import copy from "../src/assets/copy.png";
+// import motion from "../src/assets/motion.png";
+// import format from "../src/assets/format.png";
+// import split from "../src/assets/split.png";
+// import complience from "../src/assets/complience.png";
 
-// import adcreation from "../src/assets/adcreationHeader.png"
+// import stronger from "../src/assets/stronger.png";
+// import higher from "../src/assets/Higher.png";
+// import faster from "../src/assets/faster.png";
+// import Transparent from "../src/assets/Transparent.png";
+
 // import AdHeader from "./AdHeader";
 
-
-
 // const Adcreations = () => {
-//     const benefits = [
-//         {
-//             icon: stronger,
-//             title: "Stronger Brand Recall",
-//             desc: "Consistent, high-impact visuals and messaging make your ads unforgettable.",
-//             className: "lg:col-span-2",
-//         },
-//         {
-//             icon: higher,
-//             title: "Higher Engagement Rates",
-//             desc: "Tailored creative and testing drive more clicks, views, and conversions.",
-//             className: "",
-//         },
-//         {
-//             icon: faster,
-//             title: "Faster Time-to-Market",
-//             desc: "End-to-end production workflows accelerate campaign launch across channels.",
-//             className: "",
-//         },
-//         {
-//             icon: Transparent,
-//             title: "Transparent Performance Tracking",
-//             desc: "Detailed creative-level metrics reveal what works, so you invest only in winners.",
-//             className: "lg:col-span-2",
-//         },]
+
+//     const { id } = useParams();
 
 //     const MarketingAssets = [
 //         {
 //             icon: creative,
 //             title: "Creative Strategy",
 //             points: [
-//                 "Develop big-idea frameworks  ",
-//                 "that align with your brand goals  ",
+//                 "Develop big-idea frameworks",
+//                 "that align with your brand goals",
 //                 "and audience motivations.",
-
 //             ],
 //         },
 //         {
 //             icon: copy,
 //             title: "Copy Messaging",
 //             points: [
-//                 "Write clear, compelling  ",
-//                 "headlines and body text that ",
-//                 "drive curiosity and action. ",
+//                 "Write clear, compelling",
+//                 "headlines and body text that",
+//                 "drive curiosity and action.",
 //             ],
 //         },
 //         {
 //             icon: motion,
 //             title: "Motion Design",
 //             points: [
-//                 "Produce scroll-stopping static ",
-//                 "and animated creatives tailored ",
+//                 "Produce scroll-stopping static",
+//                 "and animated creatives tailored",
 //                 "to each platform.",
-
 //             ],
 //         },
 //         {
 //             icon: format,
 //             title: "Format Production",
 //             points: [
-//                 "Export ads in all required specs ",
-//                 "—social sizes, banners, video ",
+//                 "Export ads in all required specs",
+//                 "social sizes, banners, video",
 //                 "cuts, and native templates.",
-
 //             ],
 //         },
 //         {
 //             icon: split,
 //             title: "Split Testing",
 //             points: [
-//                 "Continuously test creatives,  ",
-//                 "formats, and copy variants to  ",
-//                 "identify top performers.",
+//                 "Continuously test creatives,",
+//                 "formats and copy variants",
+//                 "to identify top performers.",
 //             ],
 //         },
 //         {
 //             icon: complience,
 //             title: "Compliance Review",
 //             points: [
-//                 "Ensure every asset adheres to ",
-//                 "brand guidelines, legal ",
-//                 "requirements, and platform policies.",
-
+//                 "Ensure every asset adheres",
+//                 "to brand guidelines and",
+//                 "platform policies.",
 //             ],
 //         },
 //     ];
-//     const { id } = useParams
+
+//     const benefits = [
+//         {
+//             icon: stronger,
+//             title: "Stronger Brand Recall",
+//             desc:
+//                 "Consistent, high-impact visuals and messaging make your ads unforgettable.",
+//             className: "lg:col-span-2",
+//         },
+//         {
+//             icon: higher,
+//             title: "Higher Engagement Rates",
+//             desc:
+//                 "Tailored creative and testing drive more clicks, views, and conversions.",
+//         },
+//         {
+//             icon: faster,
+//             title: "Faster Time-to-Market",
+//             desc:
+//                 "End-to-end production workflows accelerate campaign launch.",
+//         },
+//         {
+//             icon: Transparent,
+//             title: "Transparent Performance Tracking",
+//             desc:
+//                 "Detailed creative metrics reveal what works so you invest only in winners.",
+//             className: "lg:col-span-2",
+//         },
+//     ];
+
 //     return (
-//         <div >
+//         <div>
 
-
-//             {/* <section className="w-full pt-24 bg-[#12001E]">
-//                                       <img
-//                                         src={adcreation}
-//                                         alt="Hero"
-//                                         className="w-full h-auto block"
-//                                       />
-//                                     </section> */}
 //             <section className="w-full pt-15 bg-[#12001E]">
-
 //                 <AdHeader />
 //             </section>
 
+//             {/* ================= Assets Preview ================= */}
 
-//             <section className="relative bg-[#101110] py-24 px-5 md:px-10 lg:px-16">
 
-//                 <div className="max-w-[1280px] mx-auto">
+//             <section className="bg-[#101110] py-16 md:py-24 px-4 md:px-10 lg:px-16">
 
-//                     <h2 className="text-white text-center text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-20">
-//                         Assets preview
+//                 <div className="max-w-7xl mx-auto">
+
+//                     <h2 className="text-center text-white text-3xl md:text-5xl font-semibold mb-12 md:mb-20">
+//                         Assets Preview
 //                     </h2>
 
-//                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-//                     {/* <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8"> */}
+//                     <div
+//                         className="
+//         grid
+
+//         sm:grid-cols-1
+    
+//             min-[375px]:grid-cols-2
+//         lg:grid-cols-3
+
+//         gap-x-3
+//         gap-y-8
+
+   
+//         sm:gap-x-5
+//         sm:gap-y-10
+
+//         md:gap-x-8
+//         md:gap-y-16
+//       "
+//                     >
+
+
 
 //                         {MarketingAssets.map((item, index) => (
+
 //                             <div
 //                                 key={index}
-//                                 className="relative w-full min-h-[280px] rounded-[24px]
-//           border border-white/30
-//           bg-white/[0.03]
-//           backdrop-blur-sm
-//           px-7 pt-16 pb-8
-//           text-center">
+//                                 className="
+//             relative
+  
+//             aspect-square
+//             md:aspect-auto
 
-    
+        
+//             md:min-h-[280px]
 
-//                                 <div className="absolute -top-10 left-1/2 -translate-x-1/2">
-//                                     <div className="w-20 h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center overflow-hidden">
+//             rounded-[24px]
+//             border border-white/20
+//             bg-white/[0.03]
+//             backdrop-blur-sm
+
+//             flex
+//             flex-col
+//             items-center
+//             justify-center
+
+//             px-3
+//             py-4
+
+//             sm:px-5
+//             sm:py-6
+
+//             md:px-7
+//             md:pt-16
+//             md:pb-8
+//           "
+//                             >
+
+//                                 {/* Icon */}
+//                                 <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2">
+
+//                                     <div
+//                                         className="
+//                 w-12
+//                 h-12
+                            
+
+
+//                 sm:w-16
+//                 sm:h-16
+
+//                 md:w-20
+//                 md:h-20
+
+//                 rounded-full
+//                 bg-[#EEF1FF]
+
+//                 flex
+//                 items-center
+//                 justify-center
+//               "
+//                                     >
+
 //                                         <img
 //                                             src={item.icon}
 //                                             alt=""
-//                                             className="w-[70px] h-[70px] object-contain"
+//                                   className="
+//   w-10
+//   h-10
+
+//   min-[375px]:w-10
+//   min-[375px]:h-10
+
+//   min-[425px]:w-14
+//   min-[425px]:h-14
+
+//   md:w-[70px]
+//   md:h-[70px]
+
+//   object-contain
+// "
 //                                         />
+
 //                                     </div>
+
 //                                 </div>
-//                                 <h3 className="text-white text-2xl font-medium mb-5">
+
+//                                 {/* Title */}
+//                                 <h3
+//                                     className="
+//               text-white
+//               text-left
+//               font-semibold
+
+//               text-[13px]
+
+//               sm:text-[16px]
+
+//               md:text-2xl
+
+//               mb-2
+//               md:mb-5
+//             "
+//                                 >
 //                                     {item.title}
 //                                 </h3>
 
+//                                 {/* Description */}
+//                                 <div
+//                                     className="
+//               text-left
+//               text-[#D8D8D8]
 
+//               text-[9px]
+//               leading-4
 
-//                                 <div className="space-y-1 text-[#D8D8D8] text-[15px] leading-7">
+//               sm:text-[11px]
+//               sm:leading-5
+
+//               md:text-[15px]
+//               md:leading-7
+
+//               space-y-1
+//             "
+//                                 >
+
 //                                     {item.points.map((point, i) => (
-//                                         <p key={i}> {point}</p>
+//                                         <p key={i}>{point}</p>
 //                                     ))}
+
 //                                 </div>
+
 //                             </div>
+
 //                         ))}
 
 //                     </div>
@@ -179,49 +570,55 @@
 
 //             </section>
 
+//             {/* ================= Client Benefits ================= */}
 
+//             <section className="bg-[#101110] py-16 md:py-28">
 
-//             <section className="bg-[#101110] py-28">
-
-//                 <div className="max-w-[1200px] mx-auto px-6">
+//                 <div className="max-w-7xl mx-auto px-4 md:px-8">
 
 //                     <h2
-//                         className="text-white italic mb-16
-//       text-5xl lg:text-7xl"
+//                         className="text-white italic text-4xl md:text-7xl mb-10 md:mb-16"
 //                         style={{ fontFamily: "Playfair Display, serif" }}
 //                     >
 //                         Client Benefits
 //                     </h2>
 
-//                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+//                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-8">
 
 //                         {benefits.map((item, index) => (
 
 //                             <div
 //                                 key={index}
 //                                 className={`
-//     ${item.className}
-//     rounded-[26px]
+//                   ${item.className || ""}
+//                   rounded-[26px]
 //     border-t border-l
 //     border-white/60
 //     bg-white/[0.03]
 //     backdrop-blur-sm
 //     p-8
 //     min-h-[180px]
-//     flex flex-col justify-center
-//   `}
+   
+
+//                   p-5
+//                   md:p-8
+
+//                   flex flex-col
+//                   justify-center
+//                 `}
 //                             >
+
 //                                 <img
 //                                     src={item.icon}
 //                                     alt=""
-//                                     className="w-14 h-14 object-contain mb-8"
+//                                     className="w-10 md:w-14 mb-5 md:mb-8"
 //                                 />
 
-//                                 <h3 className="text-white text-[32px] font-medium mb-3">
+//                                 <h3 className="text-white text-xl md:text-[32px] font-semibold mb-2">
 //                                     {item.title}
 //                                 </h3>
 
-//                                 <p className="text-white/70 text-lg leading-7 max-w-[420px]">
+//                                 <p className="text-white/70 text-sm md:text-lg leading-6 md:leading-7">
 //                                     {item.desc}
 //                                 </p>
 
@@ -232,356 +629,57 @@
 //                     </div>
 
 //                 </div>
-
-
-
-
-//                 <section className="py-28 bg-[#111111]">
-//                     <div className="max-w-7xl mx-auto px-8">
-
-//                         {/* Heading */}
-//                         <div className="mb-16">
-//                             <h3
-//                                 className="text-5xl md:text-6xl italic text-white"
-//                                 style={{ fontFamily: "serif" }}
-//                             >
-//                                 Featured Projects
-//                             </h3>
-//                         </div>
-//                         <ServiceProjects serviceId={id} />
-//                     </div>
-//                 </section>
-
-
-//                 <section className="py-28 bg-[#111111]">
-//                     <div className="max-w-7xl mx-auto px-8">
-
-//                         <OtherServices />
-//                     </div>
-//                 </section>
-
 //             </section>
 
-//             <section className="py-24 bg-[#111111]">
-//                 <div className="max-w-[1320px] mx-auto px-6 lg:px-12 xl:px-20">
-//                     <Form />
+//             {/* ================= Featured Projects ================= */}
+
+//             <section className="py-16 md:py-28 bg-[#111111]">
+
+//                 <div className="max-w-7xl mx-auto px-4 md:px-8">
+
+//                     <div className="mb-10 md:mb-16">
+
+//                         <h3
+//                             className="text-4xl md:text-6xl italic text-white"
+//                             style={{ fontFamily: "Playfair Display, serif" }}
+//                         >
+//                             Featured Projects
+//                         </h3>
+
+//                     </div>
+
+//                     <ServiceProjects serviceId={id} />
+
 //                 </div>
+
 //             </section>
 
+//             {/* ================= Other Services ================= */}
 
+//             <section className="py-16 md:py-28 bg-[#111111]">
 
+//                 <div className="max-w-7xl mx-auto px-4 md:px-8">
 
+//                     <OtherServices />
 
+//                 </div>
 
+//             </section>
+
+//             {/* ================= Contact Form ================= */}
+
+//             <section className="py-16 md:py-24 bg-[#111111]">
+
+//                 <div className="max-w-[1320px] mx-auto px-4 md:px-8 lg:px-12 xl:px-20">
+
+//                     <Form />
+
+//                 </div>
+
+//             </section>
 
 //         </div>
 //     );
 // };
 
 // export default Adcreations;
-
-
-
-import React from "react";
-import Form from "../resuable component/Form";
-import OtherServices from "../resuable component/OtherServices";
-import ServiceProjects from "./ServiceProjects";
-import { useParams } from "react-router-dom";
-
-import creative from "../src/assets/creative.png";
-import copy from "../src/assets/copy.png";
-import motion from "../src/assets/motion.png";
-import format from "../src/assets/format.png";
-import split from "../src/assets/split.png";
-import complience from "../src/assets/complience.png";
-
-import stronger from "../src/assets/stronger.png";
-import higher from "../src/assets/Higher.png";
-import faster from "../src/assets/faster.png";
-import Transparent from "../src/assets/Transparent.png";
-
-import AdHeader from "./AdHeader";
-
-const Adcreations = () => {
-
-  const { id } = useParams();
-
-  const MarketingAssets = [
-    {
-      icon: creative,
-      title: "Creative Strategy",
-      points: [
-        "Develop big-idea frameworks",
-        "that align with your brand goals",
-        "and audience motivations.",
-      ],
-    },
-    {
-      icon: copy,
-      title: "Copy Messaging",
-      points: [
-        "Write clear, compelling",
-        "headlines and body text that",
-        "drive curiosity and action.",
-      ],
-    },
-    {
-      icon: motion,
-      title: "Motion Design",
-      points: [
-        "Produce scroll-stopping static",
-        "and animated creatives tailored",
-        "to each platform.",
-      ],
-    },
-    {
-      icon: format,
-      title: "Format Production",
-      points: [
-        "Export ads in all required specs",
-        "social sizes, banners, video",
-        "cuts, and native templates.",
-      ],
-    },
-    {
-      icon: split,
-      title: "Split Testing",
-      points: [
-        "Continuously test creatives,",
-        "formats and copy variants",
-        "to identify top performers.",
-      ],
-    },
-    {
-      icon: complience,
-      title: "Compliance Review",
-      points: [
-        "Ensure every asset adheres",
-        "to brand guidelines and",
-        "platform policies.",
-      ],
-    },
-  ];
-
-  const benefits = [
-    {
-      icon: stronger,
-      title: "Stronger Brand Recall",
-      desc:
-        "Consistent, high-impact visuals and messaging make your ads unforgettable.",
-      className: "lg:col-span-2",
-    },
-    {
-      icon: higher,
-      title: "Higher Engagement Rates",
-      desc:
-        "Tailored creative and testing drive more clicks, views, and conversions.",
-    },
-    {
-      icon: faster,
-      title: "Faster Time-to-Market",
-      desc:
-        "End-to-end production workflows accelerate campaign launch.",
-    },
-    {
-      icon: Transparent,
-      title: "Transparent Performance Tracking",
-      desc:
-        "Detailed creative metrics reveal what works so you invest only in winners.",
-      className: "lg:col-span-2",
-    },
-  ];
-
-  return (
-    <div>
-
-      <section className="w-full pt-15 bg-[#12001E]">
-        <AdHeader />
-      </section>
-
-      {/* ================= Assets Preview ================= */}
-
-      <section className="bg-[#101110] py-16 md:py-24 px-4 md:px-10 lg:px-16">
-
-        <div className="max-w-7xl mx-auto">
-
-          <h2 className="text-center text-white text-3xl md:text-5xl font-semibold mb-14 md:mb-20">
-            Assets Preview
-          </h2>
-
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-
-            {MarketingAssets.map((item, index) => (
-
-              <div
-                key={index}
-                className="
-                relative
-                aspect-square
-                md:aspect-auto
-                md:min-h-[280px]
-
-                rounded-3xl
-                border border-white/20
-                bg-white/[0.03]
-                backdrop-blur-sm
-
-                flex flex-col
-                items-center
-                justify-center
-
-                px-3
-                pt-8
-                pb-3
-
-                md:px-7
-                md:pt-16
-                md:pb-8
-              "
-              >
-
-                <div className="absolute -top-5 md:-top-10 left-1/2 -translate-x-1/2">
-
-                  <div className="w-12 h-12 md:w-20 md:h-20 rounded-full bg-[#EEF1FF] flex items-center justify-center">
-
-                    <img
-                      src={item.icon}
-                      alt=""
-                      className="w-7 h-7 md:w-[70px] md:h-[70px] object-contain"
-                    />
-
-                  </div>
-
-                </div>
-
-                <h3 className="text-white text-sm md:text-2xl font-semibold mb-2 md:mb-5">
-                  {item.title}
-                </h3>
-
-                <div className="text-center text-[10px] md:text-[15px] text-[#D8D8D8] leading-4 md:leading-7">
-
-                  {item.points.map((point, i) => (
-                    <p key={i}>{point}</p>
-                  ))}
-
-                </div>
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* ================= Client Benefits ================= */}
-
-      <section className="bg-[#101110] py-16 md:py-28">
-
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-
-          <h2
-            className="text-white italic text-4xl md:text-7xl mb-10 md:mb-16"
-            style={{ fontFamily: "Playfair Display, serif" }}
-          >
-            Client Benefits
-          </h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-8">
-
-            {benefits.map((item, index) => (
-
-              <div
-                key={index}
-                className={`
-                  ${item.className || ""}
-                  rounded-3xl
-                  border border-white/20
-                  bg-white/[0.03]
-                  backdrop-blur-sm
-
-                  p-5
-                  md:p-8
-
-                  flex flex-col
-                  justify-center
-                `}
-              >
-
-                <img
-                  src={item.icon}
-                  alt=""
-                  className="w-10 md:w-14 mb-5 md:mb-8"
-                />
-
-                <h3 className="text-white text-xl md:text-[32px] font-semibold mb-2">
-                  {item.title}
-                </h3>
-
-                <p className="text-white/70 text-sm md:text-lg leading-6 md:leading-7">
-                  {item.desc}
-                </p>
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </div>
-      </section>
-
-            {/* ================= Featured Projects ================= */}
-
-      <section className="py-16 md:py-28 bg-[#111111]">
-
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-
-          <div className="mb-10 md:mb-16">
-
-            <h3
-              className="text-4xl md:text-6xl italic text-white"
-              style={{ fontFamily: "Playfair Display, serif" }}
-            >
-              Featured Projects
-            </h3>
-
-          </div>
-
-          <ServiceProjects serviceId={id} />
-
-        </div>
-
-      </section>
-
-      {/* ================= Other Services ================= */}
-
-      <section className="py-16 md:py-28 bg-[#111111]">
-
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-
-          <OtherServices />
-
-        </div>
-
-      </section>
-
-      {/* ================= Contact Form ================= */}
-
-      <section className="py-16 md:py-24 bg-[#111111]">
-
-        <div className="max-w-[1320px] mx-auto px-4 md:px-8 lg:px-12 xl:px-20">
-
-          <Form />
-
-        </div>
-
-      </section>
-
-    </div>
-  );
-};
-
-export default Adcreations;
