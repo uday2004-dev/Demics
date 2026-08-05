@@ -95,19 +95,28 @@ import aim from "../src/assets/aim.png";
 import spring from "../src/assets/spring.png";
 import fly from "../src/assets/fly.png";
 import element from "../src/assets/Elements.png";
-import mobileAdCreation from "../src/assets/mobil-adcreation.png";
+import mobileAdCreation from "../src/assets/mobil-adcreation.jpg";
 
 const AdHeader = () => {
   return (
     <>
       {/* ================= Mobile View ================= */}
-      <section className="block md:hidden">
+      {/* <section className="block md:hidden">
         <img
           src={mobileAdCreation}
           alt="Ad Creation Header"
           className="w-full h-auto object-cover"
         />
+      </section> */}
+
+      <section className="block md:hidden  -mt-2 overflow-hidden">
+        <img
+          src={mobileAdCreation}
+          alt="Branding Hero"
+          className="w-full h-auto object-cover -translate-y-2"
+        />
       </section>
+      
 
       {/* ================= Desktop & Tablet ================= */}
       <section className="relative hidden min-h-[85vh] items-center justify-center overflow-hidden bg-[linear-gradient(103.43deg,#8a38f5_1.29%,#3d1273_39.23%,#040009_98.71%)] px-5 sm:px-8 md:flex md:px-12 lg:px-20">
