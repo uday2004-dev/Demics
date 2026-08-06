@@ -452,30 +452,9 @@ const Branding = () => {
 
                                 {/* Icon */}
                                 <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2">
-{/* 
+
                                     <div
                                         className="
-                w-12
-                h-12
-                            
-
-
-                sm:w-16
-                sm:h-16
-
-                md:w-20
-                md:h-20
-
-                rounded-full
-                bg-[#EEF1FF]
-
-                flex
-                items-center
-                justify-center
-              "
-                                    > */}
-                                    <div
-  className="
     w-10
     h-10
 
@@ -492,12 +471,28 @@ const Branding = () => {
     items-center
     justify-center
   "
->
-{/* 
+                                    >
+
                                         <img
                                             src={item.icon}
                                             alt=""
-                                            className="
+//                                             className="
+//     w-8
+//     h-8
+
+//     min-[375px]:w-8
+//     min-[375px]:h-8
+
+//     min-[425px]:w-12
+//     min-[425px]:h-12
+
+//     md:w-[62px]
+//     md:h-[62px]
+
+//     object-contain
+//   "
+
+               className="
   w-10
   h-10
 
@@ -512,39 +507,20 @@ const Branding = () => {
 
   object-contain
 "
-                                        /> */}
-                                        <img
-  src={item.icon}
-  alt=""
-  className="
-    w-8
-    h-8
-
-    min-[375px]:w-8
-    min-[375px]:h-8
-
-    min-[425px]:w-12
-    min-[425px]:h-12
-
-    md:w-[62px]
-    md:h-[62px]
-
-    object-contain
-  "
-/>
+                                        />
 
                                     </div>
 
                                 </div>
 
                                 {/* Title */}
-                                <h3
+                                {/* <h3
                                     className="
               text-white
               text-left
               font-semibold
 
-              text-[13px]
+              text-[14px]
 
               sm:text-[16px]
 
@@ -555,7 +531,26 @@ const Branding = () => {
             "
                                 >
                                     {item.title}
+                                </h3> */}
+
+                                <h3
+                                    className="
+    w-full
+    text-left
+    text-white
+    font-semibold
+
+    text-[12px]
+    sm:text-[14px]
+    md:text-2xl
+
+    mb-2
+    md:mb-5
+  "
+                                >
+                                    {item.title}
                                 </h3>
+
 
                                 {/* Description */}
                                 {/* <div
@@ -583,15 +578,15 @@ const Branding = () => {
                                     ))}
 
                                 </div> */}
-                                <ul
-  className="
+                                {/* <ul
+                                    className="
     list-disc
     pl-4
 
     text-left
     text-[#D8D8D8]
 
-    text-[9px]
+    text-[12px]
     leading-4
 
     sm:text-[11px]
@@ -602,11 +597,29 @@ const Branding = () => {
 
     space-y-1
   "
->
-  {item.points.map((point, i) => (
-    <li key={i}>{point}</li>
-  ))}
-</ul>
+                                >
+                                    {item.points.map((point, i) => (
+                                        <li key={i}>{point}</li>
+                                    ))}
+                                </ul> */}
+
+                                <p
+                                    className="
+    text-left
+    text-[#D8D8D8]
+
+    text-[12px]
+    leading-4
+
+    sm:text-[11px]
+    sm:leading-5
+
+    md:text-[15px]
+    md:leading-7
+  "
+                                >
+                                    {item.points.join(" ")}
+                                </p>
 
                             </div>
 
