@@ -24,17 +24,6 @@ app.get("/", (req, res) => {
   res.send("Server is running");
 });
 
-// app.use(
-//   cors({
-//     origin: [
-//       "http://localhost:5173",
-//       "https://frontend-seven-rose-54.vercel.app",
-//       "https://demics.vercel.app",
-//     ],
-//     credentials: true,
-//   })
-// );
-
 
 
 app.use(
