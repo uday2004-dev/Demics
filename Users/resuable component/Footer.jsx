@@ -7,7 +7,7 @@ import {
 import { HiOutlineMail } from "react-icons/hi";
 import { FiPhone } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
-
+import Demics from "../src/assets/DEMICSDECK.pdf"
 import logo from "../src/assets/demics.png";
 import grid from "../src/assets/grid.png";
 
@@ -62,7 +62,8 @@ const Footer = () => {
               <li>Healthcare & Fitness Industry</li>
               <li>Edtech Industry</li>
               <li>E-Commerce Industry</li>
-              <li>Company Deck</li>
+              <li   onClick={() => window.open(Demics, "_blank")}
+  className="cursor-pointer hover:text-purple-400 transition">Company Deck</li>
             </ul>
           </div>
 

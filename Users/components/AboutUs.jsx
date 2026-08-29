@@ -285,19 +285,6 @@ const AboutUs = () => {
             className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
           >
             {/* Left Side Image */}
-            {/* <div className="overflow-hidden rounded-3xl">
-            <img
-                src={member.photo}
-                alt={member.name}
-                className="w-full h-[550px] object-cover rounded-3xl transition duration-500 hover:scale-105"
-              />
-            <img
-                src={member.photo}
-                alt={member.name}
-                className="w-full h-[550px] object-cover object-[center_20%] rounded-3xl transition duration-500 hover:scale-105"
-
-              />
-            </div> */}
 
             <div className="relative w-full h-[550px] overflow-hidden rounded-3xl">
               <img
@@ -312,22 +299,19 @@ const AboutUs = () => {
 
             {/* Right Side Text */}
             <div>
-              {/* <h3 className="text-5xl font-semibold mb-4">
+
+              <h3 className="text-[38px] sm:text-4xl md:text-5xl font-semibold mb-4">
                 {member.name}
-              </h3> */}
-<h3 className="text-[38px] sm:text-4xl md:text-5xl font-semibold mb-4">
-  {member.name}
-</h3>
-              <p className="text-xl text-gray-400 mb-8">
+              </h3>
+              <h4 className="text-xl text-gray-400 mb-8">
                 {member.designation}
-              </p>
+              </h4>
 
               <p className="text-gray-400 text-lg leading-8">
-                We’re a group of passionate designers, strategists, and
-                problem-solvers dedicated to helping brands succeed online.
-                With diverse skills and a shared commitment to quality, we
-                work together to bring fresh ideas, creative solutions, and
-                reliable support to every project.
+                The Vision Behind the Studio <br /><br />
+                Our founder brings together a passion for design, branding, and marketing, with a vision to help brands build distinctive and meaningful identities. <br /><br />
+                With a design-first approach and an eye for detail, every project combines creative thinking with strategic marketing—from brand identity and content to social media and digital experiences. <br /> <br />
+                The belief is simple: great design should not just look good; it should create impact, build recognition, and tell a brand’s story.
               </p>
             </div>
           </div>

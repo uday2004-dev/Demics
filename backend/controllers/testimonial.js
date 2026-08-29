@@ -128,31 +128,3 @@ export const deletetestimonial = async (req, res) => {
 
 }
 
-
-// export const deleteProject = async (req, res) => {
-//   try {
-//     const { id } = req.params
-
-
-//     const project = await Project.findById(id)
-//     if (!project) {
-//       return res.status(404).json({
-//         success: false,
-//         message: "Is is not found"
-//       })
-//     }
-
-//     await Project.findByIdAndDelete(id)
-//     return res.status(200).json({
-//       success: true,
-//       mmessage: "Project deleted success fully"
-//     })
-//   } catch (error) {
-//     console.log(error)
-//     return res.status(400).json({
-//       success: false,
-//       message: "Id is not matching"
-//     })
-//   }
-
-// }
