@@ -140,49 +140,190 @@ export const deleteService = async (req, res) => {
 };
 
 
+// export const editServices = async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const updateData = req.body;
+
+    
+//     if (updateData.name) {
+//       updateData.slug = updateData.name
+//         .toLowerCase()
+//         .trim()
+//         .replace(/ /g, "-")
+//         .replace(/[^\w-]+/g, "");
+//     }
+
+//     const updatedService = await Service.findByIdAndUpdate(
+//       id,
+//       updateData,
+//       { new: true, runValidators: true }
+//     );
+
+//     if (!updatedService) {
+//       return res.status(404).json({
+//         success: false,
+//         message: "Service not found",
+//       });
+//     }
+
+//     return res.status(200).json({
+//       success: true,
+//       message: "Service updated successfully",
+//       data: updatedService,
+//     });
+
+//   } catch (error) {
+//     console.log(error);
+
+//     return res.status(500).json({
+//       success: false,
+//       message: "Failed to update service",
+//     });
+//   }
+// };
+
+// export const editServices = async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const { name, description } = req.body;
+
+//     console.log("ID:", id);
+//     console.log("BODY:", req.body);
+//     console.log("FILE:", req.file);
+
+//     const service = await Service.findById(id);
+
+//     if (!service) {
+//       return res.status(404).json({
+//         success: false,
+//         message: "Service not found",
+//       });
+//     }
+
+//     // Update name
+//     if (name !== undefined) {
+//       service.name = name;
+
+//       service.slug = name
+//         .toLowerCase()
+//         .trim()
+//         .replace(/\s+/g, "-")
+//         .replace(/[^\w-]+/g, "");
+//     }
+
+//     // Update description
+//     if (description !== undefined) {
+//       service.description = description;
+//     }
+
+//     // Update image only if new image is selected
+//     if (req.file) {
+//       const result = await uploadOnCloudinary(
+//         req.file.buffer,
+//         "services"
+//       );
+
+//       console.log("Cloudinary result:", result);
+
+//       if (!result?.secure_url) {
+//         return res.status(500).json({
+//           success: false,
+//           message: "Image upload failed",
+//         });
+//       }
+
+//       service.photo = result.secure_url;
+//     }
+
+//     const updatedService = await service.save();
+
+//     return res.status(200).json({
+//       success: true,
+//       message: "Service updated successfully",
+//       service: updatedService,
+//     });
+
+//   } catch (error) {
+//     console.log("UPDATE SERVICE ERROR:", error);
+
+//     return res.status(500).json({
+//       success: false,
+//       message: error.message,
+//     });
+//   }
+// };
+
 export const editServices = async (req, res) => {
   try {
+    console.log("========== UPDATE SERVICE ==========");
+
+    console.log("ID:", req.params.id);
+    console.log("BODY:", req.body);
+    console.log("FILE:", req.file);
+
     const { id } = req.params;
-    const updateData = req.body;
+    const { name, description } = req.body;
 
-    // 🔥 if name updated → regenerate slug
-    if (updateData.name) {
-      updateData.slug = updateData.name
-        .toLowerCase()
-        .trim()
-        .replace(/ /g, "-")
-        .replace(/[^\w-]+/g, "");
-    }
+    const service = await Service.findById(id);
 
-    const updatedService = await Service.findByIdAndUpdate(
-      id,
-      updateData,
-      { new: true, runValidators: true }
-    );
+    console.log("SERVICE:", service);
 
-    if (!updatedService) {
+    if (!service) {
       return res.status(404).json({
         success: false,
         message: "Service not found",
       });
     }
 
+    if (name !== undefined) {
+      service.name = name;
+
+      service.slug = name
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, "-")
+        .replace(/[^\w-]+/g, "");
+    }
+
+    if (description !== undefined) {
+      service.description = description;
+    }
+
+    if (req.file) {
+      console.log("Uploading new image...");
+
+      const result = await uploadOnCloudinary(
+        req.file.buffer,
+        "services"
+      );
+
+      console.log("CLOUDINARY RESULT:", result);
+
+      service.photo = result.secure_url;
+    }
+
+    const updatedService = await service.save();
+
+    console.log("UPDATED SERVICE:", updatedService);
+
     return res.status(200).json({
       success: true,
       message: "Service updated successfully",
-      data: updatedService,
+      service: updatedService,
     });
 
   } catch (error) {
+    console.log("🔥 UPDATE SERVICE ERROR 🔥");
     console.log(error);
+    console.log(error.message);
 
     return res.status(500).json({
       success: false,
-      message: "Failed to update service",
+      message: error.message,
     });
   }
 };
-
 
 
 export const getServiceDetails = async (req, res) => {

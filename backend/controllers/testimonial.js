@@ -7,12 +7,32 @@ import mongoose from "mongoose"
 export const createTestimonial = async (req, res) => {
 
   try {
-    const { testimonial, review, name, position } = req.body
-    if (!testimonial || !review || !name || !position) {
+    // const { testimonial, review, name, position } = req.body
+    // if (!testimonial || !review || !name) {
+    //   return res.status(400).json({
+    //     success: false,
+    //     message: "All field are required"
+    //   })
+    // }
+
+       console.log("========== TESTIMONIAL ==========");
+    console.log("REQ BODY:", req.body);
+    console.log("BODY TYPE:", typeof req.body);
+
+    const { testimonial, review, name, position } = req.body;
+
+    console.log("testimonial:", testimonial);
+    console.log("review:", review);
+    console.log("name:", name);
+    console.log("position:", position);
+
+    if (!testimonial || !review || !name) {
+      console.log("❌ VALIDATION FAILED");
+
       return res.status(400).json({
         success: false,
         message: "All field are required"
-      })
+      });
     }
     const newTestimonial = await Testimonial.create({
       testimonial,

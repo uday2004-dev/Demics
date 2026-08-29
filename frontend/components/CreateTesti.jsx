@@ -22,6 +22,11 @@ const CreateTesti = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+      console.log("TESTIMONIAL:", formData.testimonial);
+  console.log("REVIEW:", formData.review);
+  console.log("NAME:", formData.name);
+  console.log("POSITION:", formData.position);
+
     try {
       const res = await createTestimonial(formData);
 

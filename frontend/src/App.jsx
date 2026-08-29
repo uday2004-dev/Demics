@@ -13,10 +13,10 @@ import Blogs from '../components/Blogs'
 import Testimonial from '../components/Testimonial'
 import CreateBlogs from '../components/CreateBlogs'
 import CreateTesti from '../components/CreateTesti'
-
 import TeamCreate from '../components/TeamCreate'
 import Team from '../components/Team'
 import Inquery from '../components/Inquery'
+import EditService from '../components/EditService'
 
 
 
@@ -54,6 +54,10 @@ const App = () => {
         {
           path: "services/create",
           element: <Services />
+        },
+        {
+          path: "services/edit/:id",
+          element: <EditService/>
         },
         {
           path: "blogs",

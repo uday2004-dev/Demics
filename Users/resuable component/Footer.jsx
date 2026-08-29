@@ -6,12 +6,14 @@ import {
 } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiPhone } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import logo from "../src/assets/demics.png";
 import grid from "../src/assets/grid.png";
 
 const Footer = () => {
+
+  const navigate=useNavigate()
   return (
     <footer className="bg-[#111] text-white relative z-10 overflow-hidden w-screen">
 
@@ -25,12 +27,12 @@ const Footer = () => {
               Important Links
             </h3>
 
-            <ul className="space-y-3 text-sm text-gray-300">
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Services</li>
-              <li>Work</li>
-              <li>Blog</li>
+            <ul className="space-y-3 text-sm text-gray-300 cursor-pointer">
+              <li onClick={() => navigate("/")}>Home</li>
+              <li onClick={() => navigate("/aboutus")}>About Us</li>
+              <li onClick={() => navigate("/services")}>Services</li>
+              <li onClick={() => navigate("/work")}>Work</li>
+              <li onClick={()=>navigate("/blogs")}>Blog</li>
             </ul>
           </div>
 
@@ -40,12 +42,12 @@ const Footer = () => {
               Services
             </h3>
 
-            <ul className="space-y-3 text-sm text-gray-300">
-              <li>Branding</li>
-              <li>Social Media Management</li>
-              <li>Marketing</li>
-              <li>Website</li>
-              <li>AD Creation</li>
+            <ul className="space-y-3 text-sm text-gray-300 cursor-pointer">
+              <li onClick={()=>navigate("/branding/:id")}>Branding</li>
+              <li onClick={()=>navigate("/socialmediamanagement/:id")}>Social Media Management</li>
+              <li onClick={()=>navigate("/marketing/:id")}>Marketing</li>
+              <li onClick={()=>navigate("/development/:id")}>Website</li>
+              <li onClick={()=>navigate("/adcreation/:id")}>AD Creation</li>
             </ul>
           </div>
 

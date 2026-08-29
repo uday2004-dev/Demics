@@ -16,7 +16,8 @@ const testimonialSchema = mongoose.Schema(
         },
         position: {
             type: String,
-            required: true
+            // required: true,
+            required:false
         }
     },
     {
