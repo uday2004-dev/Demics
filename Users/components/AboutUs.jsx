@@ -12,6 +12,7 @@ import arrow2 from "../src/assets/arrow2.png"
 import laptop from "../src/assets/laptop.png"
 import api from "../utls/axios";
 import AboutHeader from "./AboutHeader";
+import mobileAbout from '../src/assets/mobileAbout.jpg'
 const AboutUs = () => {
   const [teams, setTeams] = useState([]);
   const [openFaq, setOpenFaq] = useState(null);
@@ -45,21 +46,7 @@ const AboutUs = () => {
     fetchTeam();
   }, []);
 
-  // const fetchTeam = async () => {
-  //   try {
-  //     const res = await fetch(
-  //       "http://localhost:3000/api/team/  "
-  //     );
 
-  //     const data = await res.json();
-
-  //     if (data.success) {
-  //       setTeams(data.teams);
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
   const fetchTeam = async () => {
     try {
       const res = await api.get("/api/team");
@@ -117,61 +104,153 @@ const AboutUs = () => {
 
 
       {/* HERO */}
-      <section className="w-full pt-24 bg-[#12001E]">
+      {/* <section className="w-full pt-24 bg-[#12001E]">
 
         <AboutHeader />
-      </section>
+      </section> */}
+
+      {/* HERO */}
+
+{/* Mobile View */}
+{/* <section className="block md:hidden w-full overflow-hidden">
+  <img
+    src={mobileAbout}
+    alt="About Us"
+    className="w-full h-auto object-cover"
+  />
+</section> */}
+<section className="block md:hidden w-full overflow-hidden mt-10">
+  <img
+    src={mobileAbout}
+    alt="About Us"
+    className="w-full h-auto object-cover"
+  />
+</section>
+
+{/* Desktop / Tablet View */}
+<section className="hidden md:block w-full pt-24 bg-[#12001E]">
+  <AboutHeader />
+</section>
 
 
 
       {/* OUR VISION */}
-      <div className="max-w-screen mx-auto px-8 pb-24">
-        <div className="relative overflow-hidden rounded-[40px] bg-[#171717]">
+     
 
-          {/* Purple Glow */}
-          <div className="absolute -bottom-32 -right-32 w-[450px] h-[450px] bg-[#7B2EFF]/30 blur-[160px] rounded-full"></div>
+{/* <div className="w-full px-5 sm:px-8 pb-16 sm:pb-24"> */}
+<div className="w-full pb-16 sm:pb-24">
+  <div className="relative w-full overflow-hidden rounded-[30px] sm:rounded-[40px] bg-[#171717]">
 
-          <div className="relative grid lg:grid-cols-2 gap-14 items-center p-14">
+    {/* Purple Glow */}
+    <div
+      className="
+        absolute
+        -bottom-32
+        -left-32
+        lg:-right-32
+        lg:left-auto
+        w-[350px]
+        h-[350px]
+        sm:w-[450px]
+        sm:h-[450px]
+        bg-[#7B2EFF]/30
+        blur-[140px]
+        sm:blur-[160px]
+        rounded-full
+      "
+    ></div>
 
-            {/* Left Image */}
-            <div className="flex justify-center lg:justify-start">
-              <img
-                src={Telescope}
-                alt="Telescope"
-                className="w-[390px] h-auto object-contain"
-              />
-            </div>
+    <div
+      className="
+        relative
+        w-full
+        grid
+        grid-cols-1
+        lg:grid-cols-2
+        gap-8
+        lg:gap-14
+        items-center
+        p-6
+        sm:p-10
+        lg:p-14
+      "
+    >
 
-            {/* Right Content */}
-            <div>
-              <h2
-                className="text-[72px] leading-none  font-awesome  text-white mb-8"
-              // style={{ fontFamily: "serif" }}
-              >
-                Our Vision
-              </h2>
+      {/* ================= CONTENT ================= */}
+      <div className="order-1 lg:order-2">
 
-              <p className="text-gray-300 text-[15px] leading-7">
-                Our vision is to revolutionize the way brands connect with the world
-                by blending high-end design with the power of emerging technologies.
-                We aspire to be a global leader in crafting intelligent, immersive,
-                and results-driven brand experiences that are rooted in creativity
-                and powered by data. By combining human-centric design, AI-driven
-                strategies, and advanced digital tools, we aim to help businesses
-                thrive in an ever-evolving digital ecosystem. Our goal is to not just
-                follow trends, but to shape them—delivering future-ready solutions
-                that are bold, adaptive, and impactful. We are committed to building
-                meaningful digital journeys that spark emotion, drive engagement, and
-                create measurable growth, while upholding values of innovation,
-                inclusivity, and ethical digital storytelling. Through collaboration,
-                innovation, and relentless pursuit of excellence, we envision becoming
-                the go-to partner for brands ready to lead in the digital age.
-              </p>
-            </div>
+        <h2
+          className="
+            text-[48px]
+            sm:text-[60px]
+            lg:text-[72px]
+            leading-none
+            font-awesome
+            text-white
+            mb-6
+            sm:mb-8
+          "
+        >
+          Our Vision
+        </h2>
 
-          </div>
-        </div>
+        <p
+          className="
+            text-gray-300
+            text-[14px]
+            sm:text-[15px]
+            leading-6
+            sm:leading-7
+          "
+        >
+          Our vision is to revolutionize the way brands connect with the world
+          by blending high-end design with the power of emerging technologies.
+          We aspire to be a global leader in crafting intelligent, immersive,
+          and results-driven brand experiences that are rooted in creativity
+          and powered by data. By combining human-centric design, AI-driven
+          strategies, and advanced digital tools, we aim to help businesses
+          thrive in an ever-evolving digital ecosystem. Our goal is to not just
+          follow trends, but to shape them—delivering future-ready solutions
+          that are bold, adaptive, and impactful. We are committed to building
+          meaningful digital journeys that spark emotion, drive engagement, and
+          create measurable growth, while upholding values of innovation,
+          inclusivity, and ethical digital storytelling. Through collaboration,
+          innovation, and relentless pursuit of excellence, we envision becoming
+          the go-to partner for brands ready to lead in the digital age.
+        </p>
+
       </div>
+
+
+      {/* ================= TELESCOPE ================= */}
+      <div
+        className="
+          order-2
+          lg:order-1
+          flex
+          justify-center
+          lg:justify-start
+          mt-4
+          sm:mt-8
+          lg:mt-0
+        "
+      >
+        <img
+          src={Telescope}
+          alt="Telescope"
+          className="
+            w-[300px]
+            sm:w-[340px]
+            lg:w-[390px]
+            h-auto
+            object-contain
+          "
+        />
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
       <section className="bg-[#101110] py-28">
@@ -181,7 +260,7 @@ const AboutUs = () => {
           <h2
             className="text-white  font-awesome mb-16
       text-5xl lg:text-7xl"
-          // style={{ fontFamily: "Playfair Display, serif" }}
+       
           >
             Client Benefits
           </h2>

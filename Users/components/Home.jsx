@@ -39,10 +39,13 @@ const Home = () => {
 
               <h1 className="text-white leading-tight lg:leading-none mb-6 lg:mb-8">
 
-                <span
-                  className="  font-awesome text-4xl sm:text-5xl lg:text-6xl italic"
+                {/* <span
+                  className="  font-awesome text-4xl-#F5FF1B sm:text-5xl- lg:text-6xl italic "
 
-                >
+                > */}
+                <span
+  className="font-awesome text-4xl sm:text-5xl lg:text-6xl italic text-[#F1FD0F]"
+>
                   Creative Solutions
                 </span>
 
@@ -149,7 +152,7 @@ const Home = () => {
                 </span>
 
                 <span
-                  className="text-4xl   font-awesome sm:text-5xl lg:text-6xl italic"
+                  className="text-4xl   font-awesome sm:text-5xl lg:text-6xl italic text-[#F1FD0F]"
                 // style={{ fontFamily: "serif" }}
                 >
                   design-led, strategy-driven
@@ -258,7 +261,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-8">
           <h1 className="text-white leading-tight mb-6 sm:mb-8 text-left">
             <span
-              className=" font-awesome text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px]"
+              className=" font-awesome text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px] text-[#F1FD0F]"
             // style={{ fontFamily: "serif" }}
             >
               Client
@@ -275,7 +278,7 @@ const Home = () => {
             </span>{" "}
 
             <span
-              className=" font-awesome text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px]"
+              className=" font-awesome text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px] text-[#F1FD0F]"
             // style={{ fontFamily: "serif" }}
             >
               Real Feedback

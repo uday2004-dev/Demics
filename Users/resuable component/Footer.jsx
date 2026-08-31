@@ -13,7 +13,7 @@ import grid from "../src/assets/grid.png";
 
 const Footer = () => {
 
-  const navigate=useNavigate()
+  const navigate = useNavigate()
   return (
     <footer className="bg-[#111] text-white relative z-10 overflow-hidden w-screen">
 
@@ -32,7 +32,7 @@ const Footer = () => {
               <li onClick={() => navigate("/aboutus")}>About Us</li>
               <li onClick={() => navigate("/services")}>Services</li>
               <li onClick={() => navigate("/work")}>Work</li>
-              <li onClick={()=>navigate("/blogs")}>Blog</li>
+              <li onClick={() => navigate("/blogs")}>Blog</li>
             </ul>
           </div>
 
@@ -43,11 +43,11 @@ const Footer = () => {
             </h3>
 
             <ul className="space-y-3 text-sm text-gray-300 cursor-pointer">
-              <li onClick={()=>navigate("/branding/:id")}>Branding</li>
-              <li onClick={()=>navigate("/socialmediamanagement/:id")}>Social Media Management</li>
-              <li onClick={()=>navigate("/marketing/:id")}>Marketing</li>
-              <li onClick={()=>navigate("/development/:id")}>Website</li>
-              <li onClick={()=>navigate("/adcreation/:id")}>AD Creation</li>
+              <li onClick={() => navigate("/branding/:id")}>Branding</li>
+              <li onClick={() => navigate("/socialmediamanagement/:id")}>Social Media Management</li>
+              <li onClick={() => navigate("/marketing/:id")}>Marketing</li>
+              <li onClick={() => navigate("/development/:id")}>Website</li>
+              <li onClick={() => navigate("/adcreation/:id")}>AD Creation</li>
             </ul>
           </div>
 
@@ -62,8 +62,8 @@ const Footer = () => {
               <li>Healthcare & Fitness Industry</li>
               <li>Edtech Industry</li>
               <li>E-Commerce Industry</li>
-              <li   onClick={() => window.open(Demics, "_blank")}
-  className="cursor-pointer hover:text-purple-400 transition">Company Deck</li>
+              <li onClick={() => window.open(Demics, "_blank")}
+                className="cursor-pointer">Company Deck</li>
             </ul>
           </div>
 
@@ -86,9 +86,24 @@ const Footer = () => {
             </div>
 
             <div className="flex gap-6 mt-8 text-2xl">
-              <FaFacebookF />
+
+               <a
+                href="https://www.facebook.com/share/1GU8nGP3Lv/"
+                target="_blank"
+                rel="demics"
+              >
+                <FaFacebookF className="cursor-pointer" />
+              </a>
+        
               <FaXTwitter />
-              <FaInstagram />
+              <a
+                href="https://www.instagram.com/demics_creativehub?igsi=MW9kOGJ3c2M3ZTF2dA=="
+                target="_blank"
+                rel="demics"
+              >
+                <FaInstagram className="cursor-pointer" />
+              </a>
+
             </div>
           </div>
 
@@ -171,7 +186,7 @@ const Footer = () => {
 
       {/* LOGO SECTION */}
       <div className="relative bg-[#151515]">
-        
+
         {/* safe overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-purple-700/60 to-transparent pointer-events-none z-0" />
 

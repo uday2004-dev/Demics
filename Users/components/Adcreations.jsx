@@ -432,138 +432,192 @@ const Adcreations = () => {
 
 
 
-                        {MarketingAssets.map((item, index) => (
+   {MarketingAssets.map((item, index) => (
 
-                            <div
-                                key={index}
+                <div
+                    key={index}
+                    className="
+                        relative
+
+                        aspect-square
+                        md:aspect-auto
+                        md:min-h-[280px]
+
+                        rounded-[24px]
+
+                        border
+                        border-purple-400/80
+
+                        bg-white/[0.03]
+                        backdrop-blur-sm
+
+                        shadow-[0_0_18px_rgba(168,85,247,0.7),inset_0_0_12px_rgba(168,85,247,0.15)]
+
+                        flex
+                        flex-col
+                        items-center
+                        justify-center
+
+                        px-3
+                        py-4
+
+                        sm:px-5
+                        sm:py-6
+
+                        md:px-7
+                        md:pt-16
+                        md:pb-8
+
+                        transition-all
+                        duration-300
+
+                        hover:border-purple-300
+                        hover:shadow-[0_0_18px_rgba(168,85,247,0.7),inset_0_0_12px_rgba(168,85,247,0.15)]
+                    "
+
+//   className="
+//   relative
+//   aspect-square
+//   md:aspect-auto
+//   md:min-h-[280px]
+
+//   rounded-[24px]
+
+//   border
+//   border-purple-400
+
+//   bg-white/[0.03]
+//   backdrop-blur-sm
+
+//   shadow-[
+//     0_0_10px_rgba(168,85,247,1),
+//     0_0_25px_rgba(168,85,247,0.95),
+//     0_0_50px_rgba(168,85,247,0.8),
+//     0_0_80px_rgba(168,85,247,0.6),
+//     inset_0_0_20px_rgba(168,85,247,0.3)
+//   ]
+
+//   flex
+//   flex-col
+//   items-center
+//   justify-center
+
+//   px-3
+//   py-4
+
+//   sm:px-5
+//   sm:py-6
+
+//   md:px-7
+//   md:pt-16
+//   md:pb-8
+
+//   transition-all
+//   duration-300
+
+//   hover:border-purple-300
+
+//   hover:shadow-[
+//   0_0_8px_rgba(168,85,247,1),
+//   0_0_20px_rgba(168,85,247,1),
+//   0_0_40px_rgba(168,85,247,0.95),
+//   0_0_70px_rgba(168,85,247,0.85),
+//   0_0_110px_rgba(168,85,247,0.65),
+//   inset_0_0_25px_rgba(168,85,247,0.35)
+// ]
+// "
+                >
+
+                    {/* Icon */}
+                    <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2">
+
+                        <div
+                            className="
+                                w-10
+                                h-10
+
+                                sm:w-14
+                                sm:h-14
+
+                                md:w-[72px]
+                                md:h-[72px]
+
+                                rounded-full
+                                bg-[#EEF1FF]
+
+                                flex
+                                items-center
+                                justify-center
+
+                                shadow-[0_0_15px_rgba(168,85,247,0.5)]
+                            "
+                        >
+
+                            <img
+                                src={item.icon}
+                                alt=""
                                 className="
-            relative
-  
-            aspect-square
-            md:aspect-auto
+                                    w-10
+                                    h-10
 
-        
-            md:min-h-[280px]
+                                    min-[375px]:w-10
+                                    min-[375px]:h-10
 
-            rounded-[24px]
-            border border-white/20
-            bg-white/[0.03]
-            backdrop-blur-sm
+                                    min-[425px]:w-14
+                                    min-[425px]:h-14
 
-            flex
-            flex-col
-            items-center
-            justify-center
+                                    md:w-[70px]
+                                    md:h-[70px]
 
-            px-3
-            py-4
+                                    object-contain
+                                "
+                            />
 
-            sm:px-5
-            sm:py-6
+                        </div>
 
-            md:px-7
-            md:pt-16
-            md:pb-8
-          "
-                            >
+                    </div>
 
-                                {/* Icon */}
-                                <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2">
+                    {/* Title */}
+                    <h3
+                        className="
+                            w-full
+                            text-left
+                            text-white
+                            font-semibold
 
-                                    <div
-                                        className="
-                w-12
-                h-12
-                            
+                            text-[12px]
+                            sm:text-[14px]
+                            md:text-2xl
 
+                            mb-2
+                            md:mb-5
+                        "
+                    >
+                        {item.title}
+                    </h3>
 
-                sm:w-16
-                sm:h-16
+                    {/* Description */}
+                    <p
+                        className="
+                            text-left
+                            text-[#D8D8D8]
 
-                md:w-20
-                md:h-20
+                            text-[12px]
+                            leading-4
 
-                rounded-full
-                bg-[#EEF1FF]
+                            sm:text-[11px]
+                            sm:leading-5
 
-                flex
-                items-center
-                justify-center
-              "
-                                    >
+                            md:text-[15px]
+                            md:leading-7
+                        "
+                    >
+                        {item.points.join(" ")}
+                    </p>
 
-                                        <img
-                                            src={item.icon}
-                                            alt=""
-                                            className="
-  w-10
-  h-10
+                </div>
 
-  min-[375px]:w-10
-  min-[375px]:h-10
-
-  min-[425px]:w-14
-  min-[425px]:h-14
-
-  md:w-[70px]
-  md:h-[70px]
-
-  object-contain
-"
-                                        />
-
-                                    </div>
-
-                                </div>
-
-                                {/* Title */}
-                                <h3
-                                    className="
-              text-white
-              text-left
-              font-semibold
-
-              text-[13px]
-
-              sm:text-[16px]
-
-              md:text-2xl
-
-              mb-2
-              md:mb-5
-            "
-                                >
-                                    {item.title}
-                                </h3>
-
-                                {/* Description */}
-                                <div
-                                    className="
-              text-left
-              text-[#D8D8D8]
-
-              text-[9px]
-              leading-4
-
-              sm:text-[11px]
-              sm:leading-5
-
-              md:text-[15px]
-              md:leading-7
-
-              space-y-1
-            "
-                                >
-
-                                    {item.points.map((point, i) => (
-                                        <p key={i}>{point}</p>
-                                    ))}
-
-                                </div>
-
-                            </div>
-
-                        ))}
+            ))}
 
                     </div>
 
@@ -573,7 +627,7 @@ const Adcreations = () => {
 
             {/* ================= Client Benefits ================= */}
 
-            <section className="bg-[#101110] py-16 md:py-28">
+            {/* <section className="bg-[#101110] py-16 md:py-28">
 
                 <div className="max-w-7xl mx-auto px-4 md:px-8">
 
@@ -630,7 +684,135 @@ const Adcreations = () => {
                     </div>
 
                 </div>
-            </section>
+            </section> */}
+
+               <section className="bg-[#101110] py-16 md:py-28">
+
+  <div className="max-w-7xl mx-auto px-4 md:px-8">
+
+    <h2
+      className="text-white italic text-4xl md:text-7xl mb-10 md:mb-16"
+      style={{ fontFamily: "Playfair Display, serif" }}
+    >
+      Client Benefits
+    </h2>
+
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-8">
+
+      {benefits.map((item, index) => (
+
+        <div
+          key={index}
+//           className={`
+//             ${item.className || ""}
+
+//             rounded-[26px]
+
+//             border-t
+//             border-l
+//             border-purple-400
+
+//             bg-white/[0.03]
+//             backdrop-blur-sm
+
+//             shadow-[
+//   0_0_8px_rgba(168,85,247,0.95),
+//   0_0_20px_rgba(168,85,247,0.75),
+//   0_0_40px_rgba(168,85,247,0.55),
+//   inset_0_0_15px_rgba(168,85,247,0.18)
+// ]
+
+//             hover:border-purple-300
+
+//             hover:shadow-[
+//               0_0_10px_rgba(168,85,247,1),
+//               0_0_25px_rgba(168,85,247,0.9),
+//               0_0_50px_rgba(168,85,247,0.75),
+//               0_0_80px_rgba(168,85,247,0.5),
+//               inset_0_0_20px_rgba(168,85,247,0.25)
+//             ]
+
+//             transition-all
+//             duration-300
+
+//             p-5
+//             md:p-8
+
+//             min-h-[180px]
+
+//             flex
+//             flex-col
+//             justify-center
+//           `}
+
+className={`
+  ${item.className || ""}
+
+  rounded-[26px]
+
+  border-t
+  border-l
+  border-purple-400
+
+  bg-white/[0.03]
+  backdrop-blur-sm
+
+  p-5
+  md:p-8
+
+  min-h-[180px]
+
+  flex
+  flex-col
+  justify-center
+
+  shadow-[
+    0_0_8px_rgba(168,85,247,1),
+    0_0_20px_rgba(168,85,247,0.9),
+    0_0_40px_rgba(168,85,247,0.75),
+    0_0_70px_rgba(168,85,247,0.55),
+    0_0_100px_rgba(168,85,247,0.35),
+    inset_0_0_18px_rgba(168,85,247,0.2)
+  ]
+
+  transition-all
+  duration-300
+
+  hover:border-purple-300
+
+  hover:shadow-[
+    0_0_10px_rgba(168,85,247,1),
+    0_0_25px_rgba(168,85,247,1),
+    0_0_50px_rgba(168,85,247,0.9),
+    0_0_80px_rgba(168,85,247,0.75),
+    0_0_120px_rgba(168,85,247,0.5),
+    inset_0_0_25px_rgba(168,85,247,0.3)
+  ]
+`}
+        >
+
+          <img
+            src={item.icon}
+            alt=""
+            className="w-10 md:w-14 mb-5 md:mb-8"
+          />
+
+          <h3 className="text-white text-xl md:text-[32px] font-semibold mb-2">
+            {item.title}
+          </h3>
+
+          <p className="text-white/70 text-sm md:text-lg leading-6 md:leading-7">
+            {item.desc}
+          </p>
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+</section>
 
             {/* ================= Featured Projects ================= */}
 
