@@ -373,25 +373,64 @@ const ServicesCard = () => {
           return (
             <div key={service._id} className="flex justify-center px-3 sm:px-4">
               <div
-                className={`
-                  w-full
+                // className={`
+                //   w-full
+                //   max-w-[1100px]
+                //   border border-white/20
+                //   rounded-[22px] sm:rounded-[28px] lg:rounded-[32px]
+                //   bg-[#111111]
+                //   flex flex-col
+                //   md:flex-row
+                //   items-center
+                //   gap-6
+                //   sm:gap-8
+                //   lg:gap-12
+                //   p-5
+                //   sm:p-6
+                //   md:p-8
+                //   lg:px-14
+                //   lg:py-12
+                //   ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}
+                // `}
+
+                 className={`
+    w-full
                   max-w-[1100px]
-                  border border-white/20
-                  rounded-[22px] sm:rounded-[28px] lg:rounded-[32px]
+
+                  rounded-[22px]
+                  md:rounded-[30px]
+
                   bg-[#111111]
-                  flex flex-col
+
+                  border
+                  border-purple-400/70
+
+                  shadow-[0_0_8px_rgba(168,85,247,0.75),0_0_20px_rgba(168,85,247,0.45),0_0_35px_rgba(168,85,247,0.25)]
+
+                  hover:border-purple-400
+                  hover:shadow-[0_0_10px_rgba(168,85,247,0.95),0_0_25px_rgba(168,85,247,0.70),0_0_45px_rgba(168,85,247,0.45)]
+
+                  transition-all
+                  duration-300
+
+                  flex
+                  flex-col
                   md:flex-row
                   items-center
+
                   gap-6
-                  sm:gap-8
+                  md:gap-10
                   lg:gap-12
+
                   p-5
                   sm:p-6
                   md:p-8
                   lg:px-14
                   lg:py-12
-                  ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}
-                `}
+
+
+    ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}
+  `}
               >
                 {/* IMAGE */}
                 <div className="w-full md:w-[40%] flex justify-center">

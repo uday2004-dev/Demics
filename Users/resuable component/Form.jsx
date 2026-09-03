@@ -180,18 +180,33 @@ const Form = () => {
   const glowStyle = (field) => ({
     borderColor:
       focused === field
-        ? "rgba(168,85,247,1)"
-        : "rgb(75,85,99)",
+        // ? "rgba(168,85,247,1)"
+        // : "rgb(75,85,99)"
+        ?"rgb(75,85,99)"
+        :"rgba(168,85,247,1)",
+        
 
     boxShadow:
       focused === field
-        ? `
+        // ? `
+        //   0 0 5px rgba(168,85,247,1),
+        //   0 0 15px rgba(168,85,247,0.9),
+        //   0 0 30px rgba(168,85,247,0.7),
+        //   0 0 50px rgba(168,85,247,0.4)
+        // `
+        // : "none",
+
+          ? "rgba(168,85,247,1)"
+        : `
           0 0 5px rgba(168,85,247,1),
           0 0 15px rgba(168,85,247,0.9),
           0 0 30px rgba(168,85,247,0.7),
           0 0 50px rgba(168,85,247,0.4)
-        `
-        : "none",
+        `,
+
+
+
+        
 
     transition:
       "border-color 300ms ease, box-shadow 300ms ease",
