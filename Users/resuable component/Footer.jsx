@@ -24,7 +24,7 @@ const Footer = () => {
           {/* Important Links */}
           <div>
             <h3 className="text-lg font-medium mb-6 uppercase">
-              Important Links
+              Navigation Links
             </h3>
 
             <ul className="space-y-3 text-sm text-gray-300 cursor-pointer">
