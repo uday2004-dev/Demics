@@ -138,7 +138,7 @@
 //                     <h2 className="text-white text-center text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-20">
 //                         Assets preview
 //                     </h2>
-
+// kcwoie
 //                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
 
 //                         {brandingAssets.map((item, index) => (
@@ -420,30 +420,33 @@ const SocialMediaManagement = () => {
 
                 <div className="max-w-7xl mx-auto">
 
-                    <h2 className="text-center text-white text-xl md:text-5xl  mb-12 md:mb-20">
+                    {/* <h2 className="text-center text-white text-xl md:text-5xl  mb-12 md:mb-20"> */}
+                                        <h2 className="text-center text-white text-xl md:text-5xl mb-16 md:mb-20">
+
                         What We Provide
                     </h2>
 
                     <div
-                        className="
+                     className="
         grid
-
-        sm:grid-cols-1
-    
-            min-[375px]:grid-cols-2
-              md:grid-cols-2
+        grid-cols-2
         lg:grid-cols-3
 
-        gap-x-3
-        gap-y-8
+        pt-6
 
-   
+        gap-x-3
+        gap-y-10
+
+        min-[390px]:gap-x-4
+        min-[390px]:gap-y-12
+
         sm:gap-x-5
-        sm:gap-y-10
+        sm:gap-y-12
 
         md:gap-x-8
         md:gap-y-16
-      "
+        md:pt-6
+    "
                     >
 
 
@@ -452,13 +455,52 @@ const SocialMediaManagement = () => {
 
                 <div
                     key={index}
-                    className="
+                    // className="
+                    //     relative
+
+                    //     aspect-square
+                    //     md:aspect-auto
+                    //     md:min-h-[280px]
+
+                    //     rounded-[24px]
+
+                    //     border
+                    //     border-purple-400/80
+
+                    //     bg-white/[0.03]
+                    //     backdrop-blur-sm
+
+                    //     shadow-[0_0_18px_rgba(168,85,247,0.7),inset_0_0_12px_rgba(168,85,247,0.15)]
+
+                    //     flex
+                    //     flex-col
+                    //     items-center
+                    //     justify-center
+
+                    //     px-3
+                    //     py-4
+
+                    //     sm:px-5
+                    //     sm:py-6
+
+                    //     md:px-7
+                    //     md:pt-16
+                    //     md:pb-8
+
+                    //     transition-all
+                    //     duration-300
+
+                    //     hover:border-purple-300
+                    //     hover:shadow-[0_0_18px_rgba(168,85,247,0.7),inset_0_0_12px_rgba(168,85,247,0.15)]
+                    // "
+
+   className="
                         relative
 
-                        aspect-square
-                        md:aspect-auto
-                        md:min-h-[280px]
-
+                  min-h-[150px]
+min-[390px]:min-h-[165px]
+sm:min-h-[190px]
+md:min-h-[280px]
                         rounded-[24px]
 
                         border
@@ -475,21 +517,31 @@ const SocialMediaManagement = () => {
                         justify-center
 
                         px-3
-                        py-4
+pt-12
+pb-4
 
-                        sm:px-5
-                        sm:py-6
 
-                        md:px-7
-                        md:pt-16
-                        md:pb-8
 
-                        transition-all
-                        duration-300
+min-[390px]:px-4
+min-[390px]:pt-12
+min-[390px]:pb-5
 
-                        hover:border-purple-300
-                        hover:shadow-[0_0_18px_rgba(168,85,247,0.7),inset_0_0_12px_rgba(168,85,247,0.15)]
+    sm:px-5
+    sm:py-6
+
+    md:px-7
+    md:pt-16
+    md:pb-8
+
+    transition-all
+    duration-300
+
+    hover:border-purple-300
+    hover:shadow-[0_0_18px_rgba(168,85,247,0.7),inset_0_0_12px_rgba(168,85,247,0.15)]
                     "
+
+
+
 
 //   className="
 //   relative
@@ -545,7 +597,9 @@ const SocialMediaManagement = () => {
                 >
 
                     {/* Icon */}
-                    <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2">
+                    {/* <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2"> */}
+
+                                <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2">
 
                         <div
                             className="

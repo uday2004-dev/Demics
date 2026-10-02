@@ -10,6 +10,7 @@ import Form from "../resuable component/Form"
 import grid from "../src/assets/grid.png"
 import { useNavigate } from "react-router-dom";
 import heroImg2 from "../src/assets/heroImg2.svg"
+
 // import blur from "../src/assets/blurEffect.png"
 
 
@@ -20,17 +21,27 @@ const Home = () => {
     <div className="bg-[#111111] overflow-hidden">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative min-h-screen overflow-hidden bg-[#111111] flex items-center py-16 lg:py-0">
+      {/* <section className="relative min-h-screen overflow-hidden bg-[#111111] flex items-center py-16 lg:py-0"> */}
+    <section
+  className="relative min-h-screen overflow-hidden flex items-center py-16 lg:py-0"
+  style={{
+    background:
+      "linear-gradient(180deg, #111111 0%, #111111 48%, #17121f 58%, #21152d 68%, #2d1742 78%, #3a1858 88%, #48186f 100%)",
+  }}
+>
 
         {/* Background Grid */}
         <img
           src={grid}
           alt="Grid"
+          // className="absolute bottom-0 left-0 w-full h-[350px] object-cover z-0 opacity-60"
           className="absolute bottom-0 left-0 w-full h-[350px] object-cover z-0 opacity-60"
         />
 
         {/* Purple Glow */}
-        <div className="absolute bottom-0 left-0 w-[320px] sm:w-[450px] lg:w-[700px] h-[220px] sm:h-[280px] lg:h-[350px] bg-purple-700/20 blur-[120px] lg:blur-[180px] rounded-full z-0" />
+        {/* <div className="absolute bottom-0 left-0 w-[320px] sm:w-[450px] lg:w-[700px] h-[220px] sm:h-[280px] lg:h-[350px] bg-purple-700/20 blur-[120px] lg:blur-[180px] rounded-full z-0" /> */}
+
+        <div className="absolute bottom-0 left-0 w-[320px] sm:w-[450px] lg:w-[700px] h-[220px] sm:h-[280px] lg:h-[350px] bg-[#6c14db]/10 blur-[140px] lg:blur-[180px] rounded-full z-0" />
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto w-full px-5 sm:px-8 lg:px-8">
@@ -46,8 +57,8 @@ const Home = () => {
 
                 > */}
                 <span
-  className="font-awesome text-4xl sm:text-5xl lg:text-6xl italic text-[#ACFE05]"
->
+                  className="font-awesome text-4xl sm:text-5xl lg:text-6xl italic text-[#ACFE05]"
+                >
                   Creative Solutions
                 </span>
 
@@ -70,7 +81,7 @@ const Home = () => {
                 to life with creativity and precision.
               </p>
 
-              <button        onClick={() => navigate("/contact")} className="px-8 py-4 rounded-full bg-gradient-to-r from-[#B84DFF] to-[#7A00FF] text-white font-medium">
+              <button onClick={() => navigate("/contact")} className="px-8 py-4 rounded-full bg-gradient-to-r from-[#B84DFF] to-[#7A00FF] text-white font-medium">
                 BOOK A CALL
               </button>
 
@@ -82,7 +93,9 @@ const Home = () => {
             <div className="relative flex justify-center lg:justify-end lg:pr-20 mt-10 lg:mt-0 lg:-mt-16">
 
               {/* Purple Glow */}
-              <div className="absolute top-1/2 left-1/2 lg:left-auto lg:right-12 -translate-x-1/2 lg:translate-x-0 -translate-y-1/2 w-[230px] sm:w-[280px] lg:w-[320px] h-[230px] sm:h-[280px] lg:h-[320px] bg-purple-600/35 blur-[90px] lg:blur-[120px] rounded-full"></div>
+              {/* <div className="absolute top-1/2 left-1/2 lg:left-auto lg:right-12 -translate-x-1/2 lg:translate-x-0 -translate-y-1/2 w-[230px] sm:w-[280px] lg:w-[320px] h-[230px] sm:h-[280px] lg:h-[320px] bg-purple-600/35 blur-[90px] lg:blur-[120px] rounded-full"></div> */}
+
+              <div className="absolute top-1/2 left-1/2 lg:left-auto lg:right-12 -translate-x-1/2 lg:translate-x-0 -translate-y-1/2 w-[230px] sm:w-[280px] lg:w-[320px] h-[230px] sm:h-[280px] lg:h-[320px] bg-[#6a13d7]/35 blur-[90px] lg:blur-[120px] rounded-full"></div>
 
               {/* Hero Image */}
               <img
@@ -90,13 +103,7 @@ const Home = () => {
                 alt="Hero"
                 className="relative z-20 w-[240px] sm:w-[280px] lg:w-[300px] object-contain lg:-translate-y-6 lg:translate-x-4"
               />
-              {/* <img
-  src={heroImg}
-  alt="Hero"
-  className="relative z-20 w-[240px] sm:w-[280px] lg:w-[300px] h-auto object-contain lg:-translate-y-6 lg:translate-x-4"
-  loading="eager"
-  decoding="async"
-/> */}
+
 
             </div>
 
@@ -106,7 +113,35 @@ const Home = () => {
       </section>
 
 
-      <div className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 py-8 overflow-hidden">
+      {/* <div className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 py-8 overflow-hidden">
+        <div className="animate-marquee">
+          {[
+            "EVOLUTION",
+            "pigment play",
+            "L.A. COLORS",
+            "L.A. Girl",
+            "LORD & BERRY",
+            "MILANI",
+            "Gartner",
+            "EVOLUTION",
+            "pigment play",
+            "L.A. COLORS",
+            "L.A. Girl",
+            "LORD & BERRY",
+            "MILANI",
+            "Gartner",
+          ].map((brand, index) => (
+            <div
+              key={index}
+              className="mx-12 text-white font-bold text-lg whitespace-nowrap"
+            >
+              {brand}
+            </div>
+          ))}
+        </div>
+      </div> */}
+
+      <div className="bg-gradient-to-r from-[#8200FF] via-[#7C2BF5] to-[#6A1FEE] py-8 overflow-hidden">
         <div className="animate-marquee">
           {[
             "EVOLUTION",
@@ -139,7 +174,9 @@ const Home = () => {
 
 
 
-        <div className="absolute right-0 top-0 w-[300px] sm:w-[500px] lg:w-[700px] h-[300px] sm:h-[500px] lg:h-[700px] bg-purple-700/20 blur-[120px] lg:blur-[180px] rounded-full" />
+        {/* <div className="absolute right-0 top-0 w-[300px] sm:w-[500px] lg:w-[700px] h-[300px] sm:h-[500px] lg:h-[700px] bg-purple-700/20 blur-[120px] lg:blur-[180px] rounded-full" /> */}
+
+        <div className="absolute right-0 top-0 w-[300px] sm:w-[500px] lg:w-[700px] h-[300px] sm:h-[500px] lg:h-[700px] bg-[#5d12bb]/20 blur-[120px] lg:blur-[180px] rounded-full" />
 
         <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
@@ -263,7 +300,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-8">
           <h1 className="text-white leading-tight mb-6 sm:mb-8 text-left">
             <span
-              className=" font-awesome text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px] text-[#F1FD0F]"
+              className=" font-awesome text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px] text-[#ACFE05]"
             // style={{ fontFamily: "serif" }}
             >
               Client
@@ -280,7 +317,7 @@ const Home = () => {
             </span>{" "}
 
             <span
-              className=" font-awesome text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px] text-[#F1FD0F]"
+              className=" font-awesome text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px] text-[#ACFE05]"
             // style={{ fontFamily: "serif" }}
             >
               Real Feedback

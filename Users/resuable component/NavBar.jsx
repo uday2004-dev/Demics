@@ -152,7 +152,8 @@
 
 
 import React, { useEffect, useState } from "react";
-import logo from "../src/assets/demics.png";
+// import logo from "../src/assets/demics.png";
+import logo from "../src/assets/demicsLogo-cropped.png"
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion, AnimatePresence } from "motion/react";
@@ -199,7 +200,10 @@ const NavBar = () => {
 
             {/* ================= LOGO ================= */}
 
-            <Link to="/">
+
+            {/* ye purane wale logo ka hai aage kaam if in case  */}
+
+            {/* <Link to="/">
               <motion.img
                 src={logo}
                 alt="Demics"
@@ -213,8 +217,48 @@ const NavBar = () => {
                   scale: 1.05,
                 }}
                 className="h-8 sm:h-9 md:h-11 lg:h-12 object-contain"
+               
               />
-            </Link>
+            </Link> */}
+
+            {/* <Link to="/" className="inline-flex items-center">
+  <motion.img
+    src={logo}
+    alt="Demics"
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{
+      delay: 0.2,
+      duration: 0.6,
+    }}
+    whileHover={{
+      scale: 1.05,
+    }}
+    // className="h-9 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
+        className="h-12 sm:h-12 md:h-12 lg:h-18 w-auto object-contain"
+
+  />
+  
+</Link> */}
+   
+
+   <Link to="/" className="inline-flex items-center">
+  <motion.img
+    src={logo}
+    alt="Demics"
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{
+      delay: 0.2,
+      duration: 0.6,
+    }}
+    whileHover={{
+      scale: 1.05,
+    }}
+    className="h-12 md:h-12 lg:h-[72px] w-auto object-contain"
+  />
+</Link>
+          
 
 
             {/* ================= DESKTOP MENU ================= */}
