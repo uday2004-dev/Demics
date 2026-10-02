@@ -271,15 +271,15 @@ const Home = () => {
 
 
       {/* ================= BLUR EFFECT ================= */}
-
+{/* 
       <section className="py-28 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-8">
 
-          {/* Heading */}
+      
           <div className="mb-16">
             <h3
               className="text-5xl md:text-6xl  font-awesome text-white"
-            // style={{ fontFamily: "serif" }}
+           
             >
               Featured Projects
             </h3>
@@ -291,7 +291,7 @@ const Home = () => {
 
           <Project />
         </div>
-      </section>
+      </section> */}
 
 
 

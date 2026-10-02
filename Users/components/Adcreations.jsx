@@ -589,7 +589,7 @@ className={`
 
             {/* ================= Featured Projects ================= */}
 
-            <section className="py-16 md:py-28 bg-[#111111]">
+            {/* <section className="py-16 md:py-28 bg-[#111111]">
 
                 <div className="max-w-7xl mx-auto px-4 md:px-8">
 
@@ -608,7 +608,7 @@ className={`
 
                 </div>
 
-            </section>
+            </section> */}
 
             {/* ================= Other Services ================= */}
 

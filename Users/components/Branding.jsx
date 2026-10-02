@@ -453,7 +453,7 @@ min-[390px]:pb-5
 
             {/* ================= Featured Projects ================= */}
 
-            <section className="py-16 md:py-28 bg-[#111111]">
+            {/* <section className="py-16 md:py-28 bg-[#111111]">
 
                 <div className="max-w-7xl mx-auto px-4 md:px-8">
 
@@ -472,7 +472,7 @@ min-[390px]:pb-5
 
                 </div>
 
-            </section>
+            </section> */}
 
             {/* ================= Other Services ================= */}
 
