@@ -353,7 +353,10 @@ min-[390px]:pb-5
 
          
 
-               <section className="bg-[#101110] py-16 md:py-28">
+               {/* <section className="bg-[#101110] py-16 md:py-28"> */}
+                           {/* <section className="bg-[#101110] pt-16 pb-4 md:pt-28 md:pb-8"> */}
+                             <section className="bg-[#101110] pt-16 pb-8 md:pt-28 md:pb-16">
+
 
   <div className="max-w-7xl mx-auto px-4 md:px-8">
 
@@ -466,7 +469,7 @@ className={`
 
             {/* ================= Other Services ================= */}
 
-            <section className="py-16 md:py-28 bg-[#111111]">
+            {/* <section className="py-16 md:py-28 bg-[#111111]">
 
                 <div className="max-w-7xl mx-auto px-4 md:px-8">
 
@@ -474,11 +477,11 @@ className={`
 
                 </div>
 
-            </section>
+            </section> */}
 
             {/* ================= Contact Form ================= */}
 
-            <section className="py-16 md:py-24 bg-[#111111]">
+            {/* <section className="py-16 md:py-24 bg-[#111111]">
 
                 <div className="max-w-[1320px] mx-auto px-4 md:px-8 lg:px-12 xl:px-20">
 
@@ -486,6 +489,23 @@ className={`
 
                 </div>
 
+            </section> */}
+
+
+
+               {/* Other Services */}
+            {/* <section className="bg-[#111111] pt-16 pb-2 md:pt-28 md:pb-4"> */}
+            <section className="bg-[#111111] pt-0 pb-2 md:pb-4">
+                <div className="max-w-7xl mx-auto px-4 md:px-8">
+                    <OtherServices />
+                </div>
+            </section>
+
+            {/* Contact Form */}
+            <section className="bg-[#111111] pt-0 pb-16 md:pb-24">
+                <div className="max-w-[1320px] mx-auto px-4 md:px-8 lg:px-12 xl:px-20">
+                    <Form />
+                </div>
             </section>
 
 

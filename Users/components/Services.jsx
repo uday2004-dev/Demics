@@ -90,7 +90,9 @@ md:leading-8">
       </section>
 
       {/* ================= PROCESS ================= */}
-      <section className="py-10 sm:py-14 md:py-20 w-full  bg-[#111111]">
+      {/* <section className="py-10 sm:py-14 md:py-20 w-full  bg-[#111111]"> */}
+      {/* <section className="pt-10 pb-4 sm:pt-14 sm:pb-6 md:pt-20 md:pb-8 w-full bg-[#111111]"> */}
+      <section className="pt-10 pb-1 sm:pt-14 sm:pb-2 md:pt-20 md:pb-3 w-full bg-[#111111]">
         <div className="mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-12 xl:px-20">
           <h2
             className="text-white  font-awesome
@@ -111,7 +113,9 @@ md:leading-8">
 
 
       {/* ================= SERVICES ================= */}
-      <section className="py-10 sm:py-14 md:py-20  bg-[#111111]">
+      {/* <section className="py-10 sm:py-14 md:py-20  bg-[#111111]"> */}
+      {/* <section className="pt-4 pb-10 sm:pt-6 sm:pb-14 md:pt-8 md:pb-20 bg-[#111111]"> */}
+      <section className="pt-1 pb-10 sm:pt-2 sm:pb-14 md:pt-3 md:pb-20 bg-[#111111]">
         <div className="mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-12 xl:px-20">
           <h2
             className="text-white  font-awesome
@@ -130,7 +134,8 @@ md:leading-8">
       </section>
 
       {/* ================= FORM ================= */}
-      <section className="py-12 sm:py-16 md:py-24  bg-[#111111] ">
+      {/* <section className="py-12 sm:py-16 md:py-24  bg-[#111111] "> */}
+      <section className="pt-4 pb-12 sm:pt-6 sm:pb-16 md:pt-8 md:pb-24 bg-[#111111]">
         <div className="mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-12 xl:px-20">
           <Form />
         </div>

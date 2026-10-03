@@ -22,13 +22,13 @@ const Home = () => {
 
       {/* ================= HERO SECTION ================= */}
       {/* <section className="relative min-h-screen overflow-hidden bg-[#111111] flex items-center py-16 lg:py-0"> */}
-    <section
-  className="relative min-h-screen overflow-hidden flex items-center py-16 lg:py-0"
-  style={{
-    background:
-      "linear-gradient(180deg, #111111 0%, #111111 48%, #17121f 58%, #21152d 68%, #2d1742 78%, #3a1858 88%, #48186f 100%)",
-  }}
->
+      <section
+        className="relative min-h-screen overflow-hidden flex items-center py-16 lg:py-0"
+        style={{
+          background:
+            "linear-gradient(180deg, #111111 0%, #111111 48%, #17121f 58%, #21152d 68%, #2d1742 78%, #3a1858 88%, #48186f 100%)",
+        }}
+      >
 
         {/* Background Grid */}
         <img
@@ -253,7 +253,11 @@ const Home = () => {
 
       </section>
 
-      <section className="bg-[#111111] py-12 sm:py-16 lg:py-28">
+      {/* <section className="bg-[#111111] py-12 sm:py-16 lg:py-28"> */}
+      {/* <section className="bg-[#111111] pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-12 lg:pb-28"> */}
+      {/* <section className="bg-[#111111] pt-3 pb-12 sm:pt-5 sm:pb-16 lg:pt-8 lg:pb-28"> */}
+      {/* <section className="bg-[#111111] pt-3 pb-2 sm:pt-5 sm:pb-3 lg:pt-8 lg:pb-4"> */}
+      <section className="bg-[#111111] pt-3 pb-8 sm:pt-5 sm:pb-10 lg:pt-8 lg:pb-16">
         <div className="max-w-7xl mx-auto">
 
           <div className="px-5 sm:px-6 lg:px-8 mb-8 sm:mb-10 lg:mb-16">
@@ -271,7 +275,7 @@ const Home = () => {
 
 
       {/* ================= BLUR EFFECT ================= */}
-{/* 
+      {/* 
       <section className="py-28 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-8">
 
@@ -295,14 +299,38 @@ const Home = () => {
 
 
 
-      <section className="py-28 bg-[#111111]">
-        {/* Heading */}
+      {/* <section className="py-28 bg-[#111111]"> */}
+      {/* <section className="pt-6 pb-28 sm:pt-8 lg:pt-12 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-8">
           <h1 className="text-white leading-tight mb-6 sm:mb-8 text-left">
             <span
               className=" font-awesome text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px] text-[#ACFE05]"
-            // style={{ fontFamily: "serif" }}
             >
+              Client
+            </span>
+
+            <span className="ml-2 sm:ml-3 text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px] font-semibold">
+              Testimonials:
+            </span>
+            <br />
+            <span className="text-[34px] sm:text-[44px] md:text-[56px] lg:text-[60px] font-semibold">
+              Real Results,
+            </span>{" "}
+            <span
+              className=" font-awesome text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px] text-[#ACFE05]"
+            >
+              Real Feedback
+            </span>
+          </h1>
+        </div>
+        <Testimonial />
+      </section> */}
+
+      <section className="bg-[#111111] pt-6 pb-8 sm:pt-8 sm:pb-10 lg:pt-12 lg:pb-12">
+        {/* Heading */}
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <h1 className="text-white leading-tight mb-6 sm:mb-8 text-left">
+            <span className="font-awesome text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px] text-[#ACFE05]">
               Client
             </span>
 
@@ -316,10 +344,7 @@ const Home = () => {
               Real Results,
             </span>{" "}
 
-            <span
-              className=" font-awesome text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px] text-[#ACFE05]"
-            // style={{ fontFamily: "serif" }}
-            >
+            <span className="font-awesome text-[30px] sm:text-[40px] md:text-[52px] lg:text-[56px] text-[#ACFE05]">
               Real Feedback
             </span>
           </h1>
@@ -331,13 +356,31 @@ const Home = () => {
 
 
 
-      <section className="py-28 bg-[#111111]">
+
+      {/* <section className="py-28 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-8">
           <Form />
         </div>
+      </section> */}
+
+      {/* <section className="pt-2 pb-28 sm:pt-4 lg:pt-6 bg-[#111111]">
+  <div className="max-w-7xl mx-auto px-8">
+    <Form />
+  </div>
+</section> */}
+
+      {/* <section className="pt-0 pb-28 bg-[#111111]">
+        <div className="max-w-7xl mx-auto px-8">
+          <Form />
+        </div>
+      </section> */}
+
+
+      <section className="bg-[#111111] pt-0 pb-20 sm:pb-24 lg:pb-28">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <Form />
+        </div>
       </section>
-
-
 
     </div>
   );
