@@ -263,7 +263,7 @@ min-[390px]:pb-5
 
                                 {/* Icon */}
                                 {/* <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2"> */}
-                                <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2">
+                                {/* <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2">
 
                                     <div
                                         className="
@@ -305,6 +305,55 @@ min-[390px]:pb-5
 
                                     object-contain
                                 "
+                                        />
+
+                                    </div>
+
+                                </div> */}
+
+                                {/* Icon */}
+                                <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2">
+
+                                    <div
+                                        className="
+            w-10
+            h-10 
+
+            sm:w-14
+            sm:h-14
+
+            md:w-[72px]
+            md:h-[72px]
+
+            rounded-full
+          bg-[#97D400]
+
+            flex
+            items-center
+            justify-center
+
+            shadow-[0_0_15px_rgba(172,254,5,0.5)]
+        "
+                                    >
+
+                                        <img
+                                            src={item.icon}
+                                            alt=""
+                                            className="
+                w-10
+                h-10
+
+                min-[375px]:w-10
+                min-[375px]:h-10
+
+                min-[425px]:w-14
+                min-[425px]:h-14
+
+                md:w-[70px]
+                md:h-[70px]
+
+                object-contain
+            "
                                         />
 
                                     </div>
@@ -365,7 +414,7 @@ min-[390px]:pb-5
 
             {/* <section className="bg-[#101110] py-16 md:py-28"> */}
             {/* <section className="bg-[#101110] pt-16 pb-4 md:pt-28 md:pb-8"> */}
-              <section className="bg-[#101110] pt-16 pb-8 md:pt-28 md:pb-16">
+            <section className="bg-[#101110] pt-16 pb-8 md:pt-28 md:pb-16">
 
                 <div className="max-w-7xl mx-auto px-4 md:px-8">
 
@@ -429,12 +478,20 @@ min-[390px]:pb-5
   ]
 `}
                             >
+                                    
+                                    <img
+                                        src={item.icon}
+                                        alt=""
+                                        className="w-10 md:w-14 mb-5 md:mb-8"
+                                    />
 
-                                <img
-                                    src={item.icon}
-                                    alt=""
-                                    className="w-10 md:w-14 mb-5 md:mb-8"
-                                />
+
+{/* <img
+  src={item.icon}
+  alt=""
+  className="w-10 md:w-14 mb-5 md:mb-8 drop-shadow-[0_0_16px_rgba(151,212,0,0.9)]"
+/> */}
+                             
 
                                 <h3 className="text-white text-xl md:text-[32px] font-semibold mb-2">
                                     {item.title}

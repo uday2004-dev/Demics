@@ -314,18 +314,37 @@ const AboutUs = () => {
                 // hover:border-[#8B5CF6]
                 // `}
 
-                className={`
-          ${item.className}
-          rounded-[26px]
-          border border-white/20
-          bg-white/[0.03]
-          backdrop-blur-sm
-          p-5 sm:p-6 md:p-8
-          min-h-[180px]
-          flex flex-col justify-center
-          transition-all duration-300
-          hover:border-[#8B5CF6]
-          `}
+          //       className={`
+          // ${item.className}
+          // rounded-[26px]
+          // border border-white/20
+          // bg-white/[0.03]
+          // backdrop-blur-sm
+          // p-5 sm:p-6 md:p-8
+          // min-h-[180px]
+          // flex flex-col justify-center
+          // transition-all duration-300
+          // hover:border-[#8B5CF6]
+          // `}
+
+          className={`
+  ${item.className}
+  rounded-[26px]
+
+  border-t
+  border-l
+  border-purple-400
+
+  bg-white/[0.03]
+  backdrop-blur-sm
+
+  p-5 sm:p-6 md:p-8
+  min-h-[180px]
+  flex flex-col justify-center
+
+  transition-all duration-300
+  hover:border-purple-300
+`}
               >
 
                 <img

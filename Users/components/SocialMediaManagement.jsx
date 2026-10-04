@@ -599,7 +599,7 @@ min-[390px]:pb-5
                     {/* Icon */}
                     {/* <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2"> */}
 
-                                <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2">
+                                {/* <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2">
 
                         <div
                             className="
@@ -645,7 +645,56 @@ min-[390px]:pb-5
 
                         </div>
 
-                    </div>
+                    </div> */}
+
+
+                    <div className="absolute -top-4 md:-top-10 left-1/2 -translate-x-1/2">
+
+    <div
+        className="
+            w-10
+            h-10 
+
+            sm:w-14
+            sm:h-14
+
+            md:w-[72px]
+            md:h-[72px]
+
+            rounded-full
+          bg-[#97D400]
+
+            flex
+            items-center
+            justify-center
+
+            shadow-[0_0_15px_rgba(172,254,5,0.5)]
+        "
+    >
+
+        <img
+            src={item.icon}
+            alt=""
+            className="
+                w-10
+                h-10
+
+                min-[375px]:w-10
+                min-[375px]:h-10
+
+                min-[425px]:w-14
+                min-[425px]:h-14
+
+                md:w-[70px]
+                md:h-[70px]
+
+                object-contain
+            "
+        />
+
+    </div>
+
+</div>
 
                     {/* Title */}
                     <h3
