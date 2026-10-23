@@ -1,4 +1,4 @@
-@import "tailwindcss";
+ @import "tailwindcss";
 
 @keyframes marquee {
   from {
@@ -49,7 +49,7 @@
 
 .animate-left:hover,
 .animate-right:hover {
-  /* animation-play-state: paused; */
+
 }
 
 
@@ -62,4 +62,87 @@
 
 .font-awesome {
   font-family: "AwesomeSerif", serif;
+} 
+
+
+/* =========================================================
+   ROCKET + SERVICES GROUP
+   RIGHT TOP → LEFT BOTTOM
+   ========================================================= */
+
+.rocket-services-group {
+  position: relative;
+  overflow: hidden;
+  background: #111111;
+
+  background-image:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(122, 0, 255, 0.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(122, 0, 255, 0.15),
+      transparent 28%
+    );
+}
+
+
+/* =========================================================
+   TESTIMONIAL + FORM GROUP
+   RIGHT TOP → LEFT BOTTOM
+   ========================================================= */
+
+.testimonial-form-group {
+  position: relative;
+  overflow: hidden;
+  background: #111111;
+
+  background-image:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(122, 0, 255, 0.16),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(122, 0, 255, 0.14),
+      transparent 28%
+    );
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 640px) {
+
+  .rocket-services-group {
+    background-image:
+      radial-gradient(
+        circle at 100% 0%,
+        rgba(122, 0, 255, 0.15),
+        transparent 32%
+      ),
+      radial-gradient(
+        circle at 0% 100%,
+        rgba(122, 0, 255, 0.13),
+        transparent 32%
+      );
+  }
+
+  .testimonial-form-group {
+    background-image:
+      radial-gradient(
+        circle at 100% 0%,
+        rgba(122, 0, 255, 0.14),
+        transparent 32%
+      ),
+      radial-gradient(
+        circle at 0% 100%,
+        rgba(122, 0, 255, 0.12),
+        transparent 32%
+      );
+  }
+
 }

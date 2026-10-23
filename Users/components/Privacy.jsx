@@ -1,16 +1,45 @@
 import React from "react";
+import Form from "../resuable component/Form"
 
 const Privacy = () => {
+
+
+const glows = [
+  { side: "left", top: "8%", color: "bg-[#7A00FF]/45" },
+  // { side: "right", top: "16%", color: "bg-[#7A00FF]/45" },
+  // { side: "left", top: "28%", color: "bg-[#7A00FF]/45" },
+  { side: "right", top: "40%", color: "bg-[#7A00FF]/45" },
+  { side: "left", top: "52%", color: "bg-[#7A00FF]/45" },
+  { side: "right", top: "64%", color: "bg-[#7A00FF]/45" },
+  { side: "left", top: "76%", color: "bg-[#7A00FF]/40" },
+  { side: "right", top: "88%", color: "bg-[#7A00FF]/45" },
+];
+
   return (
     // <div className="min-h-screen pt-24 md:pt-28 pb-20 px-5 sm:px-8">
-    <div className="min-h-screen bg-[#111111] pt-24 md:pt-28 pb-20 px-5 sm:px-8">
+    // <div className="min-h-screen bg-[#111111] pt-24 md:pt-28 pb-20 px-5 sm:px-8">
+    <div className="relative overflow-x-clip min-h-screen bg-[#111111] pt-24 md:pt-28 pb-20 px-5 sm:px-8">
+
       {/* <div className="max-w-6xl mx-auto text-white"> */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-10 lg:px-14 text-white">
-    
+
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        {glows.map((g, i) => (
+          <div
+            key={i}
+            className={`absolute w-[450px] h-[600px] rounded-full blur-[140px] ${g.color} ${g.side === "right" ? "right-[-200px]" : "left-[-200px]"
+              }`}
+            style={{ top: g.top }}
+          />
+        ))}
+      </div>
+      {/* <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-10 lg:px-14 text-white"> */}
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 md:px-10 lg:px-14 text-white">
+
+
 
         <h1 className="font-awesome text-[48px] sm:text-[56px] md:text-[64px] lg:text-[72px] leading-none text-left mt-6 md:mt-10 mb-12 md:mb-16">
-  Privacy Policy
-</h1>
+          Privacy Policy
+        </h1>
 
         {/* 1 */}
         <h3 className="text-2xl font-semibold mt-8 mb-2">
@@ -311,6 +340,33 @@ const Privacy = () => {
         <p className="text-gray-400 mt-6">
           — End of Privacy Policy —
         </p>
+      </div>
+
+        <section className="relative z-10 pt-0 pb-20 sm:pb-24 lg:pb-28 w-full">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 [&>*]:!bg-transparent [&>*]:!overflow-visible">
+          <Form />
+        </div>
+      </section>
+
+      {/* GLOWS (sirf ek baar, end mein) */}
+      <div
+        className="pointer-events-none absolute top-0 left-0 w-full bottom-[-350px] z-20 overflow-hidden mix-blend-screen"
+        style={{
+          WebkitMaskImage:
+            "linear-gradient(to bottom, black 0%, black calc(100% - 350px), transparent 100%)",
+          maskImage:
+            "linear-gradient(to bottom, black 0%, black calc(100% - 350px), transparent 100%)",
+        }}
+      >
+        {glows.map((g, i) => (
+          <div
+            key={i}
+            className={`absolute w-[450px] h-[600px] rounded-full blur-[140px] ${g.color} ${
+              g.side === "right" ? "right-[-200px]" : "left-[-200px]"
+            }`}
+            style={{ top: g.top }}
+          />
+        ))}
       </div>
     </div>
   );

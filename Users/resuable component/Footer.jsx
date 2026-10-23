@@ -15,13 +15,14 @@ const Footer = () => {
 
   const navigate = useNavigate()
   return (
-    <footer className="bg-[#111] text-white relative z-10 overflow-hidden w-screen">
+    // <footer className="bg-[#111] text-white relative z-10 overflow-hidden w-screen">
+    <footer className="bg-[#111] text-white relative z-10 overflow-hidden w-full">
 
       {/* TOP SECTION */}
-      <div className="max-w-7xl mx-auto px-8 py-20 relative z-10">
+      {/* <div className="max-w-7xl mx-auto px-8 py-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
 
-          {/* Important Links */}
+      
           <div>
             <h3 className="text-lg font-medium mb-6 uppercase">
               Navigation Links
@@ -36,7 +37,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
           <div>
             <h3 className="text-lg font-medium mb-6 uppercase">
               Services
@@ -51,7 +51,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Industry */}
+          
           <div>
             <h3 className="text-lg font-medium mb-6 uppercase">
               Specialized Industry
@@ -67,7 +67,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
+        
           <div>
             <h3 className="text-lg font-medium mb-6 uppercase">
               Contact
@@ -108,7 +108,107 @@ const Footer = () => {
           </div>
 
         </div>
-      </div>
+      </div> */}
+
+
+
+      {/* TOP SECTION */}
+      <div className="relative">
+
+        {/* Gradient: section ki poori height cover karega (mobile + desktop dono) */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(180deg, #111111 0%, #111111 30%, #241239 55%, #3b1a7a 80%, #4a1a8f 100%)",
+          }}
+        />
+
+        <div className="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-20 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
+
+            {/* Important Links */}
+            <div>
+              <h3 className="text-lg font-medium mb-6 uppercase">Navigation Links</h3>
+              <ul className="space-y-3 text-sm text-gray-300 cursor-pointer">
+                <li onClick={() => navigate("/")}>Home</li>
+                <li onClick={() => navigate("/aboutus")}>About Us</li>
+                <li onClick={() => navigate("/services")}>Services</li>
+                <li onClick={() => navigate("/work")}>Work</li>
+                <li onClick={() => navigate("/blogs")}>Blog</li>
+              </ul>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h3 className="text-lg font-medium mb-6 uppercase">Services</h3>
+              <ul className="space-y-3 text-sm text-gray-300 cursor-pointer">
+                <li onClick={() => navigate("/branding/:id")}>Branding</li>
+                <li onClick={() => navigate("/socialmediamanagement/:id")}>Social Media Management</li>
+                <li onClick={() => navigate("/marketing/:id")}>Marketing</li>
+                <li onClick={() => navigate("/development/:id")}>Website</li>
+                <li onClick={() => navigate("/adcreation/:id")}>AD Creation</li>
+              </ul>
+            </div>
+
+            {/* Industry */}
+            <div>
+              <h3 className="text-lg font-medium mb-6 uppercase">Specialized Industry</h3>
+              <ul className="space-y-3 text-sm text-gray-300">
+                <li>Fintech Industry</li>
+                <li>Healthcare & Fitness Industry</li>
+                <li>Edtech Industry</li>
+                <li>E-Commerce Industry</li>
+                <li
+                  onClick={() => window.open(Demics, "_blank")}
+                  className="cursor-pointer"
+                >
+                  Company Deck
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <h3 className="text-lg font-medium mb-6 uppercase">Contact</h3>
+
+              <div className="space-y-4 text-sm text-gray-300">
+                <div className="flex items-center gap-3">
+                  <HiOutlineMail className="text-purple-500" />
+                  <span>hello@demics.com</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <FiPhone className="text-purple-500" />
+                  <span>+91 6393934851</span>
+                </div>
+              </div>
+
+              <div className="flex gap-6 mt-8 text-2xl">
+                <a
+                  href="https://www.facebook.com/share/1GU8nGP3Lv/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebookF className="cursor-pointer" />
+                </a>
+
+                <FaXTwitter />
+
+                <a
+                  href="https://www.instagram.com/demics_creativehub?igsi=MW9kOGJ3c2M3ZTF2dA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram className="cursor-pointer" />
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+          </div>
+ 
+
 
 
 
