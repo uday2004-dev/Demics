@@ -5,24 +5,26 @@
 // import custom from "../src/assets/puzzleCube.png"
 // import tranparent from "../src/assets/Transparent.png"
 // import Telescope from "../src/assets/Telescope.png"
-// import grid from "../src/assets/grid.png"
-// import hash from "../src/assets/hash.png"
-// import arrow1 from "../src/assets/arrow1.png"
-// import arrow2 from "../src/assets/arrow2.png"
-// import laptop from "../src/assets/laptop.png"
 // import api from "../utls/axios";
 // import AboutHeader from "./AboutHeader";
 // import mobileAbout from '../src/assets/mobileAbout.jpg'
 
 // const glows = [
-//   { side: "right", top: "10%", color: "bg-[#7A00FF]/35" },
-//   { side: "left", top: "24%", color: "bg-[#7A00FF]/30" },
-//   { side: "right", top: "38%", color: "bg-[#7A00FF]/30" },
-//   { side: "left", top: "52%", color: "bg-[#7A00FF]/25" },
-//   { side: "right", top: "66%", color: "bg-[#7A00FF]/25" },
-//   { side: "left", top: "80%", color: "bg-[#7A00FF]/30" },
-//   { side: "right", top: "92%", color: "bg-[#7A00FF]/25" },
+//   { side: "right", top: "5%", color: "bg-[#7A00FF]/55" },
+//   { side: "left", top: "16%", color: "bg-[#7A00FF]/50" },
+//   { side: "right", top: "27%", color: "bg-[#7A00FF]/50" },
+//   { side: "left", top: "38%", color: "bg-[#7A00FF]/45" },
+//   { side: "right", top: "49%", color: "bg-[#7A00FF]/30" },
+//   { side: "left", top: "60%", color: "bg-[#7A00FF]/30" },
+//   { side: "right", top: "71%", color: "bg-[#7A00FF]/50" },
+//   { side: "left", top: "82%", color: "bg-[#7A00FF]/35" },
+//   // { side: "right", top: "88%", color: "bg-[#7A00FF]/40" },
+//   { side: "right", top: "92%", color: "bg-[#7A00FF]/50" },
 // ];
+
+
+
+
 
 // const AboutUs = () => {
 //   const [teams, setTeams] = useState([]);
@@ -109,14 +111,16 @@
 //   ];
 
 //   return (
-//     <section className="bg-[#111111] text-white overflow-hidden">
+//     // <section className="bg-[#111111] text-white overflow-hidden">
+//     // <section className="relative bg-[#111111] text-white overflow-hidden">
+//     <section className="relative bg-[#111111] text-white overflow-x-clip">
 
 
 
 
 //       {/* HERO */}
 
-//      <section className="block md:hidden w-full overflow-hidden mt-16">
+//       <section className="block md:hidden w-full overflow-hidden mt-16">
 //         <img
 //           src={mobileAbout}
 //           alt="About Us"
@@ -158,7 +162,7 @@
 //           ></div>
 
 //           <div
-//            className="
+//             className="
 //         relative
 //         w-full
 //         grid
@@ -179,8 +183,8 @@
 
 
 //               <h2 className="text-[40px] sm:text-[60px] lg:text-[72px] leading-none font-awesome text-white mb-6 sm:mb-8">
-//   Our Vision
-// </h2>
+//                 Our Vision
+//               </h2>
 
 //               <p
 //                 className="
@@ -226,7 +230,7 @@
 //               <img
 //                 src={Telescope}
 //                 alt="Telescope"
-//                  className="
+//                 className="
 //             w-[240px] sm:w-[300px] md:w-[340px] lg:w-[390px]
 //             sm:w-[340px]
 //             lg:w-[390px]
@@ -240,22 +244,18 @@
 //         </div>
 //       </div>
 
-
-//       {/* <section className="bg-[#101110] py-28"> */}
+//       {/* 
 //       <section className="bg-[#101110] py-14 sm:py-20 md:py-28">
 
-//         {/* <div className="max-w-[1200px] mx-auto px-6"> */}
 //         <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
 //           <h2
-//             //       className="text-white  font-awesome mb-16
-//             // text-5xl lg:text-7xl"
+
 //             className="text-white font-awesome mb-10 sm:mb-14 md:mb-16 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
 //           >
 //             Client Benefits
 //           </h2>
 
-//           {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"> */}
 //           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
 
 //             {benefits.map((item, index) => (
@@ -263,7 +263,7 @@
 //               <div
 //                 key={index}
 
-//           className={`
+//                 className={`
 //   ${item.className}
 //   rounded-[26px]
 
@@ -284,15 +284,13 @@
 //               >
 
 
-// <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 mb-5 sm:mb-6 md:mb-8">
-//   <div className="pointer-events-none absolute inset-0 rounded-full bg-[#ACFE05]/60 blur-xl scale-125" />
-//   <img
-//     src={item.icon}
-//     alt=""
-//     className="relative z-10 w-full h-full object-contain"
-//   />
-// </div>
-
+//                 <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 mb-5 sm:mb-6 md:mb-8">
+//                   <img
+//                     src={item.icon}
+//                     alt=""
+//                     className="w-full h-full object-contain"
+//                   />
+//                 </div>
 //                 <h3 className="text-white text-xl sm:text-2xl md:text-[32px] font-medium mb-3">
 
 //                   {item.title}
@@ -314,7 +312,90 @@
 
 //         </div>
 
+//       </section> */}
+
+//       <section className="bg-[#101110] py-14 sm:py-20 md:py-28">
+//         <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+
+//           <h2 className="text-white font-awesome mb-10 sm:mb-14 md:mb-16 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+//             Client Benefits
+//           </h2>
+
+//           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
+//             {benefits.map((item, index) => (
+//               <div
+//                 key={index}
+//                 className={`
+//             ${item.className}
+//             group
+//             relative
+//             overflow-hidden
+
+//             rounded-[22px]
+//             md:rounded-[26px]
+
+//             bg-[#111111]
+
+//             border
+//             border-purple-400/70
+
+//             shadow-[0_0_8px_rgba(168,85,247,0.75),0_0_20px_rgba(168,85,247,0.45),0_0_35px_rgba(168,85,247,0.25)]
+
+//             hover:border-purple-400
+//             hover:shadow-[0_0_10px_rgba(168,85,247,0.95),0_0_25px_rgba(168,85,247,0.70),0_0_45px_rgba(168,85,247,0.45)]
+//             hover:-translate-y-2
+
+//             p-5 sm:p-6 md:p-8
+//             min-h-[180px]
+//             flex flex-col justify-center
+
+//             transition-all duration-500
+//           `}
+//               >
+//                 {/* PURPLE HOVER GLOW */}
+//                 <div
+//                   className="
+//               absolute
+//               w-[200px]
+//               h-[200px]
+//               rounded-full
+//               bg-purple-600/20
+//               blur-[80px]
+//               -top-20
+//               -right-20
+//               opacity-0
+//               group-hover:opacity-100
+//               transition-opacity
+//               duration-700
+//               pointer-events-none
+//             "
+//                 />
+
+//                 <div className="relative z-10">
+//                   <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 mb-5 sm:mb-6 md:mb-8">
+//                     <img
+//                       src={item.icon}
+//                       alt=""
+//                       className="w-full h-full object-contain"
+//                     />
+//                   </div>
+
+//                   <h3 className="text-white text-xl sm:text-2xl md:text-[32px] font-medium mb-3">
+//                     {item.title}
+//                   </h3>
+
+//                   <p className="text-white/70 text-sm sm:text-base md:text-lg leading-6 md:leading-7 max-w-[420px]">
+//                     {item.desc}
+//                   </p>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+
+//         </div>
 //       </section>
+
+
 //       {/* STATS */}
 //       {/* <div className="max-w-6xl mx-auto px-8 py-24 text-center"> */}
 //       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-14 sm:py-20 md:py-24 text-center">
@@ -409,20 +490,20 @@
 //             <div>
 
 //               {/* <h3 className="text-[38px] sm:text-4xl md:text-5xl font-semibold mb-4"> */}
-//                               <h3 className="text-2xl sm:text-4xl md:text-5xl font-semibold mb-4">
+//               <h3 className="text-2xl sm:text-4xl md:text-5xl font-semibold mb-4">
 
 //                 {member.name}
 
 //               </h3>
 //               {/* <h4 className="text-xl text-gray-400 mb-8"> */}
-//                             <h4 className="text-base sm:text-xl text-gray-400 mb-8">
+//               <h4 className="text-base sm:text-xl text-gray-400 mb-8">
 
 //                 {member.designation}
 
 //               </h4>
 
 //               {/* <p className="text-gray-400 text-lg leading-8"> */}
-//                             <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-7 md:leading-8">
+//               <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-7 md:leading-8">
 
 //                 The Vision Behind the Studio <br /><br />
 //                 Our founder brings together a passion for design, branding, and marketing, with a vision to help brands build distinctive and meaningful identities. <br /><br />
@@ -484,10 +565,43 @@
 //       </div>
 
 //       {/* CONTACT */}
-//       {/* <div className="max-w-7xl mx-auto px-8 py-24"> */}
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-14 sm:py-20 md:py-24">
+
+
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pt-14 sm:pt-20 md:pt-24 pb-10 [&>*]:!bg-transparent [&>*]:!overflow-visible">
 //         <Form />
 //       </div>
+
+//       {/* ================= GLOBAL ZIG-ZAG GLOW LAYER ================= */}
+//       {/* <div className="pointer-events-none absolute top-0 left-0 w-full bottom-[-350px] z-20 overflow-hidden mix-blend-screen">
+//         {glows.map((g, i) => (
+//           <div
+//             key={i}
+//             className={`absolute w-[450px] h-[600px] rounded-full blur-[140px] ${g.color} ${g.side === "right" ? "right-[-200px]" : "left-[-200px]"
+//               }`}
+//             style={{ top: g.top }}
+//           />
+//         ))}
+//       </div> */}
+//       {/* ================= GLOBAL ZIG-ZAG GLOW LAYER ================= */}
+//       <div
+//         className="pointer-events-none absolute top-0 left-0 w-full bottom-[-350px] z-20 overflow-hidden mix-blend-screen"
+//         style={{
+//           WebkitMaskImage:
+//             "linear-gradient(to bottom, black 0%, black calc(100% - 350px), transparent 100%)",
+//           maskImage:
+//             "linear-gradient(to bottom, black 0%, black calc(100% - 350px), transparent 100%)",
+//         }}
+//       >
+//         {glows.map((g, i) => (
+//           <div
+//             key={i}
+//             className={`absolute w-[450px] h-[600px] rounded-full blur-[140px] ${g.color} ${g.side === "right" ? "right-[-200px]" : "left-[-200px]"
+//               }`}
+//             style={{ top: g.top }}
+//           />
+//         ))}
+//       </div>
+
 //     </section>
 //   );
 // };
@@ -502,11 +616,6 @@ import plant from "../src/assets/plant.png"
 import custom from "../src/assets/puzzleCube.png"
 import tranparent from "../src/assets/Transparent.png"
 import Telescope from "../src/assets/Telescope.png"
-import grid from "../src/assets/grid.png"
-import hash from "../src/assets/hash.png"
-import arrow1 from "../src/assets/arrow1.png"
-import arrow2 from "../src/assets/arrow2.png"
-import laptop from "../src/assets/laptop.png"
 import api from "../utls/axios";
 import AboutHeader from "./AboutHeader";
 import mobileAbout from '../src/assets/mobileAbout.jpg'
@@ -523,7 +632,6 @@ const glows = [
   // { side: "right", top: "88%", color: "bg-[#7A00FF]/40" },
   { side: "right", top: "92%", color: "bg-[#7A00FF]/50" },
 ];
-
 
 
 const AboutUs = () => {
@@ -744,22 +852,18 @@ const AboutUs = () => {
         </div>
       </div>
 
-
-      {/* <section className="bg-[#101110] py-28"> */}
+      {/* 
       <section className="bg-[#101110] py-14 sm:py-20 md:py-28">
 
-        {/* <div className="max-w-[1200px] mx-auto px-6"> */}
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
 
           <h2
-            //       className="text-white  font-awesome mb-16
-            // text-5xl lg:text-7xl"
+
             className="text-white font-awesome mb-10 sm:mb-14 md:mb-16 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
           >
             Client Benefits
           </h2>
 
-          {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"> */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
 
             {benefits.map((item, index) => (
@@ -816,7 +920,90 @@ const AboutUs = () => {
 
         </div>
 
+      </section> */}
+
+      <section className="bg-[#101110] py-14 sm:py-20 md:py-28">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+
+          <h2 className="text-white font-awesome mb-10 sm:mb-14 md:mb-16 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+            Client Benefits
+          </h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
+            {benefits.map((item, index) => (
+              <div
+                key={index}
+                className={`
+            ${item.className}
+            group
+            relative
+            overflow-hidden
+
+            rounded-[22px]
+            md:rounded-[26px]
+
+            bg-[#111111]
+
+            border
+            border-purple-400/70
+
+            shadow-[0_0_8px_rgba(168,85,247,0.75),0_0_20px_rgba(168,85,247,0.45),0_0_35px_rgba(168,85,247,0.25)]
+
+            hover:border-purple-400
+            hover:shadow-[0_0_10px_rgba(168,85,247,0.95),0_0_25px_rgba(168,85,247,0.70),0_0_45px_rgba(168,85,247,0.45)]
+            hover:-translate-y-2
+
+            p-5 sm:p-6 md:p-8
+            min-h-[180px]
+            flex flex-col justify-center
+
+            transition-all duration-500
+          `}
+              >
+                {/* PURPLE HOVER GLOW */}
+                <div
+                  className="
+              absolute
+              w-[200px]
+              h-[200px]
+              rounded-full
+              bg-purple-600/20
+              blur-[80px]
+              -top-20
+              -right-20
+              opacity-0
+              group-hover:opacity-100
+              transition-opacity
+              duration-700
+              pointer-events-none
+            "
+                />
+
+                <div className="relative z-10">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 mb-5 sm:mb-6 md:mb-8">
+                    <img
+                      src={item.icon}
+                      alt=""
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  <h3 className="text-white text-xl sm:text-2xl md:text-[32px] font-medium mb-3">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-white/70 text-sm sm:text-base md:text-lg leading-6 md:leading-7 max-w-[420px]">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
       </section>
+
+
       {/* STATS */}
       {/* <div className="max-w-6xl mx-auto px-8 py-24 text-center"> */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-14 sm:py-20 md:py-24 text-center">

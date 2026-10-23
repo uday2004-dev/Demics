@@ -6,9 +6,9 @@ const Privacy = () => {
 
 const glows = [
   { side: "left", top: "8%", color: "bg-[#7A00FF]/45" },
-  // { side: "right", top: "16%", color: "bg-[#7A00FF]/45" },
+  { side: "right", top: "20%", color: "bg-[#7A00FF]/45" },
   // { side: "left", top: "28%", color: "bg-[#7A00FF]/45" },
-  { side: "right", top: "40%", color: "bg-[#7A00FF]/45" },
+  { side: "left", top: "40%", color: "bg-[#7A00FF]/45" },
   { side: "left", top: "52%", color: "bg-[#7A00FF]/45" },
   { side: "right", top: "64%", color: "bg-[#7A00FF]/45" },
   { side: "left", top: "76%", color: "bg-[#7A00FF]/40" },
